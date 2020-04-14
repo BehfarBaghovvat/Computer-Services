@@ -1,5 +1,5 @@
 ﻿using Tulpep.NotificationWindow;
-namespace Mbb.Windows.Forms
+namespace Infrastracture
 {
 	public class Utility
 	{

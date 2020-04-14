@@ -38,6 +38,9 @@
     <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Tulpep.NotificationWindow, Version=1.1.31.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tulpep.NotificationWindow.1.1.31\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,6 +114,12 @@
       <DependentUpon>UserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\Forms\Utility.cs" />
+    <Compile Include="Windows\PopupNotificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\PopupNotificationForm.Designer.cs">
+      <DependentUpon>PopupNotificationForm.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -123,6 +132,12 @@
     <EmbeddedResource Include="Windows\Forms\UserControl.resx">
       <DependentUpon>UserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Windows\PopupNotificationForm.resx">
+      <DependentUpon>PopupNotificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
