@@ -45,7 +45,6 @@
 			this.lastNamePanel = new Mbb.Windows.Forms.Panel();
 			this.telTextBox = new Mbb.Windows.Forms.TextBox();
 			this.telpanel = new Mbb.Windows.Forms.Panel();
-			this.personalImagePicturBox = new Mbb.Windows.Forms.PicturBox();
 			this.groupBox1 = new Mbb.Windows.Forms.GroupBox();
 			this.button4 = new Mbb.Windows.Forms.Button();
 			this.showPasswordPicturBox2 = new Mbb.Windows.Forms.PicturBox();
@@ -56,6 +55,7 @@
 			this.descriptionTextBox = new Mbb.Windows.Forms.TextBox();
 			this.panel1 = new Mbb.Windows.Forms.Panel();
 			this.confirmPasswordTextBox = new Mbb.Windows.Forms.TextBox();
+			this.personalImagePicturBox = new Mbb.Windows.Forms.PicturBox();
 			this.panel2 = new Mbb.Windows.Forms.Panel();
 			this.passwordTextBox = new Mbb.Windows.Forms.TextBox();
 			this.dateRegisterPanel = new Mbb.Windows.Forms.Panel();
@@ -66,15 +66,19 @@
 			this.loginButton = new Mbb.Windows.Forms.Button();
 			this.saveButton = new Mbb.Windows.Forms.Button();
 			this.resetButton = new Mbb.Windows.Forms.Button();
+			this.maritalStatusGroupBox = new Mbb.Windows.Forms.GroupBox();
+			this.singleRadioButton = new Mbb.Windows.Forms.RadioButton();
+			this.marriedRadioButton = new Mbb.Windows.Forms.RadioButton();
 			this.titlePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picturBox1)).BeginInit();
 			this.personalInformationGroupBox.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.personalImagePicturBox)).BeginInit();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.showPasswordPicturBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.showPasswordPicturBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.confirmEmailTickPicturBox)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.confirmUsernameTickPicturBox)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.personalImagePicturBox)).BeginInit();
+			this.maritalStatusGroupBox.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// titlePanel
@@ -91,8 +95,9 @@
 			// 
 			// picturBox1
 			// 
+			this.picturBox1.Dock = System.Windows.Forms.DockStyle.Right;
 			this.picturBox1.Image = ((System.Drawing.Image)(resources.GetObject("picturBox1.Image")));
-			this.picturBox1.Location = new System.Drawing.Point(768, 0);
+			this.picturBox1.Location = new System.Drawing.Point(770, 0);
 			this.picturBox1.Name = "picturBox1";
 			this.picturBox1.Size = new System.Drawing.Size(30, 30);
 			this.picturBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -104,7 +109,7 @@
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("IRANSans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.label1.ForeColor = System.Drawing.Color.White;
-			this.label1.Location = new System.Drawing.Point(648, 3);
+			this.label1.Location = new System.Drawing.Point(655, 3);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(113, 24);
 			this.label1.TabIndex = 4;
@@ -146,10 +151,10 @@
 			// 
 			// firstNameTextBox
 			// 
-			this.firstNameTextBox.BackColor = System.Drawing.Color.RoyalBlue;
+			this.firstNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(0)))), ((int)(((byte)(132)))));
 			this.firstNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.firstNameTextBox.Font = new System.Drawing.Font("IRANSans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.firstNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.firstNameTextBox.ForeColor = System.Drawing.Color.White;
 			this.firstNameTextBox.Location = new System.Drawing.Point(496, 31);
 			this.firstNameTextBox.MaxLength = 25;
 			this.firstNameTextBox.Name = "firstNameTextBox";
@@ -160,6 +165,7 @@
 			// personalInformationGroupBox
 			// 
 			this.personalInformationGroupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.personalInformationGroupBox.Controls.Add(this.maritalStatusGroupBox);
 			this.personalInformationGroupBox.Controls.Add(this.addressTextBox);
 			this.personalInformationGroupBox.Controls.Add(this.addressPanel);
 			this.personalInformationGroupBox.Controls.Add(this.nationalCodeTextBox);
@@ -181,10 +187,10 @@
 			// 
 			// addressTextBox
 			// 
-			this.addressTextBox.BackColor = System.Drawing.Color.RoyalBlue;
+			this.addressTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(0)))), ((int)(((byte)(132)))));
 			this.addressTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.addressTextBox.Font = new System.Drawing.Font("IRANSans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.addressTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.addressTextBox.ForeColor = System.Drawing.Color.White;
 			this.addressTextBox.Location = new System.Drawing.Point(224, 113);
 			this.addressTextBox.MaxLength = 500;
 			this.addressTextBox.Name = "addressTextBox";
@@ -203,10 +209,10 @@
 			// 
 			// nationalCodeTextBox
 			// 
-			this.nationalCodeTextBox.BackColor = System.Drawing.Color.RoyalBlue;
+			this.nationalCodeTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(0)))), ((int)(((byte)(132)))));
 			this.nationalCodeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.nationalCodeTextBox.Font = new System.Drawing.Font("IRANSans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.nationalCodeTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.nationalCodeTextBox.ForeColor = System.Drawing.Color.White;
 			this.nationalCodeTextBox.Location = new System.Drawing.Point(224, 72);
 			this.nationalCodeTextBox.MaxLength = 10;
 			this.nationalCodeTextBox.Name = "nationalCodeTextBox";
@@ -225,10 +231,10 @@
 			// 
 			// lastNameTextBox
 			// 
-			this.lastNameTextBox.BackColor = System.Drawing.Color.RoyalBlue;
+			this.lastNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(0)))), ((int)(((byte)(132)))));
 			this.lastNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.lastNameTextBox.Font = new System.Drawing.Font("IRANSans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.lastNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.lastNameTextBox.ForeColor = System.Drawing.Color.White;
 			this.lastNameTextBox.Location = new System.Drawing.Point(224, 31);
 			this.lastNameTextBox.MaxLength = 30;
 			this.lastNameTextBox.Name = "lastNameTextBox";
@@ -247,10 +253,10 @@
 			// 
 			// telTextBox
 			// 
-			this.telTextBox.BackColor = System.Drawing.Color.RoyalBlue;
+			this.telTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(0)))), ((int)(((byte)(132)))));
 			this.telTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.telTextBox.Font = new System.Drawing.Font("IRANSans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.telTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.telTextBox.ForeColor = System.Drawing.Color.White;
 			this.telTextBox.Location = new System.Drawing.Point(496, 72);
 			this.telTextBox.MaxLength = 11;
 			this.telTextBox.Name = "telTextBox";
@@ -266,19 +272,6 @@
 			this.telpanel.Name = "telpanel";
 			this.telpanel.Size = new System.Drawing.Size(250, 1);
 			this.telpanel.TabIndex = 3;
-			// 
-			// personalImagePicturBox
-			// 
-			this.personalImagePicturBox.BackgroundImage = global::ComputerServices.Properties.Resources.user_512;
-			this.personalImagePicturBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.personalImagePicturBox.Image = ((System.Drawing.Image)(resources.GetObject("personalImagePicturBox.Image")));
-			this.personalImagePicturBox.Location = new System.Drawing.Point(27, 32);
-			this.personalImagePicturBox.Name = "personalImagePicturBox";
-			this.personalImagePicturBox.Size = new System.Drawing.Size(170, 170);
-			this.personalImagePicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.personalImagePicturBox.TabIndex = 9;
-			this.personalImagePicturBox.TabStop = false;
-			this.personalImagePicturBox.Click += new System.EventHandler(this.personalImagePicturBox_Click);
 			// 
 			// groupBox1
 			// 
@@ -377,10 +370,10 @@
 			// 
 			// descriptionTextBox
 			// 
-			this.descriptionTextBox.BackColor = System.Drawing.Color.RoyalBlue;
+			this.descriptionTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(0)))), ((int)(((byte)(132)))));
 			this.descriptionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.descriptionTextBox.Font = new System.Drawing.Font("IRANSans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.descriptionTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.descriptionTextBox.ForeColor = System.Drawing.Color.White;
 			this.descriptionTextBox.Location = new System.Drawing.Point(224, 144);
 			this.descriptionTextBox.Multiline = true;
 			this.descriptionTextBox.Name = "descriptionTextBox";
@@ -399,16 +392,29 @@
 			// 
 			// confirmPasswordTextBox
 			// 
-			this.confirmPasswordTextBox.BackColor = System.Drawing.Color.RoyalBlue;
+			this.confirmPasswordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(0)))), ((int)(((byte)(132)))));
 			this.confirmPasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.confirmPasswordTextBox.Font = new System.Drawing.Font("IRANSans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.confirmPasswordTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.confirmPasswordTextBox.ForeColor = System.Drawing.Color.White;
 			this.confirmPasswordTextBox.Location = new System.Drawing.Point(255, 88);
 			this.confirmPasswordTextBox.MaxLength = 40;
 			this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
 			this.confirmPasswordTextBox.Size = new System.Drawing.Size(219, 28);
 			this.confirmPasswordTextBox.TabIndex = 8;
 			this.confirmPasswordTextBox.Text = "تایید رمز عبور";
+			// 
+			// personalImagePicturBox
+			// 
+			this.personalImagePicturBox.BackgroundImage = global::ComputerServices.Properties.Resources.user_512;
+			this.personalImagePicturBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.personalImagePicturBox.Image = ((System.Drawing.Image)(resources.GetObject("personalImagePicturBox.Image")));
+			this.personalImagePicturBox.Location = new System.Drawing.Point(27, 32);
+			this.personalImagePicturBox.Name = "personalImagePicturBox";
+			this.personalImagePicturBox.Size = new System.Drawing.Size(170, 170);
+			this.personalImagePicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.personalImagePicturBox.TabIndex = 9;
+			this.personalImagePicturBox.TabStop = false;
+			this.personalImagePicturBox.Click += new System.EventHandler(this.personalImagePicturBox_Click);
 			// 
 			// panel2
 			// 
@@ -421,10 +427,10 @@
 			// 
 			// passwordTextBox
 			// 
-			this.passwordTextBox.BackColor = System.Drawing.Color.RoyalBlue;
+			this.passwordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(0)))), ((int)(((byte)(132)))));
 			this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.passwordTextBox.Font = new System.Drawing.Font("IRANSans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.passwordTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.passwordTextBox.ForeColor = System.Drawing.Color.White;
 			this.passwordTextBox.Location = new System.Drawing.Point(527, 88);
 			this.passwordTextBox.MaxLength = 40;
 			this.passwordTextBox.Name = "passwordTextBox";
@@ -443,10 +449,10 @@
 			// 
 			// emailTextBox
 			// 
-			this.emailTextBox.BackColor = System.Drawing.Color.RoyalBlue;
+			this.emailTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(0)))), ((int)(((byte)(132)))));
 			this.emailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.emailTextBox.Font = new System.Drawing.Font("IRANSans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.emailTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.emailTextBox.ForeColor = System.Drawing.Color.White;
 			this.emailTextBox.Location = new System.Drawing.Point(255, 32);
 			this.emailTextBox.MaxLength = 60;
 			this.emailTextBox.Name = "emailTextBox";
@@ -465,10 +471,10 @@
 			// 
 			// usernameTextBox
 			// 
-			this.usernameTextBox.BackColor = System.Drawing.Color.RoyalBlue;
+			this.usernameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(0)))), ((int)(((byte)(132)))));
 			this.usernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.usernameTextBox.Font = new System.Drawing.Font("IRANSans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.usernameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.usernameTextBox.ForeColor = System.Drawing.Color.White;
 			this.usernameTextBox.Location = new System.Drawing.Point(527, 32);
 			this.usernameTextBox.MaxLength = 15;
 			this.usernameTextBox.Name = "usernameTextBox";
@@ -539,11 +545,45 @@
 			this.resetButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.resetButton.UseVisualStyleBackColor = false;
 			// 
+			// maritalStatusGroupBox
+			// 
+			this.maritalStatusGroupBox.Controls.Add(this.singleRadioButton);
+			this.maritalStatusGroupBox.Controls.Add(this.marriedRadioButton);
+			this.maritalStatusGroupBox.ForeColor = System.Drawing.Color.White;
+			this.maritalStatusGroupBox.Location = new System.Drawing.Point(26, 42);
+			this.maritalStatusGroupBox.Name = "maritalStatusGroupBox";
+			this.maritalStatusGroupBox.Size = new System.Drawing.Size(167, 84);
+			this.maritalStatusGroupBox.TabIndex = 14;
+			this.maritalStatusGroupBox.TabStop = false;
+			this.maritalStatusGroupBox.Text = "وضعیت تاهل";
+			// 
+			// singleRadioButton
+			// 
+			this.singleRadioButton.AutoSize = true;
+			this.singleRadioButton.Location = new System.Drawing.Point(29, 52);
+			this.singleRadioButton.Name = "singleRadioButton";
+			this.singleRadioButton.Size = new System.Drawing.Size(112, 23);
+			this.singleRadioButton.TabIndex = 15;
+			this.singleRadioButton.TabStop = true;
+			this.singleRadioButton.Text = "مجرد (بدون همسر)";
+			this.singleRadioButton.UseVisualStyleBackColor = true;
+			// 
+			// marriedRadioButton
+			// 
+			this.marriedRadioButton.AutoSize = true;
+			this.marriedRadioButton.Location = new System.Drawing.Point(25, 23);
+			this.marriedRadioButton.Name = "marriedRadioButton";
+			this.marriedRadioButton.Size = new System.Drawing.Size(116, 23);
+			this.marriedRadioButton.TabIndex = 14;
+			this.marriedRadioButton.TabStop = true;
+			this.marriedRadioButton.Text = "متاهل (دارای همسر)";
+			this.marriedRadioButton.UseVisualStyleBackColor = true;
+			// 
 			// RegisterForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.RoyalBlue;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(0)))), ((int)(((byte)(132)))));
 			this.ClientSize = new System.Drawing.Size(800, 509);
 			this.Controls.Add(this.loginButton);
 			this.Controls.Add(this.saveButton);
@@ -552,20 +592,22 @@
 			this.Controls.Add(this.personalInformationGroupBox);
 			this.Controls.Add(this.titlePanel);
 			this.Name = "RegisterForm";
-			this.Opacity = 0.95D;
+			this.Opacity = 0.9D;
 			this.Text = "RegisterForm";
 			this.titlePanel.ResumeLayout(false);
 			this.titlePanel.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picturBox1)).EndInit();
 			this.personalInformationGroupBox.ResumeLayout(false);
 			this.personalInformationGroupBox.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.personalImagePicturBox)).EndInit();
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.showPasswordPicturBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.showPasswordPicturBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.confirmEmailTickPicturBox)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.confirmUsernameTickPicturBox)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.personalImagePicturBox)).EndInit();
+			this.maritalStatusGroupBox.ResumeLayout(false);
+			this.maritalStatusGroupBox.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -609,5 +651,8 @@
 		private Mbb.Windows.Forms.Button saveButton;
 		private Mbb.Windows.Forms.Button resetButton;
 		private Mbb.Windows.Forms.PicturBox picturBox1;
+		private Mbb.Windows.Forms.GroupBox maritalStatusGroupBox;
+		private Mbb.Windows.Forms.RadioButton singleRadioButton;
+		private Mbb.Windows.Forms.RadioButton marriedRadioButton;
 	}
 }

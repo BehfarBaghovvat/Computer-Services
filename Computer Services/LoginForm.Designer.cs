@@ -33,7 +33,7 @@
 			this.panel0 = new Mbb.Windows.Forms.Panel();
 			this.picturBox1 = new Mbb.Windows.Forms.PicturBox();
 			this.loginLabel = new Mbb.Windows.Forms.Label();
-			this.panel = new Mbb.Windows.Forms.Panel();
+			this.titlePanel = new Mbb.Windows.Forms.Panel();
 			this.minimizeButton = new Mbb.Windows.Forms.Button();
 			this.closeButton = new Mbb.Windows.Forms.Button();
 			this.usernameTextBox = new Mbb.Windows.Forms.TextBox();
@@ -46,10 +46,13 @@
 			this.captionLabel1 = new Mbb.Windows.Forms.Label();
 			this.label1 = new Mbb.Windows.Forms.Label();
 			this.panel3 = new Mbb.Windows.Forms.Panel();
+			this.forgetPasswordLinkLabel = new Mbb.Windows.Forms.LinkLabel();
+			this.loginPicturBox = new Mbb.Windows.Forms.PicturBox();
 			this.panel0.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picturBox1)).BeginInit();
-			this.panel.SuspendLayout();
+			this.titlePanel.SuspendLayout();
 			this.panel3.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.loginPicturBox)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel0
@@ -76,24 +79,25 @@
 			// loginLabel
 			// 
 			this.loginLabel.AutoSize = true;
-			this.loginLabel.Font = new System.Drawing.Font("IRANSans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.loginLabel.Font = new System.Drawing.Font("IRANSans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.loginLabel.ForeColor = System.Drawing.Color.White;
-			this.loginLabel.Location = new System.Drawing.Point(434, 2);
+			this.loginLabel.Location = new System.Drawing.Point(423, 3);
 			this.loginLabel.Name = "loginLabel";
-			this.loginLabel.Size = new System.Drawing.Size(106, 27);
+			this.loginLabel.Size = new System.Drawing.Size(91, 24);
 			this.loginLabel.TabIndex = 2;
 			this.loginLabel.Text = "ورود به حساب";
 			// 
-			// panel
+			// titlePanel
 			// 
-			this.panel.Controls.Add(this.minimizeButton);
-			this.panel.Controls.Add(this.loginLabel);
-			this.panel.Controls.Add(this.closeButton);
-			this.panel.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel.Location = new System.Drawing.Point(0, 0);
-			this.panel.Name = "panel";
-			this.panel.Size = new System.Drawing.Size(546, 30);
-			this.panel.TabIndex = 1;
+			this.titlePanel.Controls.Add(this.loginPicturBox);
+			this.titlePanel.Controls.Add(this.minimizeButton);
+			this.titlePanel.Controls.Add(this.loginLabel);
+			this.titlePanel.Controls.Add(this.closeButton);
+			this.titlePanel.Dock = System.Windows.Forms.DockStyle.Top;
+			this.titlePanel.Location = new System.Drawing.Point(0, 0);
+			this.titlePanel.Name = "titlePanel";
+			this.titlePanel.Size = new System.Drawing.Size(546, 30);
+			this.titlePanel.TabIndex = 1;
 			// 
 			// minimizeButton
 			// 
@@ -128,17 +132,17 @@
 			this.usernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.usernameTextBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.usernameTextBox.ForeColor = System.Drawing.Color.Gray;
-			this.usernameTextBox.Location = new System.Drawing.Point(123, 67);
+			this.usernameTextBox.Location = new System.Drawing.Point(123, 42);
 			this.usernameTextBox.Name = "usernameTextBox";
 			this.usernameTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.usernameTextBox.Size = new System.Drawing.Size(300, 17);
 			this.usernameTextBox.TabIndex = 4;
-			this.usernameTextBox.Text = "Username";
+			this.usernameTextBox.Text = "Username\\Email";
 			// 
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.White;
-			this.panel1.Location = new System.Drawing.Point(123, 93);
+			this.panel1.Location = new System.Drawing.Point(123, 68);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(300, 1);
 			this.panel1.TabIndex = 6;
@@ -146,7 +150,7 @@
 			// panel2
 			// 
 			this.panel2.BackColor = System.Drawing.Color.White;
-			this.panel2.Location = new System.Drawing.Point(123, 140);
+			this.panel2.Location = new System.Drawing.Point(123, 115);
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(300, 1);
 			this.panel2.TabIndex = 7;
@@ -157,7 +161,7 @@
 			this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.passwordTextBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.passwordTextBox.ForeColor = System.Drawing.Color.Gray;
-			this.passwordTextBox.Location = new System.Drawing.Point(123, 114);
+			this.passwordTextBox.Location = new System.Drawing.Point(123, 89);
 			this.passwordTextBox.Name = "passwordTextBox";
 			this.passwordTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.passwordTextBox.Size = new System.Drawing.Size(300, 17);
@@ -176,7 +180,7 @@
 			this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.loginButton.Font = new System.Drawing.Font("IRANSans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.loginButton.ForeColor = System.Drawing.Color.White;
-			this.loginButton.Location = new System.Drawing.Point(123, 156);
+			this.loginButton.Location = new System.Drawing.Point(123, 131);
 			this.loginButton.Name = "loginButton";
 			this.loginButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.loginButton.Size = new System.Drawing.Size(300, 35);
@@ -229,19 +233,44 @@
 			this.panel3.Size = new System.Drawing.Size(546, 50);
 			this.panel3.TabIndex = 13;
 			// 
+			// forgetPasswordLinkLabel
+			// 
+			this.forgetPasswordLinkLabel.AutoSize = true;
+			this.forgetPasswordLinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+			this.forgetPasswordLinkLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+			this.forgetPasswordLinkLabel.Location = new System.Drawing.Point(221, 172);
+			this.forgetPasswordLinkLabel.Name = "forgetPasswordLinkLabel";
+			this.forgetPasswordLinkLabel.Size = new System.Drawing.Size(104, 19);
+			this.forgetPasswordLinkLabel.TabIndex = 14;
+			this.forgetPasswordLinkLabel.TabStop = true;
+			this.forgetPasswordLinkLabel.Text = "رمز را فراموش کردید؟";
+			this.forgetPasswordLinkLabel.Visible = false;
+			// 
+			// loginPicturBox
+			// 
+			this.loginPicturBox.Dock = System.Windows.Forms.DockStyle.Right;
+			this.loginPicturBox.Image = ((System.Drawing.Image)(resources.GetObject("loginPicturBox.Image")));
+			this.loginPicturBox.Location = new System.Drawing.Point(516, 0);
+			this.loginPicturBox.Name = "loginPicturBox";
+			this.loginPicturBox.Size = new System.Drawing.Size(30, 30);
+			this.loginPicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.loginPicturBox.TabIndex = 3;
+			this.loginPicturBox.TabStop = false;
+			// 
 			// LoginForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
 			this.ClientSize = new System.Drawing.Size(750, 250);
+			this.Controls.Add(this.forgetPasswordLinkLabel);
 			this.Controls.Add(this.panel3);
 			this.Controls.Add(this.loginButton);
 			this.Controls.Add(this.passwordTextBox);
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.usernameTextBox);
-			this.Controls.Add(this.panel);
+			this.Controls.Add(this.titlePanel);
 			this.Controls.Add(this.panel0);
 			this.ForeColor = System.Drawing.Color.Black;
 			this.Name = "LoginForm";
@@ -249,10 +278,11 @@
 			this.Text = "LoginForm";
 			this.panel0.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.picturBox1)).EndInit();
-			this.panel.ResumeLayout(false);
-			this.panel.PerformLayout();
+			this.titlePanel.ResumeLayout(false);
+			this.titlePanel.PerformLayout();
 			this.panel3.ResumeLayout(false);
 			this.panel3.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.loginPicturBox)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -261,7 +291,7 @@
 		#endregion
 
 		private Mbb.Windows.Forms.Panel panel0;
-		private Mbb.Windows.Forms.Panel panel;
+		private Mbb.Windows.Forms.Panel titlePanel;
 		private Mbb.Windows.Forms.Button minimizeButton;
 		private Mbb.Windows.Forms.Button closeButton;
 		private Mbb.Windows.Forms.Label loginLabel;
@@ -276,6 +306,8 @@
 		private Mbb.Windows.Forms.Panel panel3;
 		private Mbb.Windows.Forms.Label label1;
 		private Mbb.Windows.Forms.Label captionLabel1;
+		private Mbb.Windows.Forms.LinkLabel forgetPasswordLinkLabel;
+		private Mbb.Windows.Forms.PicturBox loginPicturBox;
 	}
 }
 

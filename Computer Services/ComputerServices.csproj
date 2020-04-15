@@ -64,6 +64,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ForgetPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgetPasswordForm.Designer.cs">
+      <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Infrastracture\PopupNotificationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     <Compile Include="WelComeForm.Designer.cs">
       <DependentUpon>WelComeForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ForgetPasswordForm.resx">
+      <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Infrastracture\PopupNotificationForm.resx">
       <DependentUpon>PopupNotificationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +136,9 @@
     </Compile>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelComeForm.resx">
+      <DependentUpon>WelComeForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
