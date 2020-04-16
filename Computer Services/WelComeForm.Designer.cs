@@ -30,19 +30,19 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WelComeForm));
 			this.titlePanel = new Mbb.Windows.Forms.Panel();
+			this.nameProgramLabel = new Mbb.Windows.Forms.Label();
+			this.picturBox1 = new Mbb.Windows.Forms.PicturBox();
+			this.sidePanel = new Mbb.Windows.Forms.Panel();
 			this.ImagePanel = new Mbb.Windows.Forms.Panel();
 			this.welcomePanel = new Mbb.Windows.Forms.Panel();
-			this.circularPictureBox1 = new Mbb.Windows.Forms.CircularPictureBox();
-			this.welcomeLabel = new Mbb.Windows.Forms.Label();
-			this.usernameLabel = new Mbb.Windows.Forms.Label();
 			this.bunifuCircleProgressbar1 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-			this.sidePanel = new Mbb.Windows.Forms.Panel();
-			this.picturBox1 = new Mbb.Windows.Forms.PicturBox();
-			this.nameProgramLabel = new Mbb.Windows.Forms.Label();
+			this.usernameLabel = new Mbb.Windows.Forms.Label();
+			this.welcomeLabel = new Mbb.Windows.Forms.Label();
+			this.circularPictureBox1 = new Mbb.Windows.Forms.CircularPictureBox();
 			this.titlePanel.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.picturBox1)).BeginInit();
 			this.welcomePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.picturBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// titlePanel
@@ -56,6 +56,37 @@
 			this.titlePanel.Name = "titlePanel";
 			this.titlePanel.Size = new System.Drawing.Size(1004, 100);
 			this.titlePanel.TabIndex = 0;
+			// 
+			// nameProgramLabel
+			// 
+			this.nameProgramLabel.BackColor = System.Drawing.Color.Transparent;
+			this.nameProgramLabel.Font = new System.Drawing.Font("IRANSans", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.nameProgramLabel.ForeColor = System.Drawing.Color.DimGray;
+			this.nameProgramLabel.Location = new System.Drawing.Point(175, 12);
+			this.nameProgramLabel.Name = "nameProgramLabel";
+			this.nameProgramLabel.Size = new System.Drawing.Size(228, 76);
+			this.nameProgramLabel.TabIndex = 3;
+			this.nameProgramLabel.Text = "سامانه خدمات کامپیوتر\r\nهزاره سوم";
+			this.nameProgramLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// picturBox1
+			// 
+			this.picturBox1.Dock = System.Windows.Forms.DockStyle.Left;
+			this.picturBox1.Image = ((System.Drawing.Image)(resources.GetObject("picturBox1.Image")));
+			this.picturBox1.Location = new System.Drawing.Point(50, 0);
+			this.picturBox1.Name = "picturBox1";
+			this.picturBox1.Size = new System.Drawing.Size(100, 100);
+			this.picturBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.picturBox1.TabIndex = 2;
+			this.picturBox1.TabStop = false;
+			// 
+			// sidePanel
+			// 
+			this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
+			this.sidePanel.Location = new System.Drawing.Point(0, 0);
+			this.sidePanel.Name = "sidePanel";
+			this.sidePanel.Size = new System.Drawing.Size(50, 100);
+			this.sidePanel.TabIndex = 1;
 			// 
 			// ImagePanel
 			// 
@@ -80,42 +111,6 @@
 			this.welcomePanel.Size = new System.Drawing.Size(759, 358);
 			this.welcomePanel.TabIndex = 2;
 			// 
-			// circularPictureBox1
-			// 
-			this.circularPictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("circularPictureBox1.BackgroundImage")));
-			this.circularPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.circularPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("circularPictureBox1.Image")));
-			this.circularPictureBox1.Location = new System.Drawing.Point(279, 49);
-			this.circularPictureBox1.Name = "circularPictureBox1";
-			this.circularPictureBox1.Size = new System.Drawing.Size(200, 200);
-			this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.circularPictureBox1.TabIndex = 0;
-			this.circularPictureBox1.TabStop = false;
-			// 
-			// welcomeLabel
-			// 
-			this.welcomeLabel.AutoSize = true;
-			this.welcomeLabel.BackColor = System.Drawing.Color.Transparent;
-			this.welcomeLabel.Font = new System.Drawing.Font("IRANSans", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.welcomeLabel.ForeColor = System.Drawing.Color.Gold;
-			this.welcomeLabel.Location = new System.Drawing.Point(562, 19);
-			this.welcomeLabel.Name = "welcomeLabel";
-			this.welcomeLabel.Size = new System.Drawing.Size(191, 58);
-			this.welcomeLabel.TabIndex = 1;
-			this.welcomeLabel.Text = "خوش آمدید";
-			// 
-			// usernameLabel
-			// 
-			this.usernameLabel.BackColor = System.Drawing.Color.Transparent;
-			this.usernameLabel.Font = new System.Drawing.Font("IRANSans", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.usernameLabel.ForeColor = System.Drawing.Color.DimGray;
-			this.usernameLabel.Location = new System.Drawing.Point(279, 252);
-			this.usernameLabel.Name = "usernameLabel";
-			this.usernameLabel.Size = new System.Drawing.Size(200, 58);
-			this.usernameLabel.TabIndex = 2;
-			this.usernameLabel.Text = "نام کاربری";
-			this.usernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
 			// bunifuCircleProgressbar1
 			// 
 			this.bunifuCircleProgressbar1.animated = false;
@@ -138,36 +133,41 @@
 			this.bunifuCircleProgressbar1.TabIndex = 3;
 			this.bunifuCircleProgressbar1.Value = 0;
 			// 
-			// sidePanel
+			// usernameLabel
 			// 
-			this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
-			this.sidePanel.Location = new System.Drawing.Point(0, 0);
-			this.sidePanel.Name = "sidePanel";
-			this.sidePanel.Size = new System.Drawing.Size(50, 100);
-			this.sidePanel.TabIndex = 1;
+			this.usernameLabel.BackColor = System.Drawing.Color.Transparent;
+			this.usernameLabel.Font = new System.Drawing.Font("IRANSans", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.usernameLabel.ForeColor = System.Drawing.Color.DimGray;
+			this.usernameLabel.Location = new System.Drawing.Point(279, 252);
+			this.usernameLabel.Name = "usernameLabel";
+			this.usernameLabel.Size = new System.Drawing.Size(200, 58);
+			this.usernameLabel.TabIndex = 2;
+			this.usernameLabel.Text = "نام کاربری";
+			this.usernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// picturBox1
+			// welcomeLabel
 			// 
-			this.picturBox1.Dock = System.Windows.Forms.DockStyle.Left;
-			this.picturBox1.Image = ((System.Drawing.Image)(resources.GetObject("picturBox1.Image")));
-			this.picturBox1.Location = new System.Drawing.Point(50, 0);
-			this.picturBox1.Name = "picturBox1";
-			this.picturBox1.Size = new System.Drawing.Size(100, 100);
-			this.picturBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.picturBox1.TabIndex = 2;
-			this.picturBox1.TabStop = false;
+			this.welcomeLabel.AutoSize = true;
+			this.welcomeLabel.BackColor = System.Drawing.Color.Transparent;
+			this.welcomeLabel.Font = new System.Drawing.Font("IRANSans", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.welcomeLabel.ForeColor = System.Drawing.Color.Gold;
+			this.welcomeLabel.Location = new System.Drawing.Point(562, 19);
+			this.welcomeLabel.Name = "welcomeLabel";
+			this.welcomeLabel.Size = new System.Drawing.Size(191, 58);
+			this.welcomeLabel.TabIndex = 1;
+			this.welcomeLabel.Text = "خوش آمدید";
 			// 
-			// nameProgramLabel
+			// circularPictureBox1
 			// 
-			this.nameProgramLabel.BackColor = System.Drawing.Color.Transparent;
-			this.nameProgramLabel.Font = new System.Drawing.Font("IRANSans", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.nameProgramLabel.ForeColor = System.Drawing.Color.DimGray;
-			this.nameProgramLabel.Location = new System.Drawing.Point(175, 12);
-			this.nameProgramLabel.Name = "nameProgramLabel";
-			this.nameProgramLabel.Size = new System.Drawing.Size(228, 76);
-			this.nameProgramLabel.TabIndex = 3;
-			this.nameProgramLabel.Text = "سامانه خدمات کامپیوتر\r\nهزاره سوم";
-			this.nameProgramLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.circularPictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("circularPictureBox1.BackgroundImage")));
+			this.circularPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.circularPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("circularPictureBox1.Image")));
+			this.circularPictureBox1.Location = new System.Drawing.Point(279, 49);
+			this.circularPictureBox1.Name = "circularPictureBox1";
+			this.circularPictureBox1.Size = new System.Drawing.Size(200, 200);
+			this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.circularPictureBox1.TabIndex = 0;
+			this.circularPictureBox1.TabStop = false;
 			// 
 			// WelComeForm
 			// 
@@ -181,10 +181,10 @@
 			this.Name = "WelComeForm";
 			this.Text = "WelComeForm";
 			this.titlePanel.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.picturBox1)).EndInit();
 			this.welcomePanel.ResumeLayout(false);
 			this.welcomePanel.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.picturBox1)).EndInit();
 			this.ResumeLayout(false);
 
 		}

@@ -1,6 +1,6 @@
 ﻿namespace ComputerServices
 {
-	public partial class LoginForm : Infrastracture.BaseForm
+	public partial class LoginForm : Infrastructure.BaseForm
 	{
 		public LoginForm()
 		{

@@ -1,5 +1,6 @@
 ﻿using Tulpep.NotificationWindow;
-namespace Mbb.Windows.Forms
+
+namespace Infrastructure
 {
 	public class Utility
 	{
@@ -178,6 +179,11 @@ namespace Mbb.Windows.Forms
 			}
 			else
 			{
+				Mbb.Windows.Forms.MessageBox.Message
+					(message: "عدم همخوانی قالب ایمیل!",
+					caption: "خطای ورودی",
+					icon: Mbb.Windows.Forms.MessageBox.Icon.Error);
+
 				TrueStatus = false;
 			}
 
@@ -573,8 +579,11 @@ namespace Mbb.Windows.Forms
 
 			if (num < 2)
 			{
-				Mbb.Windows.Forms.MessageBox.ErrorMessage
-				("شناسه کاربری باید دارای حداقل 2 عدد باشد!");
+				Mbb.Windows.Forms.MessageBox.Message
+					(message: "نام کاربری باید دارای حداقل 2 عدد باشد!",
+					caption: "خطای ورودی",
+					icon: Mbb.Windows.Forms.MessageBox.Icon.Error);
+
 				statusCheck = false;
 			}
 			else

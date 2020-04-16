@@ -1,6 +1,6 @@
 ﻿namespace ComputerServices
 {
-	public partial class WelComeForm : Infrastracture.BaseForm
+	public partial class WelComeForm : Infrastructure.BaseForm
 	{
 		public WelComeForm()
 		{

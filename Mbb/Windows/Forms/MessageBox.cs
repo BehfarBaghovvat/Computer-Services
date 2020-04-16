@@ -3,8 +3,18 @@ using System.Windows.Forms;
 
 namespace Mbb.Windows.Forms
 {
-	 public class MessageBox
+	public static class MessageBox
 	{
+		public enum Icon
+		{
+			Information,
+			Question,
+			None,
+			Error,
+			Warning,
+			Stop,
+		}
+
 		#region Static Constructor Message
 		static MessageBox()
 		{
@@ -12,6 +22,7 @@ namespace Mbb.Windows.Forms
 		}
 		#endregion /Static Constructor Message
 
+		#region MyRegion
 		#region Message
 		public static void Message(string message)
 		{
@@ -50,7 +61,7 @@ namespace Mbb.Windows.Forms
 				defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
 				options: System.Windows.Forms.MessageBoxOptions.RightAlign |
 				System.Windows.Forms.MessageBoxOptions.RtlReading);
-		}		
+		}
 		#endregion /InformationMessage
 
 		#region QuestionMessage
@@ -79,7 +90,7 @@ namespace Mbb.Windows.Forms
 				caption: captiopn,
 				buttons: buttons,
 				defaultButton: defaultButton,
-				icon:icon,
+				icon: icon,
 				options: options);
 
 			return dialogResult;
@@ -98,6 +109,74 @@ namespace Mbb.Windows.Forms
 				options: System.Windows.Forms.MessageBoxOptions.RightAlign |
 				System.Windows.Forms.MessageBoxOptions.RtlReading);
 		}
-		#endregion ErrorMessage
+		#endregion ErrorMessage 
+		#endregion
+
+		#region Message
+		public static DialogResult Message(string message, string caption, Icon icon)
+		{
+			DialogResult dialogResult = DialogResult.None;
+			
+			switch (icon)
+			{
+				case Icon.Information:
+				using (InformationForm information = new InformationForm())
+				{
+					information.Message = message;
+					information.Caption = caption;
+					dialogResult = information.ShowDialog();
+				}
+				break;
+
+				case Icon.Question:
+				using (QuestionForm question = new QuestionForm())
+				{
+					question.Message = message;
+					question.Caption = caption;
+					dialogResult = question.ShowDialog();
+				}
+				break;
+
+				case Icon.None:
+				using (NoneForm none = new NoneForm())
+				{
+					none.Message = message;
+					none.Caption = caption;
+					dialogResult = none.ShowDialog();
+				}
+				break;
+
+				case Icon.Error:
+				using (ErrorForm error = new ErrorForm())
+				{
+					error.Message = message;
+					error.Caption = caption;
+					dialogResult = error.ShowDialog();
+				}
+				break;
+
+				case Icon.Warning:
+				using (WarningForm warning = new WarningForm())
+				{
+					warning.Message = message;
+					warning.Caption = caption;
+					dialogResult = warning.ShowDialog();
+				}
+				break;
+
+				case Icon.Stop:
+				using (DangerousForm dangerous = new DangerousForm())
+				{
+					dangerous.Message = message;
+					dangerous.Caption = caption;
+					dialogResult = dangerous.ShowDialog();
+				}
+				break;
+			}
+
+			return dialogResult;
+		}
+		#endregion /Message
+
 	}
 }

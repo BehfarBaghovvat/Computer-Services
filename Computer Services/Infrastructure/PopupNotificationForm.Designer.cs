@@ -1,4 +1,4 @@
-﻿namespace Infrastracture
+﻿namespace Infrastructure
 {
 	partial class PopupNotificationForm
 	{

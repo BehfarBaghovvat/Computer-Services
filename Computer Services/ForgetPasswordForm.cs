@@ -1,6 +1,6 @@
 ﻿namespace ComputerServices
 {
-	public partial class ForgetPasswordForm : Infrastracture.BaseForm
+	public partial class ForgetPasswordForm : Infrastructure.BaseForm
 	{
 		public ForgetPasswordForm()
 		{

@@ -1,13 +1,13 @@
-﻿namespace Mbb.Windows.Forms
+﻿namespace Infrastructure
 {
-	partial class UserControl
+	partial class BaseForm
 	{
-		/// <summary> 
+		/// <summary>
 		/// Required designer variable.
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
 
-		/// <summary> 
+		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
 		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,25 +20,25 @@
 			base.Dispose(disposing);
 		}
 
-		#region Component Designer generated code
+		#region Windows Form Designer generated code
 
-		/// <summary> 
-		/// Required method for Designer support - do not modify 
+		/// <summary>
+		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent()
 		{
 			this.SuspendLayout();
 			// 
-			// UserControl
+			// BaseForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-			this.Font = new System.Drawing.Font("IRANSans", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-			this.Name = "UserControl";
-			this.Size = new System.Drawing.Size(700, 447);
+			this.ClientSize = new System.Drawing.Size(1366, 768);
+			this.Font = new System.Drawing.Font("IRANSans", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+			this.Name = "BaseForm";
+			this.Text = "BaseForm";
 			this.ResumeLayout(false);
 
 		}

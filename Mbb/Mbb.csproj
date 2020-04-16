@@ -32,9 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\My Program\Microsoft Visual Studio\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -61,8 +66,38 @@
     <Compile Include="Windows\Forms\ComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Windows\Forms\DangerousForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\DangerousForm.Designer.cs">
+      <DependentUpon>DangerousForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\NoneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\NoneForm.Designer.cs">
+      <DependentUpon>NoneForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\SuccessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\SuccessForm.Designer.cs">
+      <DependentUpon>SuccessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\WarningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\WarningForm.Designer.cs">
+      <DependentUpon>WarningForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Forms\DataGridView.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\Forms\Form.cs">
       <SubType>Form</SubType>
@@ -72,6 +107,12 @@
     </Compile>
     <Compile Include="Windows\Forms\GroupBox.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\InformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\InformationForm.Designer.cs">
+      <DependentUpon>InformationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\Forms\Label.cs">
       <SubType>Component</SubType>
@@ -92,6 +133,12 @@
     <Compile Include="Windows\Forms\PicturBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Windows\Forms\QuestionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\QuestionForm.Designer.cs">
+      <DependentUpon>QuestionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Forms\RadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -107,37 +154,66 @@
     <Compile Include="Windows\Forms\TextBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Windows\Forms\UserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Windows\Forms\UserControl.Designer.cs">
-      <DependentUpon>UserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\Forms\Utility.cs" />
-    <Compile Include="Windows\PopupNotificationForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Windows\PopupNotificationForm.Designer.cs">
-      <DependentUpon>PopupNotificationForm.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\DangerousForm.resx">
+      <DependentUpon>DangerousForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ErrorForm.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\Forms\Form.resx">
       <DependentUpon>Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\Forms\UserControl.resx">
-      <DependentUpon>UserControl.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\Forms\InformationForm.resx">
+      <DependentUpon>InformationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\PopupNotificationForm.resx">
-      <DependentUpon>PopupNotificationForm.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\Forms\NoneForm.resx">
+      <DependentUpon>NoneForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\QuestionForm.resx">
+      <DependentUpon>QuestionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\SuccessForm.resx">
+      <DependentUpon>SuccessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\WarningForm.resx">
+      <DependentUpon>WarningForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\succes-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question_512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\important_512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\high_risk_512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\happy_cloud_512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

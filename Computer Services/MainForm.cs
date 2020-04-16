@@ -1,6 +1,6 @@
 ﻿namespace ComputerServices
 {
-	public partial class MainForm : Infrastracture.BaseForm
+	public partial class MainForm : Infrastructure.BaseForm
 	{
 		public MainForm()
 		{
