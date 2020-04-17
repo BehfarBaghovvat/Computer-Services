@@ -103,11 +103,41 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StartUpProgramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartUpProgramForm.Designer.cs">
+      <DependentUpon>StartUpProgramForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TestForm.Designer.cs">
       <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Project\MainBackgroundUC3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Project\MainBackgroundUC3.Designer.cs">
+      <DependentUpon>MainBackgroundUC3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Project\MainBackgroundUC1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Project\MainBackgroundUC1.Designer.cs">
+      <DependentUpon>MainBackgroundUC1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Project\MainBackgroundUC2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Project\MainBackgroundUC2.Designer.cs">
+      <DependentUpon>MainBackgroundUC2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Project\MainBackgroundUC4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Project\MainBackgroundUC4.Designer.cs">
+      <DependentUpon>MainBackgroundUC4.cs</DependentUpon>
     </Compile>
     <Compile Include="WelComeForm.cs">
       <SubType>Form</SubType>
@@ -143,8 +173,23 @@
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StartUpProgramForm.resx">
+      <DependentUpon>StartUpProgramForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Project\MainBackgroundUC3.resx">
+      <DependentUpon>MainBackgroundUC3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Project\MainBackgroundUC1.resx">
+      <DependentUpon>MainBackgroundUC1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Project\MainBackgroundUC2.resx">
+      <DependentUpon>MainBackgroundUC2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Project\MainBackgroundUC4.resx">
+      <DependentUpon>MainBackgroundUC4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelComeForm.resx">
       <DependentUpon>WelComeForm.cs</DependentUpon>

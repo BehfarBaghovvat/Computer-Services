@@ -529,7 +529,7 @@
         /BHzyKSRTSOjRlaNzBrZNTJsZNkbpodYkNe85v8DYA/M5izkB6gAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="personalImagePicturBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="userImagePicturBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAYAAAB/HSuDAAAABGdBTUEAALGPC/xhBQAArdpJREFUeF7s
         /Xm8ZWV5J3w/KMZZtNUYQzSh1aQ1bTskrbHtTtKxk9d0ZBAFURElTq0NCk9iNCbGkBQzaAECZQSKQjCK

@@ -182,7 +182,8 @@ namespace Infrastructure
 				Mbb.Windows.Forms.MessageBox.Message
 					(message: "عدم همخوانی قالب ایمیل!",
 					caption: "خطای ورودی",
-					icon: Mbb.Windows.Forms.MessageBox.Icon.Error);
+					icon: Mbb.Windows.Forms.MessageBox.MessageIcon.Error,
+					button: Mbb.Windows.Forms.MessageBox.MessageButton.Ok);
 
 				TrueStatus = false;
 			}
@@ -582,7 +583,8 @@ namespace Infrastructure
 				Mbb.Windows.Forms.MessageBox.Message
 					(message: "نام کاربری باید دارای حداقل 2 عدد باشد!",
 					caption: "خطای ورودی",
-					icon: Mbb.Windows.Forms.MessageBox.Icon.Error);
+					icon: Mbb.Windows.Forms.MessageBox.MessageIcon.Error,
+					button: Mbb.Windows.Forms.MessageBox.MessageButton.Ok);
 
 				statusCheck = false;
 			}

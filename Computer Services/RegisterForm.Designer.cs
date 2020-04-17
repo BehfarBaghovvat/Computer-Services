@@ -50,7 +50,8 @@
 			this.telTextBox = new Mbb.Windows.Forms.TextBox();
 			this.telPanel = new Mbb.Windows.Forms.Panel();
 			this.userInformationGroupBox = new Mbb.Windows.Forms.GroupBox();
-			this.personalImagePicturBox = new Mbb.Windows.Forms.CircularPictureBox();
+			this.emailTextBox = new Mbb.Windows.Forms.TextBox();
+			this.userImagePicturBox = new Mbb.Windows.Forms.CircularPictureBox();
 			this.deleteImageButton = new Mbb.Windows.Forms.Button();
 			this.passwordShowPicturBox2 = new Mbb.Windows.Forms.PicturBox();
 			this.addPictureLinkLabel = new Mbb.Windows.Forms.LinkLabel();
@@ -70,13 +71,12 @@
 			this.saveButton = new Mbb.Windows.Forms.Button();
 			this.resetButton = new Mbb.Windows.Forms.Button();
 			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-			this.emailTextBox = new Mbb.Windows.Forms.TextBox();
 			this.titlePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.RegisterLogoPicturBox)).BeginInit();
 			this.personalInformationGroupBox.SuspendLayout();
 			this.maritalStatusGroupBox.SuspendLayout();
 			this.userInformationGroupBox.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.personalImagePicturBox)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.userImagePicturBox)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.passwordShowPicturBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.passwordShowPicturBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.confirmEmailTickPicturBox)).BeginInit();
@@ -333,7 +333,7 @@
 			// 
 			this.userInformationGroupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.userInformationGroupBox.Controls.Add(this.emailTextBox);
-			this.userInformationGroupBox.Controls.Add(this.personalImagePicturBox);
+			this.userInformationGroupBox.Controls.Add(this.userImagePicturBox);
 			this.userInformationGroupBox.Controls.Add(this.deleteImageButton);
 			this.userInformationGroupBox.Controls.Add(this.passwordShowPicturBox2);
 			this.userInformationGroupBox.Controls.Add(this.addPictureLinkLabel);
@@ -358,17 +358,33 @@
 			this.userInformationGroupBox.TabStop = false;
 			this.userInformationGroupBox.Text = "اطلاعات کاربری";
 			// 
-			// personalImagePicturBox
+			// emailTextBox
 			// 
-			this.personalImagePicturBox.BackgroundImage = global::ComputerServices.Properties.Resources.user_1024;
-			this.personalImagePicturBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.personalImagePicturBox.Image = ((System.Drawing.Image)(resources.GetObject("personalImagePicturBox.Image")));
-			this.personalImagePicturBox.Location = new System.Drawing.Point(27, 32);
-			this.personalImagePicturBox.Name = "personalImagePicturBox";
-			this.personalImagePicturBox.Size = new System.Drawing.Size(170, 170);
-			this.personalImagePicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.personalImagePicturBox.TabIndex = 17;
-			this.personalImagePicturBox.TabStop = false;
+			this.emailTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(0)))), ((int)(((byte)(132)))));
+			this.emailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.emailTextBox.Font = new System.Drawing.Font("IRANSans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.emailTextBox.ForeColor = System.Drawing.Color.DimGray;
+			this.emailTextBox.Location = new System.Drawing.Point(254, 31);
+			this.emailTextBox.MaxLength = 15;
+			this.emailTextBox.Name = "emailTextBox";
+			this.emailTextBox.Size = new System.Drawing.Size(220, 28);
+			this.emailTextBox.TabIndex = 18;
+			this.emailTextBox.Text = "پست الکترونیکی";
+			this.emailTextBox.Enter += new System.EventHandler(this.EmailTextBox_Enter);
+			this.emailTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmailTextBox_KeyPress);
+			this.emailTextBox.Leave += new System.EventHandler(this.EmailTextBox_Leave);
+			// 
+			// userImagePicturBox
+			// 
+			this.userImagePicturBox.BackgroundImage = global::ComputerServices.Properties.Resources.user_1024;
+			this.userImagePicturBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.userImagePicturBox.Image = ((System.Drawing.Image)(resources.GetObject("userImagePicturBox.Image")));
+			this.userImagePicturBox.Location = new System.Drawing.Point(27, 32);
+			this.userImagePicturBox.Name = "userImagePicturBox";
+			this.userImagePicturBox.Size = new System.Drawing.Size(170, 170);
+			this.userImagePicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.userImagePicturBox.TabIndex = 17;
+			this.userImagePicturBox.TabStop = false;
 			// 
 			// deleteImageButton
 			// 
@@ -381,6 +397,7 @@
 			this.deleteImageButton.Size = new System.Drawing.Size(15, 15);
 			this.deleteImageButton.TabIndex = 6;
 			this.deleteImageButton.UseVisualStyleBackColor = true;
+			this.deleteImageButton.Click += new System.EventHandler(this.DeleteImageButton_Click);
 			// 
 			// passwordShowPicturBox2
 			// 
@@ -406,6 +423,7 @@
 			this.addPictureLinkLabel.TabIndex = 5;
 			this.addPictureLinkLabel.TabStop = true;
 			this.addPictureLinkLabel.Text = "افزودن عکس";
+			this.addPictureLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddPictureLinkLabel_LinkClicked);
 			// 
 			// passwordShowPicturBox1
 			// 
@@ -610,22 +628,6 @@
 			this.bunifuElipse1.ElipseRadius = 25;
 			this.bunifuElipse1.TargetControl = this;
 			// 
-			// emailTextBox
-			// 
-			this.emailTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(0)))), ((int)(((byte)(132)))));
-			this.emailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.emailTextBox.Font = new System.Drawing.Font("IRANSans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.emailTextBox.ForeColor = System.Drawing.Color.DimGray;
-			this.emailTextBox.Location = new System.Drawing.Point(254, 31);
-			this.emailTextBox.MaxLength = 15;
-			this.emailTextBox.Name = "emailTextBox";
-			this.emailTextBox.Size = new System.Drawing.Size(220, 28);
-			this.emailTextBox.TabIndex = 18;
-			this.emailTextBox.Text = "پست الکترونیکی";
-			this.emailTextBox.Enter += new System.EventHandler(this.EmailTextBox_Enter);
-			this.emailTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmailTextBox_KeyPress);
-			this.emailTextBox.Leave += new System.EventHandler(this.EmailTextBox_Leave);
-			// 
 			// RegisterForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
@@ -651,7 +653,7 @@
 			this.maritalStatusGroupBox.PerformLayout();
 			this.userInformationGroupBox.ResumeLayout(false);
 			this.userInformationGroupBox.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.personalImagePicturBox)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.userImagePicturBox)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.passwordShowPicturBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.passwordShowPicturBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.confirmEmailTickPicturBox)).EndInit();
@@ -700,7 +702,7 @@
 		private Mbb.Windows.Forms.GroupBox maritalStatusGroupBox;
 		private Mbb.Windows.Forms.RadioButton singleRadioButton;
 		private Mbb.Windows.Forms.RadioButton marriedRadioButton;
-		private Mbb.Windows.Forms.CircularPictureBox personalImagePicturBox;
+		private Mbb.Windows.Forms.CircularPictureBox userImagePicturBox;
 		private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
 		private Mbb.Windows.Forms.TextBox emailTextBox;
 	}

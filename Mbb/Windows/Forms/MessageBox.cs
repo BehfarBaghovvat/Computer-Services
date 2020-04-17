@@ -5,15 +5,28 @@ namespace Mbb.Windows.Forms
 {
 	public static class MessageBox
 	{
-		public enum Icon
+		#region MyRegion
+		public enum MessageIcon
 		{
 			Information,
 			Question,
 			None,
 			Error,
 			Warning,
-			Stop,
+			Danger,
+			Success,
 		}
+
+		public enum MessageButton
+		{
+			YesNoCancel,
+			YesNo,
+			Ok,
+			OkCancel,
+			AbortRetryIgnore,
+			RetryCancel,
+		}
+		#endregion
 
 		#region Static Constructor Message
 		static MessageBox()
@@ -70,7 +83,7 @@ namespace Mbb.Windows.Forms
 			System.Windows.Forms.MessageBox.Show(
 				text: text,
 				caption: "پرسش",
-				buttons: System.Windows.Forms.MessageBoxButtons.YesNo,
+				buttons: System.Windows.Forms.MessageBoxButtons.RetryCancel,
 				icon: System.Windows.Forms.MessageBoxIcon.Question,
 				defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button2,
 				options: System.Windows.Forms.MessageBoxOptions.RightAlign |
@@ -113,65 +126,106 @@ namespace Mbb.Windows.Forms
 		#endregion
 
 		#region Message
-		public static DialogResult Message(string message, string caption, Icon icon)
+		/// <summary>
+		/// A custom message box has 4 fields.
+		/// </summary>
+		/// <param name="message"></param>
+		/// <param name="caption"></param>
+		/// <param name="icon"></param>
+		/// <param name="button"></param>
+		/// <returns>dialogResult</returns>
+		public static DialogResult Message(string message, string caption, MessageIcon icon ,MessageButton button)
 		{
 			DialogResult dialogResult = DialogResult.None;
-			
-			switch (icon)
+
+			if (icon == MessageIcon.Information && button == MessageButton.Ok)
 			{
-				case Icon.Information:
 				using (InformationForm information = new InformationForm())
 				{
 					information.Message = message;
 					information.Caption = caption;
 					dialogResult = information.ShowDialog();
 				}
-				break;
+			}
 
-				case Icon.Question:
+			else if (icon == MessageIcon.Success && button == MessageButton.Ok)
+			{
+				using (SuccessForm success = new SuccessForm())
+				{
+					success.Message = message;
+					success.Caption = caption;
+					dialogResult = success.ShowDialog();
+				}
+			}
+
+			else if (icon == MessageIcon.Question && button == MessageButton.YesNo)
+			{
 				using (QuestionForm question = new QuestionForm())
 				{
 					question.Message = message;
 					question.Caption = caption;
 					dialogResult = question.ShowDialog();
 				}
-				break;
+			}
 
-				case Icon.None:
+			else if (icon == MessageIcon.Question && button == MessageButton.YesNo)
+			{
+				using (QuestionForm question = new QuestionForm())
+				{
+					question.Message = message;
+					question.Caption = caption;
+					dialogResult = question.ShowDialog();
+				}
+			}
+
+			else if (icon == MessageIcon.None && button == MessageButton.Ok)
+			{
 				using (NoneForm none = new NoneForm())
 				{
 					none.Message = message;
 					none.Caption = caption;
 					dialogResult = none.ShowDialog();
 				}
-				break;
+			}
 
-				case Icon.Error:
+			else if (icon == MessageIcon.Error && button == MessageButton.Ok)
+			{
 				using (ErrorForm error = new ErrorForm())
 				{
 					error.Message = message;
 					error.Caption = caption;
 					dialogResult = error.ShowDialog();
 				}
-				break;
+			}
 
-				case Icon.Warning:
+			else if (icon == MessageIcon.Error && button == MessageButton.Ok)
+			{
+				using (ErrorForm error = new ErrorForm())
+				{
+					error.Message = message;
+					error.Caption = caption;
+					dialogResult = error.ShowDialog();
+				}
+			}
+
+			else if (icon == MessageIcon.Warning && button == MessageButton.YesNo)
+			{
 				using (WarningForm warning = new WarningForm())
 				{
 					warning.Message = message;
 					warning.Caption = caption;
 					dialogResult = warning.ShowDialog();
 				}
-				break;
+			}
 
-				case Icon.Stop:
+			else if (icon == MessageIcon.Danger && button == MessageButton.YesNo)
+			{
 				using (DangerousForm dangerous = new DangerousForm())
 				{
 					dangerous.Message = message;
 					dangerous.Caption = caption;
 					dialogResult = dangerous.ShowDialog();
 				}
-				break;
 			}
 
 			return dialogResult;

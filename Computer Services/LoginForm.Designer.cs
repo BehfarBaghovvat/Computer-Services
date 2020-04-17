@@ -34,6 +34,7 @@
 			this.picturBox1 = new Mbb.Windows.Forms.PicturBox();
 			this.loginLabel = new Mbb.Windows.Forms.Label();
 			this.titlePanel = new Mbb.Windows.Forms.Panel();
+			this.loginPicturBox = new Mbb.Windows.Forms.PicturBox();
 			this.minimizeButton = new Mbb.Windows.Forms.Button();
 			this.closeButton = new Mbb.Windows.Forms.Button();
 			this.usernameTextBox = new Mbb.Windows.Forms.TextBox();
@@ -47,12 +48,11 @@
 			this.label1 = new Mbb.Windows.Forms.Label();
 			this.panel3 = new Mbb.Windows.Forms.Panel();
 			this.forgetPasswordLinkLabel = new Mbb.Windows.Forms.LinkLabel();
-			this.loginPicturBox = new Mbb.Windows.Forms.PicturBox();
 			this.panel0.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picturBox1)).BeginInit();
 			this.titlePanel.SuspendLayout();
-			this.panel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.loginPicturBox)).BeginInit();
+			this.panel3.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel0
@@ -89,6 +89,7 @@
 			// 
 			// titlePanel
 			// 
+			this.titlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
 			this.titlePanel.Controls.Add(this.loginPicturBox);
 			this.titlePanel.Controls.Add(this.minimizeButton);
 			this.titlePanel.Controls.Add(this.loginLabel);
@@ -98,6 +99,17 @@
 			this.titlePanel.Name = "titlePanel";
 			this.titlePanel.Size = new System.Drawing.Size(546, 30);
 			this.titlePanel.TabIndex = 1;
+			// 
+			// loginPicturBox
+			// 
+			this.loginPicturBox.Dock = System.Windows.Forms.DockStyle.Right;
+			this.loginPicturBox.Image = ((System.Drawing.Image)(resources.GetObject("loginPicturBox.Image")));
+			this.loginPicturBox.Location = new System.Drawing.Point(516, 0);
+			this.loginPicturBox.Name = "loginPicturBox";
+			this.loginPicturBox.Size = new System.Drawing.Size(30, 30);
+			this.loginPicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.loginPicturBox.TabIndex = 3;
+			this.loginPicturBox.TabStop = false;
 			// 
 			// minimizeButton
 			// 
@@ -200,6 +212,7 @@
 			this.newAccountLinkLabel.TabIndex = 10;
 			this.newAccountLinkLabel.TabStop = true;
 			this.newAccountLinkLabel.Text = "نام کاربری جدید";
+			this.newAccountLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.NewAccountLinkLabel_LinkClicked);
 			// 
 			// captionLabel1
 			// 
@@ -246,17 +259,6 @@
 			this.forgetPasswordLinkLabel.Text = "رمز را فراموش کردید؟";
 			this.forgetPasswordLinkLabel.Visible = false;
 			// 
-			// loginPicturBox
-			// 
-			this.loginPicturBox.Dock = System.Windows.Forms.DockStyle.Right;
-			this.loginPicturBox.Image = ((System.Drawing.Image)(resources.GetObject("loginPicturBox.Image")));
-			this.loginPicturBox.Location = new System.Drawing.Point(516, 0);
-			this.loginPicturBox.Name = "loginPicturBox";
-			this.loginPicturBox.Size = new System.Drawing.Size(30, 30);
-			this.loginPicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.loginPicturBox.TabIndex = 3;
-			this.loginPicturBox.TabStop = false;
-			// 
 			// LoginForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
@@ -280,9 +282,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.picturBox1)).EndInit();
 			this.titlePanel.ResumeLayout(false);
 			this.titlePanel.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.loginPicturBox)).EndInit();
 			this.panel3.ResumeLayout(false);
 			this.panel3.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.loginPicturBox)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

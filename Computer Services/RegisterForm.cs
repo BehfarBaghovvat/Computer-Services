@@ -33,7 +33,8 @@ namespace ComputerServices
 		public string RegisterTime { get; set; }
 		#endregion /Properties
 
-		//-----Beginning of the Code.
+		//-----The beginning of the coding line.
+
 		#region RegisterForm_MouseDown
 		private void RegisterForm_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
 		{
@@ -427,6 +428,47 @@ namespace ComputerServices
 		//------
 		#endregion /DescriptionTextBox
 
+		#region AddPictureLinkLabel_LinkClicked
+		private void AddPictureLinkLabel_LinkClicked(object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e)
+		{
+			System.Windows.Forms.OpenFileDialog openFileDialog =
+				new System.Windows.Forms.OpenFileDialog
+				{
+					Filter = "JPG (*.jpg)|*.jpg|" +
+							"PNG (*.png)|*.png|" +
+							"BMP (*.bmp)|*.bmp",
+					Title = "Load user picture ",
+				};
+
+			if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+			{
+				UserImage = openFileDialog.FileName;
+				userImagePicturBox.Image =
+				System.Drawing.Image.FromFile(UserImage);
+			}
+			if (UserImage != string.Empty)
+			{
+				deleteImageButton.Visible = true;
+			}
+			else
+			{
+				deleteImageButton.Visible = false;
+			}
+		}
+
+		#endregion /AddPictureLinkLabel_LinkClicked
+
+		#region DeleteImageButton_Click
+		private void DeleteImageButton_Click(object sender, System.EventArgs e)
+		{
+			UserImage = string.Empty;
+			userImagePicturBox.Image =
+				Properties.Resources.user_1024;
+			deleteImageButton.Visible = false;
+		}
+
+		#endregion /DeleteImageButton_Click
+
 		#region FirstNameTextBox
 		//-----
 		#region FirstNameTextBox_Enter
@@ -726,22 +768,191 @@ namespace ComputerServices
 		#region ResetButton_Click
 		private void ResetButton_Click(object sender, System.EventArgs e)
 		{
-
+			AllClear();
 		}
 		#endregion /ResetButton_Click
 
 		#region SaveButton_Click
 		private void SaveButton_Click(object sender, System.EventArgs e)
 		{
+			Models.DataBaseContext dataBaseContext = null;
+			try
+			{
+				dataBaseContext =
+					new Models.DataBaseContext();
 
+
+			}
+			catch (System.Exception ex)
+			{
+				Mbb.Windows.Forms.MessageBox.Message
+					(message: ex.Message,
+					caption: "Exception Error",
+					icon: Mbb.Windows.Forms.MessageBox.MessageIcon.Error,
+					button: Mbb.Windows.Forms.MessageBox.MessageButton.Ok);
+			}
+			finally
+			{
+				if (dataBaseContext != null)
+				{
+					dataBaseContext.Dispose();
+					dataBaseContext = null;
+				}
+			}
 		}
 		#endregion /SaveButton_Click
 
 		#region LoginButton_Click
 		private void LoginButton_Click(object sender, System.EventArgs e)
 		{
+			System.Windows.Forms.DialogResult dialogResult;
 
-		} 
+			if (string.IsNullOrEmpty(Username) != true||
+				string.IsNullOrEmpty(Email) != true ||
+				string.IsNullOrEmpty(Password) != true ||
+				string.IsNullOrEmpty(PasswordConfirm) != true ||
+				string.IsNullOrEmpty(Description) != true ||
+				string.IsNullOrEmpty(UserImage) != true||
+				string.IsNullOrEmpty(FirstName) != true || 
+				string.IsNullOrEmpty(LastName) != true || 
+				string.IsNullOrEmpty(Tel) != true || 
+				string.IsNullOrEmpty(NationalCode) != true || 
+				string.IsNullOrEmpty(Address) != true)
+			{
+				dialogResult = Mbb.Windows.Forms.MessageBox.Message
+					(message: "آیا از ادامه ثبت نام صرفه نظر کردید؟", 
+					caption: "انصراف از ثبت نام", 
+					icon: Mbb.Windows.Forms.MessageBox.MessageIcon.Question,
+					button: Mbb.Windows.Forms.MessageBox.MessageButton.YesNo);
+
+				if (dialogResult == System.Windows.Forms.DialogResult.Yes)
+				{
+					this.Hide();
+					Program.LoginShow();
+				}
+			}
+			else
+			{
+				this.Hide();
+				Program.LoginShow();
+				return;
+			}
+			
+		}
 		#endregion
+
+		//-----End of coding line
+
+		#region Methods
+		//*****
+		#region AllClear
+		private void AllClear()
+		{
+			Username = string.Empty;
+			usernameTextBox.Text =
+				"شناسه کاربری";
+			usernameTextBox.ForeColor =
+				Infrastructure.Utility.DimGrayColor();
+			usernameTextBox.Font =
+				Infrastructure.Utility.IranSansFont(usernameTextBox.Font.Size);
+			usernameTextBox.TextAlign =
+				System.Windows.Forms.HorizontalAlignment.Right;
+			usernamePanel.BackColor =
+				Infrastructure.Utility.DimGrayColor();
+			confirmUsernameTickPicturBox.Visible = false;
+
+			Email = string.Empty;
+			emailTextBox.Text =
+				"پست الکترونیکی";
+			emailTextBox.ForeColor =
+				Infrastructure.Utility.DimGrayColor();
+			emailTextBox.Font =
+				Infrastructure.Utility.IranSansFont(emailTextBox.Font.Size);
+			emailTextBox.TextAlign =
+				System.Windows.Forms.HorizontalAlignment.Right;
+			emailTextBox.BackColor =
+				Infrastructure.Utility.DimGrayColor();
+			confirmEmailTickPicturBox.Visible = false;
+
+			Password = string.Empty;
+			passwordTextBox.Text =
+				"رمز عبور";
+			passwordTextBox.ForeColor =
+				Infrastructure.Utility.DimGrayColor();
+			passwordTextBox.TextAlign =
+				System.Windows.Forms.HorizontalAlignment.Right;
+			passwordPanel.BackColor =
+				Infrastructure.Utility.DimGrayColor();
+			passwordTextBox.UseSystemPasswordChar = false;
+
+			PasswordConfirm = string.Empty;
+			passwordConfirmTextBox.Text =
+				"تایید رمز عبور";
+			passwordConfirmTextBox.ForeColor =
+				Infrastructure.Utility.DimGrayColor();
+			passwordConfirmTextBox.TextAlign =
+				System.Windows.Forms.HorizontalAlignment.Right;
+			passwordConfirmPanel.BackColor =
+				Infrastructure.Utility.DimGrayColor();
+			passwordConfirmTextBox.UseSystemPasswordChar = false;
+
+			UserImage = string.Empty;
+			userImagePicturBox.Image =
+				Properties.Resources.user_1024;
+			deleteImageButton.Visible = false;
+
+			FirstName = string.Empty;
+			firstNameTextBox.Text =
+				"نام";
+			firstNameTextBox.ForeColor =
+				Infrastructure.Utility.DimGrayColor();
+			firstNameTextBox.TextAlign =
+				System.Windows.Forms.HorizontalAlignment.Left;
+			firstNamePanel.BackColor =
+				Infrastructure.Utility.DimGrayColor();
+
+			LastName = string.Empty;
+			lastNameTextBox.Text =
+				"نام خانوادگی";
+			lastNameTextBox.ForeColor =
+				Infrastructure.Utility.DimGrayColor();
+			lastNameTextBox.TextAlign =
+				System.Windows.Forms.HorizontalAlignment.Left;
+			lastNamePanel.BackColor =
+				Infrastructure.Utility.DimGrayColor();
+
+			Tel = string.Empty;
+			telTextBox.Text =
+				"نام خانوادگی";
+			telTextBox.ForeColor =
+				Infrastructure.Utility.DimGrayColor();
+			telTextBox.TextAlign =
+				System.Windows.Forms.HorizontalAlignment.Left;
+			telPanel.BackColor =
+				Infrastructure.Utility.DimGrayColor();
+
+			NationalCode = string.Empty;
+			nationalCodeTextBox.Text =
+				"نام خانوادگی";
+			nationalCodeTextBox.ForeColor =
+				Infrastructure.Utility.DimGrayColor();
+			nationalCodeTextBox.TextAlign =
+				System.Windows.Forms.HorizontalAlignment.Left;
+			nationalCodePanel.BackColor =
+				Infrastructure.Utility.DimGrayColor();
+
+			Address = string.Empty;
+			addressTextBox.Text =
+				"نام خانوادگی";
+			addressTextBox.ForeColor =
+				Infrastructure.Utility.DimGrayColor();
+			addressTextBox.TextAlign =
+				System.Windows.Forms.HorizontalAlignment.Left;
+			addressPanel.BackColor =
+				Infrastructure.Utility.DimGrayColor();
+		}
+		#endregion /AllClear
+		//*****
+		#endregion /Methods
 	}
 }

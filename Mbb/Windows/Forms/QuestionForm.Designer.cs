@@ -59,7 +59,6 @@
 			this.closeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
 			this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
 			this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.closeButton.DialogResult = System.Windows.Forms.DialogResult.No;
 			this.closeButton.FlatAppearance.BorderSize = 0;
 			this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.closeButton.Font = new System.Drawing.Font("IRANSans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -146,6 +145,7 @@
 			this.noButton.TabIndex = 0;
 			this.noButton.Text = "خیر";
 			this.noButton.UseVisualStyleBackColor = false;
+			this.noButton.Click += new System.EventHandler(this.NoButton_Click);
 			// 
 			// bunifuElipse1
 			// 

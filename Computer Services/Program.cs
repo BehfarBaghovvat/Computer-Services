@@ -84,6 +84,32 @@ namespace ComputerServices
 			}
 		}
 		#endregion /Administrator
+
+		#region StartUpProgramForm
+		private static StartUpProgramForm startUpProgramForm;
+		public static StartUpProgramForm  StartUpProgramForm
+		{
+			get
+			{
+				if (startUpProgramForm == null)
+				{
+					startUpProgramForm =
+						new StartUpProgramForm();
+				}
+				return startUpProgramForm;
+			}
+		}
+
+		#region StartUpShow
+		public static void StartUpShow()
+		{
+			AuthenticatedUser = null;
+			//LoginForm.Initialize();
+			StartUpProgramForm.ShowDialog();
+		}
+		#endregion /StartUpShow
+		#endregion /StartUpProgramForm
+
 		//-----
 		#region LoginForm
 		private static LoginForm loginForm;
@@ -107,6 +133,11 @@ namespace ComputerServices
 			LoginForm.ShowDialog();
 		}
 		#endregion /LoginShow
+
+		public static void LogIn(object sender,System.Windows.Forms.FormClosedEventArgs e)
+		{
+			LoginForm.ShowDialog();
+		}
 		#endregion /LoginForm
 		//-----
 		#region RegisterForm

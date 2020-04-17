@@ -24,5 +24,10 @@ namespace Mbb.Windows.Forms
 		{
 			this.Size = new System.Drawing.Size(width: this.Width, height: this.Height + messageLabel.Height);
 		}
+
+		private void NoButton_Click(object sender, System.EventArgs e)
+		{
+			return;
+		}
 	}
 }

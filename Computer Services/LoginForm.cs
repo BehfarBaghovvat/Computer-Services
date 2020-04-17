@@ -19,8 +19,13 @@
 		{
 			this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
 		}
+
 		#endregion /MinimizeButton_Click
 
-
+		private void NewAccountLinkLabel_LinkClicked(object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e)
+		{
+			this.Hide();
+			Program.RegistrShow();
+		}
 	}
 }
