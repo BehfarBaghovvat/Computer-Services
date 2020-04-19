@@ -1,7 +1,6 @@
-﻿
-namespace Infrastructure
+﻿namespace Infrastructure
 {
-	public partial class PopupNotificationForm : BaseForm
+	public partial class PopupNotificationForm : Mbb.Windows.Forms.Form
 	{
 		public PopupNotificationForm()
 		{
@@ -73,6 +72,7 @@ namespace Infrastructure
 			}
 		}
 		#endregion /Timer1_Tick
+
 		//----- End of the codes.
 		#region Method
 		//-----
@@ -110,38 +110,43 @@ namespace Infrastructure
 
 			switch (caption)
 			{
-				//case Caption.موفقیت:
-				//alertIconPicturBox.Image = ComputerServices.Properties.Resources.succes_512;
-				//BackColor = System.Drawing.Color.SeaGreen;
-				//captionLabel.Text = Caption.موفقیت.ToString();
-				//break;
+				case Caption.موفقیت:
+				notificationStatusPicturBox.Image = ComputerServices.Properties.Resources.succes_512;
+				BackColor = System.Drawing.Color.SeaGreen;
+				captionLabel.Text = Caption.موفقیت.ToString();
+				break;
 
-				//case Caption.اخطار:
-				//alertIconPicturBox.Image = ComputerServices.Properties.Resources.warning_512;
-				//BackColor = System.Drawing.Color.DarkOrange;
-				//captionLabel.Text = Caption.اخطار.ToString();
-				//break;
+				case Caption.اخطار:
+				notificationStatusPicturBox.Image = ComputerServices.Properties.Resources.warning_512;
+				BackColor = System.Drawing.Color.DarkOrange;
+				captionLabel.Text = Caption.اخطار.ToString();
+				break;
 
-				//case Caption.خطا:
-				//alertIconPicturBox.Image = ComputerServices.Properties.Resources.error_512;
-				//BackColor = System.Drawing.Color.DarkRed;
-				//captionLabel.Text = Caption.خطا.ToString();
-				//break;
+				case Caption.خطا:
+				notificationStatusPicturBox.Image = ComputerServices.Properties.Resources.error_512;
+				BackColor = System.Drawing.Color.DarkRed;
+				captionLabel.Text = Caption.خطا.ToString();
+				break;
 
-				//case Caption.اطلاع:
-				//alertIconPicturBox.Image = ComputerServices.Properties.Resources.info_512;
-				//BackColor = System.Drawing.Color.RoyalBlue;
-				//captionLabel.Text = Caption.اطلاع.ToString();
-				//break;
+				case Caption.اطلاع:
+				notificationStatusPicturBox.Image = ComputerServices.Properties.Resources.info_512;
+				BackColor = System.Drawing.Color.RoyalBlue;
+				captionLabel.Text = Caption.اطلاع.ToString();
+				break;
 			}
 
-			this.objectpicturBox.Image = System.Drawing.Image.FromFile(picture);
-			this.alertMessageLabel.Text = message;
+			this.objectPictureBox.Image = System.Drawing.Image.FromFile(picture);
+			this.messageLabel.Text = message;
 
 			this.Show();
 			this.action = Action.start;
 			this.timer1.Interval = 1;
 			this.timer1.Start();
+		}
+
+		private void PopupNotificationForm_Load(object sender, System.EventArgs e)
+		{
+
 		}
 		#endregion /ShowAlert
 
@@ -178,31 +183,31 @@ namespace Infrastructure
 
 			switch (caption)
 			{
-				//case Caption.موفقیت:
-				//alertIconPicturBox.Image = ComputerServices.Properties.Resources.succes_512;
-				//BackColor = System.Drawing.Color.SeaGreen;
-				//captionLabel.Text = Caption.موفقیت.ToString();
-				//break;
+				case Caption.موفقیت:
+				notificationStatusPicturBox.Image = ComputerServices.Properties.Resources.succes_512;
+				BackColor = System.Drawing.Color.SeaGreen;
+				captionLabel.Text = Caption.موفقیت.ToString();
+				break;
 
-				//case Caption.اخطار:
-				//alertIconPicturBox.Image = ComputerServices.Properties.Resources.warning_512;
-				//BackColor = System.Drawing.Color.DarkOrange;
-				//captionLabel.Text = Caption.اخطار.ToString();
-				//break;
+				case Caption.اخطار:
+				notificationStatusPicturBox.Image = ComputerServices.Properties.Resources.warning_512;
+				BackColor = System.Drawing.Color.DarkOrange;
+				captionLabel.Text = Caption.اخطار.ToString();
+				break;
 
-				//case Caption.خطا:
-				//alertIconPicturBox.Image = ComputerServices.Properties.Resources.error_512;
-				//BackColor = System.Drawing.Color.DarkRed;
-				//captionLabel.Text = Caption.خطا.ToString();
-				//break;
+				case Caption.خطا:
+				notificationStatusPicturBox.Image = ComputerServices.Properties.Resources.error_512;
+				BackColor = System.Drawing.Color.DarkRed;
+				captionLabel.Text = Caption.خطا.ToString();
+				break;
 
-				//case Caption.اطلاع:
-				//alertIconPicturBox.Image = ComputerServices.Properties.Resources.info_512;
-				//BackColor = System.Drawing.Color.RoyalBlue;
-				//captionLabel.Text = Caption.اطلاع.ToString();
-				//break;
+				case Caption.اطلاع:
+				notificationStatusPicturBox.Image = ComputerServices.Properties.Resources.info_512;
+				BackColor = System.Drawing.Color.RoyalBlue;
+				captionLabel.Text = Caption.اطلاع.ToString();
+				break;
 			}
-			this.alertMessageLabel.Text = message;
+			this.messageLabel.Text = message;
 
 			this.Show();
 			this.action = Action.start;
@@ -212,5 +217,6 @@ namespace Infrastructure
 		#endregion /ShowAlert
 		//-----
 		#endregion /Method
+
 	}
 }

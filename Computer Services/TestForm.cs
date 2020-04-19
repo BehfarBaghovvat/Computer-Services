@@ -9,7 +9,11 @@
 
 		private void button1_Click(object sender, System.EventArgs e)
 		{
-			//Mbb.Windows.Forms.MessageBox.Message(message: textBox1.Text, caption: textBox2.Text, icon: Mbb.Windows.Forms.MessageBox.Icon.Error);
+			//Infrastructure.Utility.WindowsNotification
+			//	(message: textBox1.Text, 
+			//	caption: Infrastructure.PopupNotificationForm.Caption.موفقیت);
+
+			messageLabel.Text = textBox1.Text;
 		}
 	}
 }

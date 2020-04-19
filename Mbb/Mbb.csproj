@@ -72,6 +72,18 @@
     <Compile Include="Windows\Forms\DangerousForm.Designer.cs">
       <DependentUpon>DangerousForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Forms\MessageBoxDOBForm .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\MessageBoxDOBForm .Designer.cs">
+      <DependentUpon>MessageBoxDOBForm .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\MessageBoxSIBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\MessageBoxSIBForm.Designer.cs">
+      <DependentUpon>MessageBoxSIBForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Forms\NoneForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +184,12 @@
     <EmbeddedResource Include="Windows\Forms\InformationForm.resx">
       <DependentUpon>InformationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\MessageBoxDOBForm .resx">
+      <DependentUpon>MessageBoxDOBForm .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\MessageBoxSIBForm.resx">
+      <DependentUpon>MessageBoxSIBForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\Forms\NoneForm.resx">
       <DependentUpon>NoneForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +232,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\happy_cloud_512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Windows\Forms\TextFile1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

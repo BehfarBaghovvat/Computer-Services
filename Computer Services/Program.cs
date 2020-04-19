@@ -19,23 +19,34 @@ namespace ComputerServices
 				dataBaseContext =
 					new Models.DataBaseContext();
 
-				//string adminPic =
-				//"D:\\Visual Studio Project\\C# Project\\Resturant\\Resturant\\Resources\\AdminUser.png";
-
-				string user =
-					"admin";
-
-				string password =
-					"admin";
-
-				string email =
-					"admin@admin.com";
 				bool isAdmin = true;
 				bool isActive = true;
-
+				
+				string username =
+					"Administrator";
+				string email =
+					"null";
+				string password =
+					"admin";
+				string description =
+					"null";
+				string adminPic =
+				"D:\\Visual Studio Project\\C# Project\\ComputerServices\\Computer Services\\Resources\\AdminUser.png";
+				string firstName =
+					"null";
+				string lastName =
+					"null";
+				int tel =
+					0;
+				int nationalCode =
+					0;
+				string address =
+					"null";
+				string married =
+					"null";
 				Models.User adminUser =
 					dataBaseContext.Users
-					.Where(admin => string.Compare(user, admin.Username, true) == 0)
+					.Where(admin => string.Compare(username, admin.Username, true) == 0)
 					.FirstOrDefault();
 
 				if (adminUser == null)
@@ -45,12 +56,19 @@ namespace ComputerServices
 						{
 							IsActive = isActive,
 							IsAdministrator = isAdmin,
-
-							Username = user,
-							Password = password,
+							Username = username,
 							Email = email,
-							//UserPicture = System.IO.File.ReadAllBytes(adminPic),
-							RegistrationTime = "00:00:00 " + "0000/00/00",
+							Password = password,
+							Description = description,
+							User_Image = System.IO.File.ReadAllBytes(adminPic),
+							First_Name = firstName,
+							Last_Name = lastName,
+							Telephone = tel.ToString(),
+							National_Code = nationalCode.ToString(),
+							Address = address,
+							Marital_Status = married,
+							Registration_Time = "00:00:00 ",
+							Registration_Date = "0000/00/00",
 						};
 					dataBaseContext.Users.Add(adminUser);
 				}

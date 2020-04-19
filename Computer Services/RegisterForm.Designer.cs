@@ -115,7 +115,7 @@
 			this.Registerlabel.Location = new System.Drawing.Point(655, 3);
 			this.Registerlabel.Name = "Registerlabel";
 			this.Registerlabel.Size = new System.Drawing.Size(113, 24);
-			this.Registerlabel.TabIndex = 2;
+			this.Registerlabel.TabIndex = 0;
 			this.Registerlabel.Text = "ثبت حساب کاربری";
 			// 
 			// minimizeButton
@@ -127,7 +127,7 @@
 			this.minimizeButton.Location = new System.Drawing.Point(33, 8);
 			this.minimizeButton.Name = "minimizeButton";
 			this.minimizeButton.Size = new System.Drawing.Size(15, 15);
-			this.minimizeButton.TabIndex = 1;
+			this.minimizeButton.TabIndex = 2;
 			this.minimizeButton.UseVisualStyleBackColor = true;
 			this.minimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
 			// 
@@ -141,7 +141,7 @@
 			this.closeButton.Location = new System.Drawing.Point(12, 8);
 			this.closeButton.Name = "closeButton";
 			this.closeButton.Size = new System.Drawing.Size(15, 15);
-			this.closeButton.TabIndex = 0;
+			this.closeButton.TabIndex = 1;
 			this.closeButton.UseVisualStyleBackColor = true;
 			this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
 			// 
@@ -365,10 +365,10 @@
 			this.emailTextBox.Font = new System.Drawing.Font("IRANSans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.emailTextBox.ForeColor = System.Drawing.Color.DimGray;
 			this.emailTextBox.Location = new System.Drawing.Point(254, 31);
-			this.emailTextBox.MaxLength = 15;
+			this.emailTextBox.MaxLength = 60;
 			this.emailTextBox.Name = "emailTextBox";
 			this.emailTextBox.Size = new System.Drawing.Size(220, 28);
-			this.emailTextBox.TabIndex = 18;
+			this.emailTextBox.TabIndex = 1;
 			this.emailTextBox.Text = "پست الکترونیکی";
 			this.emailTextBox.Enter += new System.EventHandler(this.EmailTextBox_Enter);
 			this.emailTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmailTextBox_KeyPress);
@@ -397,6 +397,7 @@
 			this.deleteImageButton.Size = new System.Drawing.Size(15, 15);
 			this.deleteImageButton.TabIndex = 6;
 			this.deleteImageButton.UseVisualStyleBackColor = true;
+			this.deleteImageButton.Visible = false;
 			this.deleteImageButton.Click += new System.EventHandler(this.DeleteImageButton_Click);
 			// 
 			// passwordShowPicturBox2

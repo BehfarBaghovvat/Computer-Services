@@ -236,6 +236,21 @@
   <ItemGroup>
     <None Include="Resources\user_1024.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error-5121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\succes-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning-512.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -30,65 +30,81 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PopupNotificationForm));
-			this.objectpicturBox = new Mbb.Windows.Forms.PicturBox();
+			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+			this.notificationStatusPicturBox = new Mbb.Windows.Forms.PicturBox();
+			this.messageLabel = new Mbb.Windows.Forms.Label();
+			this.objectPictureBox = new Mbb.Windows.Forms.PicturBox();
 			this.cancelButton = new Mbb.Windows.Forms.Button();
-			this.alertIconPicturBox = new Mbb.Windows.Forms.PicturBox();
-			this.alertMessageLabel = new Mbb.Windows.Forms.Label();
-			this.captionLabel = new Mbb.Windows.Forms.Label();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
-			((System.ComponentModel.ISupportInitialize)(this.objectpicturBox)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.alertIconPicturBox)).BeginInit();
+			this.captionLabel = new Mbb.Windows.Forms.Label();
+			((System.ComponentModel.ISupportInitialize)(this.notificationStatusPicturBox)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.objectPictureBox)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// objectpicturBox
+			// bunifuElipse1
 			// 
-			this.objectpicturBox.Location = new System.Drawing.Point(305, 20);
-			this.objectpicturBox.Name = "objectpicturBox";
-			this.objectpicturBox.Size = new System.Drawing.Size(50, 50);
-			this.objectpicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.objectpicturBox.TabIndex = 12;
-			this.objectpicturBox.TabStop = false;
+			this.bunifuElipse1.ElipseRadius = 15;
+			this.bunifuElipse1.TargetControl = this;
+			// 
+			// notificationStatusPicturBox
+			// 
+			this.notificationStatusPicturBox.BackColor = System.Drawing.Color.Transparent;
+			this.notificationStatusPicturBox.Image = global::ComputerServices.Properties.Resources.succes_512;
+			this.notificationStatusPicturBox.Location = new System.Drawing.Point(4, 20);
+			this.notificationStatusPicturBox.Name = "notificationStatusPicturBox";
+			this.notificationStatusPicturBox.Size = new System.Drawing.Size(50, 50);
+			this.notificationStatusPicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.notificationStatusPicturBox.TabIndex = 1;
+			this.notificationStatusPicturBox.TabStop = false;
+			// 
+			// messageLabel
+			// 
+			this.messageLabel.Font = new System.Drawing.Font("IRANSans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.messageLabel.ForeColor = System.Drawing.Color.White;
+			this.messageLabel.Location = new System.Drawing.Point(60, 33);
+			this.messageLabel.Name = "messageLabel";
+			this.messageLabel.Size = new System.Drawing.Size(272, 25);
+			this.messageLabel.TabIndex = 2;
+			this.messageLabel.Text = "پیغام";
+			this.messageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// objectPictureBox
+			// 
+			this.objectPictureBox.BackColor = System.Drawing.Color.Transparent;
+			this.objectPictureBox.Location = new System.Drawing.Point(338, 20);
+			this.objectPictureBox.Name = "objectPictureBox";
+			this.objectPictureBox.Size = new System.Drawing.Size(50, 50);
+			this.objectPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.objectPictureBox.TabIndex = 4;
+			this.objectPictureBox.TabStop = false;
 			// 
 			// cancelButton
 			// 
-			this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.cancelButton.BackColor = System.Drawing.Color.Transparent;
 			this.cancelButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cancelButton.BackgroundImage")));
 			this.cancelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.cancelButton.FlatAppearance.BorderSize = 0;
 			this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.cancelButton.Location = new System.Drawing.Point(361, 28);
+			this.cancelButton.Location = new System.Drawing.Point(394, 30);
 			this.cancelButton.Name = "cancelButton";
-			this.cancelButton.Size = new System.Drawing.Size(45, 34);
-			this.cancelButton.TabIndex = 11;
-			this.cancelButton.UseVisualStyleBackColor = true;
+			this.cancelButton.Size = new System.Drawing.Size(50, 30);
+			this.cancelButton.TabIndex = 5;
+			this.cancelButton.UseVisualStyleBackColor = false;
+			this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
 			// 
-			// alertIconPicturBox
+			// timer1
 			// 
-			this.alertIconPicturBox.Location = new System.Drawing.Point(5, 23);
-			this.alertIconPicturBox.Name = "alertIconPicturBox";
-			this.alertIconPicturBox.Size = new System.Drawing.Size(47, 45);
-			this.alertIconPicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.alertIconPicturBox.TabIndex = 9;
-			this.alertIconPicturBox.TabStop = false;
-			// 
-			// alertMessageLabel
-			// 
-			this.alertMessageLabel.Font = new System.Drawing.Font("IRANSans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.alertMessageLabel.Location = new System.Drawing.Point(58, 31);
-			this.alertMessageLabel.Name = "alertMessageLabel";
-			this.alertMessageLabel.Size = new System.Drawing.Size(241, 28);
-			this.alertMessageLabel.TabIndex = 8;
-			this.alertMessageLabel.Text = "پیغام خطا";
-			this.alertMessageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
 			// 
 			// captionLabel
 			// 
 			this.captionLabel.Font = new System.Drawing.Font("IRANSans", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.captionLabel.Location = new System.Drawing.Point(2, 2);
+			this.captionLabel.ForeColor = System.Drawing.Color.White;
+			this.captionLabel.Location = new System.Drawing.Point(12, -2);
 			this.captionLabel.Name = "captionLabel";
-			this.captionLabel.Size = new System.Drawing.Size(98, 15);
-			this.captionLabel.TabIndex = 10;
-			this.captionLabel.Text = "caption";
+			this.captionLabel.Size = new System.Drawing.Size(120, 20);
+			this.captionLabel.TabIndex = 6;
+			this.captionLabel.Text = "عنوان";
 			this.captionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// PopupNotificationForm
@@ -96,29 +112,29 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.RoyalBlue;
-			this.ClientSize = new System.Drawing.Size(410, 90);
-			this.Controls.Add(this.objectpicturBox);
-			this.Controls.Add(this.cancelButton);
-			this.Controls.Add(this.alertIconPicturBox);
-			this.Controls.Add(this.alertMessageLabel);
+			this.ClientSize = new System.Drawing.Size(450, 90);
 			this.Controls.Add(this.captionLabel);
-			this.ForeColor = System.Drawing.Color.White;
+			this.Controls.Add(this.cancelButton);
+			this.Controls.Add(this.objectPictureBox);
+			this.Controls.Add(this.messageLabel);
+			this.Controls.Add(this.notificationStatusPicturBox);
 			this.Name = "PopupNotificationForm";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.Text = "PopupNotificationForm";
-			((System.ComponentModel.ISupportInitialize)(this.objectpicturBox)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.alertIconPicturBox)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.notificationStatusPicturBox)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.objectPictureBox)).EndInit();
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-		private Mbb.Windows.Forms.PicturBox objectpicturBox;
+		private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
 		private Mbb.Windows.Forms.Button cancelButton;
-		private Mbb.Windows.Forms.PicturBox alertIconPicturBox;
-		public Mbb.Windows.Forms.Label alertMessageLabel;
-		public Mbb.Windows.Forms.Label captionLabel;
+		private Mbb.Windows.Forms.PicturBox objectPictureBox;
+		private Mbb.Windows.Forms.Label messageLabel;
+		private Mbb.Windows.Forms.PicturBox notificationStatusPicturBox;
 		private System.Windows.Forms.Timer timer1;
+		private Mbb.Windows.Forms.Label captionLabel;
 	}
 }

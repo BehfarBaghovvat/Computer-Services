@@ -63,6 +63,26 @@ namespace ComputerServices.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap error_512 {
+            get {
+                object obj = ResourceManager.GetObject("error-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap error_5121 {
+            get {
+                object obj = ResourceManager.GetObject("error-5121", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hide_512 {
             get {
                 object obj = ResourceManager.GetObject("hide-512", resourceCulture);
@@ -73,9 +93,29 @@ namespace ComputerServices.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap info_512 {
+            get {
+                object obj = ResourceManager.GetObject("info_512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap show_512 {
             get {
                 object obj = ResourceManager.GetObject("show-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap succes_512 {
+            get {
+                object obj = ResourceManager.GetObject("succes-512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +156,16 @@ namespace ComputerServices.Properties {
         internal static System.Drawing.Bitmap user_512 {
             get {
                 object obj = ResourceManager.GetObject("user_512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap warning_512 {
+            get {
+                object obj = ResourceManager.GetObject("warning-512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

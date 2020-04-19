@@ -620,10 +620,10 @@ namespace Infrastructure
 		/// <param name="message"></param>
 		/// <param name="caption"></param>
 		/// <param name="picture"></param>
-		public static void WindowsNotification(string message, PopupNotificationForm.Caption caption, string picture)
+		public static void WindowsNotification(string message, Infrastructure.PopupNotificationForm.Caption caption, string picture)
 		{
-			PopupNotificationForm popupNotification =
-				new PopupNotificationForm();
+			Infrastructure.PopupNotificationForm popupNotification =
+				new Infrastructure.PopupNotificationForm();
 
 			popupNotification.ShowAlert(message: message, caption: caption, picture: picture);
 		}
@@ -636,10 +636,10 @@ namespace Infrastructure
 		/// </summary>
 		/// <param name="message"></param>
 		/// <param name="caption"></param>
-		public static void WindowsNotification(string message, PopupNotificationForm.Caption caption)
+		public static void WindowsNotification(string message, Infrastructure.PopupNotificationForm.Caption caption)
 		{
-			PopupNotificationForm popupNotification =
-				new PopupNotificationForm();
+			Infrastructure.PopupNotificationForm popupNotification =
+				new Infrastructure.PopupNotificationForm();
 
 			popupNotification.ShowAlert(message: message, caption: caption);
 		}

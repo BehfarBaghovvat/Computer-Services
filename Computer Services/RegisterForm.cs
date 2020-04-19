@@ -1,4 +1,6 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
+using System.Linq;
 using System.Runtime.InteropServices;
 
 namespace ComputerServices
@@ -335,10 +337,10 @@ namespace ComputerServices
 			else
 			{
 				passwordConfirmTextBox.ForeColor =
-				Infrastructure.Utility.DimGrayColor();
+				Infrastructure.Utility.WhiteColor();
 
 				passwordConfirmPanel.BackColor =
-					Infrastructure.Utility.DimGrayColor();
+					Infrastructure.Utility.WhiteColor();
 				PasswordConfirm = passwordConfirmTextBox.Text;
 			}
 		}
@@ -443,7 +445,7 @@ namespace ComputerServices
 			if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
 			{
 				UserImage = openFileDialog.FileName;
-				userImagePicturBox.Image =
+				userImagePicturBox.BackgroundImage =
 				System.Drawing.Image.FromFile(UserImage);
 			}
 			if (UserImage != string.Empty)
@@ -462,7 +464,7 @@ namespace ComputerServices
 		private void DeleteImageButton_Click(object sender, System.EventArgs e)
 		{
 			UserImage = string.Empty;
-			userImagePicturBox.Image =
+			userImagePicturBox.BackgroundImage =
 				Properties.Resources.user_1024;
 			deleteImageButton.Visible = false;
 		}
@@ -625,6 +627,15 @@ namespace ComputerServices
 				telPanel.BackColor =
 					Infrastructure.Utility.WhiteColor();
 
+				if (telTextBox.Text.StartsWith("09"))
+				{
+					telTextBox.Text = telTextBox.Text.Insert(4, "-");
+				}
+				else
+				{
+					telTextBox.Text = telTextBox.Text.Insert(3, "-");
+				}
+
 				Tel = telTextBox.Text;
 			}
 		}
@@ -684,6 +695,7 @@ namespace ComputerServices
 				nationalCodePanel.BackColor =
 					Infrastructure.Utility.WhiteColor();
 
+				nationalCodeTextBox.Text = nationalCodeTextBox.Text.Insert(3, "-").Insert(10, "-");
 				NationalCode = nationalCodeTextBox.Text;
 			}
 		}
@@ -781,15 +793,230 @@ namespace ComputerServices
 				dataBaseContext =
 					new Models.DataBaseContext();
 
+				string inputError = string.Empty;
 
+				#region Validation
+				if (string.IsNullOrEmpty(Username))
+				{
+					inputError =
+						"مشخصه شناسه کاربری را تکمیل کنید!";
+				}
+				if (string.IsNullOrEmpty(Email))
+				{
+					if (string.IsNullOrEmpty(inputError) == false)
+					{
+						inputError +=
+							System.Environment.NewLine;
+					}
+					inputError +=
+						"مشخصه پست الکترونیکی را تکمیل کنید!";
+				}
+				if (string.IsNullOrEmpty(Password))
+				{
+					if (string.IsNullOrEmpty(inputError) == false)
+					{
+						inputError +=
+							System.Environment.NewLine;
+					}
+					inputError +=
+						"مشخصه رمز عبور را تکمیل کنید!";
+				}
+				if (string.IsNullOrEmpty(PasswordConfirm))
+				{
+					if (string.IsNullOrEmpty(inputError) == false)
+					{
+						inputError +=
+							System.Environment.NewLine;
+					}
+					inputError +=
+						"مشخصه تایید رمز عبور را تکمیل کنید!";
+				}
+				if (string.IsNullOrEmpty(UserImage))
+				{
+					if (string.IsNullOrEmpty(inputError) == false)
+					{
+						inputError +=
+							System.Environment.NewLine;
+					}
+					inputError +=
+						"مشخصه تصویر کاربری را تکمیل کنید!";
+				}
+				if (string.IsNullOrEmpty(FirstName))
+				{
+					if (string.IsNullOrEmpty(inputError) == false)
+					{
+						inputError +=
+							System.Environment.NewLine;
+					}
+					inputError +=
+						"مشخصه نام را تکمیل کنید!";
+				}
+				if (string.IsNullOrEmpty(LastName))
+				{
+					if (string.IsNullOrEmpty(inputError) == false)
+					{
+						inputError +=
+							System.Environment.NewLine;
+					}
+					inputError +=
+						"مشخصه نام خانوادگی را تکمیل کنید!";
+				}
+				if (string.IsNullOrEmpty(Tel))
+				{
+					if (string.IsNullOrEmpty(inputError) == false)
+					{
+						inputError +=
+							System.Environment.NewLine;
+					}
+					inputError +=
+						"مشخصه شماره تماس را تکمیل کنید!";
+				}
+				//------------------------------------------------
+				if (string.IsNullOrEmpty(inputError) != true)
+				{
+					if (string.IsNullOrEmpty(Username))
+					{
+						usernameTextBox.Focus();
+					}
+					else if (string.IsNullOrEmpty(Email))
+					{
+						emailTextBox.Focus();
+					}
+					else if (string.IsNullOrEmpty(Password))
+					{
+						passwordTextBox.Focus();
+					}
+					else if (string.IsNullOrEmpty(PasswordConfirm))
+					{
+						passwordConfirmTextBox.Focus();
+					}
+					else if (string.IsNullOrEmpty(UserImage))
+					{
+						System.Windows.Forms.OpenFileDialog openFileDialog =
+							new System.Windows.Forms.OpenFileDialog
+							{
+								Filter = 
+								"JPG (*.jpg)|*.jpg|" + 
+								"PNG (*.png)|*.png|" + 
+								"BMP (*.bmp)|*.bmp",
+								Title = "Load user picture ",
+							};
+
+						if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+						{
+							UserImage = openFileDialog.FileName;
+							userImagePicturBox.BackgroundImage =
+							System.Drawing.Image.FromFile(UserImage);
+						}
+						if (UserImage != string.Empty)
+						{
+							deleteImageButton.Visible = true;
+						}
+						else
+						{
+							deleteImageButton.Visible = false;
+						}
+					}
+					else if (string.IsNullOrEmpty(FirstName))
+					{
+						firstNameTextBox.Focus();
+					}
+					else if (string.IsNullOrEmpty(LastName))
+					{
+						lastNameTextBox.Focus();
+					}
+					else if (string.IsNullOrEmpty(Tel))
+					{
+						telTextBox.Focus();
+					}
+
+					Mbb.Windows.Forms.MessageBox.Message
+						(message: inputError,
+						caption: "خطای ورودی",
+						icon: Mbb.Windows.Forms.MessageBox.MessageIcon.Error,
+						button: Mbb.Windows.Forms.MessageBox.MessageButton.Ok);
+					return;
+				}
+				#endregion/Validation
+
+				System.Windows.Forms.DialogResult dialogResult;
+
+				dialogResult = Mbb.Windows.Forms.MessageBox.Message
+					(message: $"نام کاربری {Username} ذخیره گردد؟.",
+						caption: "ذخیره اطلاعات",
+						icon: Mbb.Windows.Forms.MessageBox.MessageIcon.Question,
+						button: Mbb.Windows.Forms.MessageBox.MessageButton.YesNo);
+
+				if (dialogResult == System.Windows.Forms.DialogResult.Yes)
+				{
+					Models.User username =
+								dataBaseContext.Users
+								.Where(current => String.Compare(current.Username, Username) == 0)
+								.FirstOrDefault();
+
+					if (username != null)
+					{
+						Mbb.Windows.Forms.MessageBox.Message
+						(message: $"نام کاربری {Username} در سیستم موجود میباشد. لطفا از نام دیگری استفاده نمایید.",
+						caption: "اطلاعات مشابه",
+						icon: Mbb.Windows.Forms.MessageBox.MessageIcon.Information,
+						button: Mbb.Windows.Forms.MessageBox.MessageButton.Ok);
+
+						usernameTextBox.Focus();
+						return;
+					}
+					else
+					{
+						RegisterDate = Infrastructure.Utility.PersianCalendar(System.DateTime.Now);
+						RegisterTime = Infrastructure.Utility.ShowTime();
+
+						username =
+							new Models.User
+							{
+								IsActive = true,
+								IsAdministrator = false,
+								Username = Username,
+								Email = Email,
+								Password = Password,
+								Description = Description,
+								User_Image = System.IO.File.ReadAllBytes(UserImage),
+								First_Name = FirstName,
+								Last_Name = LastName,
+								Telephone = Tel,
+								National_Code = NationalCode,
+								Marital_Status = Marride,
+								Address = Address,
+								Registration_Date = RegisterDate,
+								Registration_Time = RegisterTime,
+							};
+						dataBaseContext.Users.Add(username);
+						dataBaseContext.SaveChanges();
+					} 
+				}
+				else
+				{
+					return;
+				}
+
+				string successMessage =
+					$"اطلاعات کاربر {Username} با موفقیت ذخیره گرید!";
+
+				Infrastructure.Utility.WindowsNotification
+					(message: successMessage,
+					caption: Infrastructure.PopupNotificationForm.Caption.موفقیت,
+					picture: UserImage);
+
+				AllClear();
 			}
 			catch (System.Exception ex)
 			{
-				Mbb.Windows.Forms.MessageBox.Message
-					(message: ex.Message,
-					caption: "Exception Error",
-					icon: Mbb.Windows.Forms.MessageBox.MessageIcon.Error,
-					button: Mbb.Windows.Forms.MessageBox.MessageButton.Ok);
+				Infrastructure.Utility.PopupNotification(ex);
+				
+				//Mbb.Windows.Forms.MessageBox.Message
+				//	(message: ex.Message,
+				//	caption: "Exception Error!",
+				//	icon: Mbb.Windows.Forms.MessageBox.MessageIcon.Error,
+				//	button: Mbb.Windows.Forms.MessageBox.MessageButton.Ok);
 			}
 			finally
 			{
@@ -807,21 +1034,21 @@ namespace ComputerServices
 		{
 			System.Windows.Forms.DialogResult dialogResult;
 
-			if (string.IsNullOrEmpty(Username) != true||
+			if (string.IsNullOrEmpty(Username) != true ||
 				string.IsNullOrEmpty(Email) != true ||
 				string.IsNullOrEmpty(Password) != true ||
 				string.IsNullOrEmpty(PasswordConfirm) != true ||
 				string.IsNullOrEmpty(Description) != true ||
-				string.IsNullOrEmpty(UserImage) != true||
-				string.IsNullOrEmpty(FirstName) != true || 
-				string.IsNullOrEmpty(LastName) != true || 
-				string.IsNullOrEmpty(Tel) != true || 
-				string.IsNullOrEmpty(NationalCode) != true || 
+				string.IsNullOrEmpty(UserImage) != true ||
+				string.IsNullOrEmpty(FirstName) != true ||
+				string.IsNullOrEmpty(LastName) != true ||
+				string.IsNullOrEmpty (Tel) != true||
+				string.IsNullOrEmpty(NationalCode) != true ||
 				string.IsNullOrEmpty(Address) != true)
 			{
 				dialogResult = Mbb.Windows.Forms.MessageBox.Message
-					(message: "آیا از ادامه ثبت نام صرفه نظر کردید؟", 
-					caption: "انصراف از ثبت نام", 
+					(message: "آیا از ادامه ثبت نام صرفه نظر کردید؟",
+					caption: "انصراف از ثبت نام",
 					icon: Mbb.Windows.Forms.MessageBox.MessageIcon.Question,
 					button: Mbb.Windows.Forms.MessageBox.MessageButton.YesNo);
 
@@ -837,7 +1064,7 @@ namespace ComputerServices
 				Program.LoginShow();
 				return;
 			}
-			
+
 		}
 		#endregion
 
@@ -856,7 +1083,7 @@ namespace ComputerServices
 			usernameTextBox.Font =
 				Infrastructure.Utility.IranSansFont(usernameTextBox.Font.Size);
 			usernameTextBox.TextAlign =
-				System.Windows.Forms.HorizontalAlignment.Right;
+				System.Windows.Forms.HorizontalAlignment.Left;
 			usernamePanel.BackColor =
 				Infrastructure.Utility.DimGrayColor();
 			confirmUsernameTickPicturBox.Visible = false;
@@ -869,8 +1096,8 @@ namespace ComputerServices
 			emailTextBox.Font =
 				Infrastructure.Utility.IranSansFont(emailTextBox.Font.Size);
 			emailTextBox.TextAlign =
-				System.Windows.Forms.HorizontalAlignment.Right;
-			emailTextBox.BackColor =
+				System.Windows.Forms.HorizontalAlignment.Left;
+			emailPanel.BackColor =
 				Infrastructure.Utility.DimGrayColor();
 			confirmEmailTickPicturBox.Visible = false;
 
@@ -880,7 +1107,7 @@ namespace ComputerServices
 			passwordTextBox.ForeColor =
 				Infrastructure.Utility.DimGrayColor();
 			passwordTextBox.TextAlign =
-				System.Windows.Forms.HorizontalAlignment.Right;
+				System.Windows.Forms.HorizontalAlignment.Left;
 			passwordPanel.BackColor =
 				Infrastructure.Utility.DimGrayColor();
 			passwordTextBox.UseSystemPasswordChar = false;
@@ -891,13 +1118,13 @@ namespace ComputerServices
 			passwordConfirmTextBox.ForeColor =
 				Infrastructure.Utility.DimGrayColor();
 			passwordConfirmTextBox.TextAlign =
-				System.Windows.Forms.HorizontalAlignment.Right;
+				System.Windows.Forms.HorizontalAlignment.Left;
 			passwordConfirmPanel.BackColor =
 				Infrastructure.Utility.DimGrayColor();
 			passwordConfirmTextBox.UseSystemPasswordChar = false;
 
 			UserImage = string.Empty;
-			userImagePicturBox.Image =
+			userImagePicturBox.BackgroundImage =
 				Properties.Resources.user_1024;
 			deleteImageButton.Visible = false;
 
@@ -921,7 +1148,7 @@ namespace ComputerServices
 			lastNamePanel.BackColor =
 				Infrastructure.Utility.DimGrayColor();
 
-			Tel = string.Empty;
+			Tel = String.Empty;
 			telTextBox.Text =
 				"نام خانوادگی";
 			telTextBox.ForeColor =
@@ -954,5 +1181,10 @@ namespace ComputerServices
 		#endregion /AllClear
 		//*****
 		#endregion /Methods
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			Infrastructure.Utility.WindowsNotification(message: NationalCode, caption: Infrastructure.PopupNotificationForm.Caption.اطلاع);
+		}
 	}
 }
