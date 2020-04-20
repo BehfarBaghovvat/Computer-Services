@@ -34,11 +34,11 @@
 		{
 			get
 			{
-				return yesButton.BackColor;
+				return okButton.BackColor;
 			}
 			set
 			{
-				yesButton.BackColor = value;
+				okButton.BackColor = value;
 			}
 		}
 		public string OKName
