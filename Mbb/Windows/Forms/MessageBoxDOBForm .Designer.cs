@@ -28,16 +28,15 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MessageBoxDOBForm));
 			this.panel1 = new Mbb.Windows.Forms.Panel();
-			this.closeButton = new Mbb.Windows.Forms.Button();
 			this.captionLabel = new Mbb.Windows.Forms.Label();
 			this.messageLabel = new Mbb.Windows.Forms.Label();
 			this.noCancelButton = new Mbb.Windows.Forms.Button();
 			this.yesOkButton = new Mbb.Windows.Forms.Button();
-			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse();
 			this.iconPicturBox = new Mbb.Windows.Forms.PicturBox();
+			this.closeButton = new Mbb.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.iconPicturBox)).BeginInit();
 			this.SuspendLayout();
@@ -51,20 +50,6 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(450, 30);
 			this.panel1.TabIndex = 0;
-			// 
-			// closeButton
-			// 
-			this.closeButton.BackColor = System.Drawing.Color.Transparent;
-			this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
-			this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.closeButton.FlatAppearance.BorderSize = 0;
-			this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-			this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.closeButton.Location = new System.Drawing.Point(0, 8);
-			this.closeButton.Name = "closeButton";
-			this.closeButton.Size = new System.Drawing.Size(30, 15);
-			this.closeButton.TabIndex = 0;
-			this.closeButton.UseVisualStyleBackColor = false;
 			// 
 			// captionLabel
 			// 
@@ -129,6 +114,20 @@
 			this.iconPicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.iconPicturBox.TabIndex = 5;
 			this.iconPicturBox.TabStop = false;
+			// 
+			// closeButton
+			// 
+			this.closeButton.BackColor = System.Drawing.Color.Transparent;
+			this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
+			this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.closeButton.FlatAppearance.BorderSize = 0;
+			this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+			this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.closeButton.Location = new System.Drawing.Point(0, 8);
+			this.closeButton.Name = "closeButton";
+			this.closeButton.Size = new System.Drawing.Size(30, 15);
+			this.closeButton.TabIndex = 0;
+			this.closeButton.UseVisualStyleBackColor = false;
 			// 
 			// MessageBoxDOBForm
 			// 

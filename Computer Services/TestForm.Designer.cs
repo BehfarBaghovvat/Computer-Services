@@ -99,12 +99,13 @@
 			// 
 			// button1
 			// 
+			this.button1.BackColor = System.Drawing.Color.Orange;
 			this.button1.Location = new System.Drawing.Point(334, 347);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(181, 46);
 			this.button1.TabIndex = 6;
 			this.button1.Text = "نمایش پیام";
-			this.button1.UseVisualStyleBackColor = true;
+			this.button1.UseVisualStyleBackColor = false;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// messageLabel
@@ -122,6 +123,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.Controls.Add(this.messageLabel);
 			this.Controls.Add(this.button1);

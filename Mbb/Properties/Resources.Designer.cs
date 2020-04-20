@@ -63,6 +63,16 @@ namespace Mbb.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alert_512px {
+            get {
+                object obj = ResourceManager.GetObject("alert_512px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cancel_512 {
             get {
                 object obj = ResourceManager.GetObject("cancel_512", resourceCulture);
@@ -76,16 +86,6 @@ namespace Mbb.Properties {
         internal static System.Drawing.Bitmap error_512 {
             get {
                 object obj = ResourceManager.GetObject("error-512", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap happy_cloud_512 {
-            get {
-                object obj = ResourceManager.GetObject("happy_cloud_512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +116,16 @@ namespace Mbb.Properties {
         internal static System.Drawing.Bitmap info_512 {
             get {
                 object obj = ResourceManager.GetObject("info_512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap none_512 {
+            get {
+                object obj = ResourceManager.GetObject("none_512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

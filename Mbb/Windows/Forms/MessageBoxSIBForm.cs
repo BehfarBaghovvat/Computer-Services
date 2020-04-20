@@ -7,6 +7,7 @@
 			InitializeComponent();
 		}
 
+		#region Properties
 		public string Message
 		{
 			get
@@ -40,6 +41,17 @@
 				yesButton.BackColor = value;
 			}
 		}
+		public string OKName
+		{
+			get
+			{
+				return okButton.Name;
+			}
+			set
+			{
+				okButton.Name = value;
+			}
+		}
 		public System.Drawing.Image Icon
 		{
 			get
@@ -51,10 +63,15 @@
 				iconPicturBox.Image = value;
 			}
 		}
+		#endregion /Properties
 
+		//-----Begining of the codes.
+
+		#region MessageLabel_SizeChanged
 		private void MessageLabel_SizeChanged(object sender, System.EventArgs e)
 		{
 			this.Size = new System.Drawing.Size(width: this.Width, height: this.Height + messageLabel.Height);
 		}
+		#endregion /MessageLabel_SizeChanged
 	}
 }

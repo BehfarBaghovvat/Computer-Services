@@ -9,8 +9,9 @@ namespace Mbb.Windows.Forms
 			InitializeComponent();
 		}
 
-		public string Message 
-		{ 
+		#region Properties
+		public string Message
+		{
 			get
 			{
 				return messageLabel.Text;
@@ -20,7 +21,7 @@ namespace Mbb.Windows.Forms
 				messageLabel.Text = value;
 			}
 		}
-		public string Caption 
+		public string Caption
 		{
 			get
 			{
@@ -42,8 +43,8 @@ namespace Mbb.Windows.Forms
 				yesOkButton.BackColor = value;
 			}
 		}
-		public string YesOkName 
-		{ 
+		public string YesOkName
+		{
 			get
 			{
 				return yesOkButton.Text;
@@ -64,8 +65,8 @@ namespace Mbb.Windows.Forms
 				noCancelButton.BackColor = value;
 			}
 		}
-		public string NoCancelName 
-		{ 
+		public string NoCancelName
+		{
 			get
 			{
 				return noCancelButton.Text;
@@ -87,10 +88,14 @@ namespace Mbb.Windows.Forms
 				iconPicturBox.Image = value;
 			}
 		}
+		#endregion /Properties
 
+		//-----Begining of the codes.
+		#region MessageLabel_SizeChanged
 		private void MessageLabel_SizeChanged(object sender, System.EventArgs e)
 		{
 			this.Size = new System.Drawing.Size(width: this.Width, height: this.Height + messageLabel.Height);
 		}
+		#endregion /MessageLabel_SizeChanged
 	}
 }
