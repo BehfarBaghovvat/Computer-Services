@@ -67,13 +67,14 @@
 			// 
 			// captionLabel
 			// 
-			this.captionLabel.AutoSize = true;
+			this.captionLabel.Dock = System.Windows.Forms.DockStyle.Right;
 			this.captionLabel.ForeColor = System.Drawing.Color.White;
-			this.captionLabel.Location = new System.Drawing.Point(397, 6);
+			this.captionLabel.Location = new System.Drawing.Point(325, 0);
 			this.captionLabel.Name = "captionLabel";
-			this.captionLabel.Size = new System.Drawing.Size(33, 19);
+			this.captionLabel.Size = new System.Drawing.Size(125, 30);
 			this.captionLabel.TabIndex = 1;
 			this.captionLabel.Text = "عنوان";
+			this.captionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// okButton
 			// 
@@ -95,9 +96,9 @@
 			this.messageLabel.AutoEllipsis = true;
 			this.messageLabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.messageLabel.ForeColor = System.Drawing.Color.White;
-			this.messageLabel.Location = new System.Drawing.Point(62, 36);
+			this.messageLabel.Location = new System.Drawing.Point(40, 36);
 			this.messageLabel.Name = "messageLabel";
-			this.messageLabel.Size = new System.Drawing.Size(320, 35);
+			this.messageLabel.Size = new System.Drawing.Size(329, 50);
 			this.messageLabel.TabIndex = 7;
 			this.messageLabel.Text = "پیغام";
 			this.messageLabel.SizeChanged += new System.EventHandler(this.MessageLabel_SizeChanged);
@@ -132,7 +133,6 @@
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.Text = "MessageBoxSIBForm";
 			this.panel1.ResumeLayout(false);
-			this.panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.iconPicturBox)).EndInit();
 			this.ResumeLayout(false);
 
@@ -144,8 +144,8 @@
 		private Button closeButton;
 		private Label captionLabel;
 		private PicturBox iconPicturBox;
-		private Button okButton;
 		private Label messageLabel;
 		private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+		public Button okButton;
 	}
 }

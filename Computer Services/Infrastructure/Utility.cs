@@ -118,6 +118,19 @@ namespace Infrastructure
 		}
 		#endregion /ADCalendar
 
+		#region BlackColor
+		/// <summary>
+		/// This function returns a color.
+		/// </summary>
+		/// <returns>BlackColor Color</returns>
+		public static System.Drawing.Color BlackColor()
+		{
+			System.Drawing.Color color = System.Drawing.Color.Black;
+
+			return color;
+		}
+		#endregion /BlackColor
+
 		#region CenturyGothicFont
 		/// <summary>
 		/// This function returns one font.
@@ -179,11 +192,11 @@ namespace Infrastructure
 			}
 			else
 			{
-				Mbb.Windows.Forms.MessageBox.Message
-					(message: "عدم همخوانی قالب ایمیل!",
+				Mbb.Windows.Forms.MessageBox.Show
+					(text: "عدم همخوانی قالب ایمیل!",
 					caption: "خطای ورودی",
-					icon: Mbb.Windows.Forms.MessageBox.MessageIcon.Error,
-					button: Mbb.Windows.Forms.MessageBox.MessageButton.Ok);
+					icon: Mbb.Windows.Forms.MessageBoxIcon.Error,
+					button: Mbb.Windows.Forms.MessageBoxButtons.Ok);
 
 				TrueStatus = false;
 			}
@@ -191,6 +204,17 @@ namespace Infrastructure
 			return TrueStatus;
 		}
 		#endregion /EmailChecker
+
+		#region ExceptionShow
+		public static void ExceptionShow(System.Exception ex)
+		{
+			Mbb.Windows.Forms.MessageBox.Show
+				(text: ex.Message,
+				caption: "Exception Erorr",
+				icon: Mbb.Windows.Forms.MessageBoxIcon.Error,
+				button: Mbb.Windows.Forms.MessageBoxButtons.Ok);
+		}
+		#endregion /ExceptionShow
 
 		#region Exit
 		/// <summary>
@@ -260,6 +284,19 @@ namespace Infrastructure
 			}
 		}
 		#endregion /EnglishTyping
+
+		#region GrayColor
+		/// <summary>
+		/// This function returns a color.
+		/// </summary>
+		/// <returns>Gray Color</returns>
+		public static System.Drawing.Color GrayColor()
+		{
+			System.Drawing.Color color = System.Drawing.Color.Gray;
+
+			return color;
+		}
+		#endregion /GrayColor
 
 		#region InsertDcimalNumbers
 		/// <summary>
@@ -580,11 +617,11 @@ namespace Infrastructure
 
 			if (num < 2)
 			{
-				Mbb.Windows.Forms.MessageBox.Message
-					(message: "نام کاربری باید دارای حداقل 2 عدد باشد!",
+				Mbb.Windows.Forms.MessageBox.Show
+					(text: "نام کاربری باید دارای حداقل 2 عدد باشد!",
 					caption: "خطای ورودی",
-					icon: Mbb.Windows.Forms.MessageBox.MessageIcon.Error,
-					button: Mbb.Windows.Forms.MessageBox.MessageButton.Ok);
+					icon: Mbb.Windows.Forms.MessageBoxIcon.Error,
+					button: Mbb.Windows.Forms.MessageBoxButtons.Ok);
 
 				statusCheck = false;
 			}

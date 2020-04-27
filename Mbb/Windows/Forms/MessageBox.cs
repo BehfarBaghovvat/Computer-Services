@@ -3,38 +3,17 @@ using System.Windows.Forms;
 
 namespace Mbb.Windows.Forms
 {
-	public static class MessageBox
+	public class MessageBox
 	{
-		#region icon
-		public enum icon
-		{
-			Success,
-			Warning,
-			Alert,
-			Question,
-			Error,
-			Information,
-			None,
-		}
-		#endregion /icon
-
-		#region button
-		public enum button
-		{
-			YesNo,
-			YesNoCancel,
-			Ok,
-			OkCancel,
-			AbortRetryIgnor,
-		}
-		#endregion /button
+		//System.Windows.Forms.MessageBox.Show("Test");
 
 		//-----Begining of the codes.
 		#region Show
-		public static void Show(string text, string caption,icon icon, button button)
+		public static System.Windows.Forms.DialogResult Show(string text, string caption, MessageBoxIcon icon, MessageBoxButtons button )
 		{
+			System.Windows.Forms.DialogResult dialogResult = System.Windows.Forms.DialogResult.None;
 			//----Single Button
-			if (icon == icon.Success && button == button.Ok)
+			if (icon == MessageBoxIcon.Success && button == MessageBoxButtons.Ok)
 			{
 				using (MessageBoxSIBForm messageBox = new MessageBoxSIBForm())
 				{
@@ -44,11 +23,11 @@ namespace Mbb.Windows.Forms
 					messageBox.BackColor = System.Drawing.Color.SeaGreen;
 					messageBox.OKBackColor = System.Drawing.Color.Green;
 					messageBox.OKName = "باشه";
-					messageBox.ShowDialog();
+					dialogResult =  messageBox.ShowDialog();
 				}
-				return;
 			}
-			if (icon == icon.Information && button == button.Ok)
+
+			else if (icon == MessageBoxIcon.Information && button == MessageBoxButtons.Ok)
 			{
 				using (MessageBoxSIBForm messageBox = new MessageBoxSIBForm())
 				{
@@ -58,11 +37,10 @@ namespace Mbb.Windows.Forms
 					messageBox.BackColor = System.Drawing.Color.RoyalBlue;
 					messageBox.OKBackColor = System.Drawing.Color.FromArgb(0, 85, 225);
 					messageBox.OKName = "باشه";
-					messageBox.ShowDialog();
+					dialogResult = messageBox.ShowDialog();
 				}
-				return;
 			}
-			if (icon == icon.None && button == button.Ok)
+			if (icon == MessageBoxIcon.None && button == MessageBoxButtons.Ok)
 			{
 				using (MessageBoxSIBForm messageBox = new MessageBoxSIBForm())
 				{
@@ -72,11 +50,10 @@ namespace Mbb.Windows.Forms
 					messageBox.BackColor = System.Drawing.Color.DarkGray;
 					messageBox.OKBackColor = System.Drawing.Color.Gray;
 					messageBox.OKName = "باشه";
-					messageBox.ShowDialog();
+					dialogResult = messageBox.ShowDialog();
 				}
-				return;
 			}
-			if (icon == icon.Error && button == button.Ok)
+			if (icon == MessageBoxIcon.Error && button == MessageBoxButtons.Ok)
 			{
 				using (MessageBoxSIBForm messageBox = new MessageBoxSIBForm())
 				{
@@ -86,11 +63,10 @@ namespace Mbb.Windows.Forms
 					messageBox.BackColor = System.Drawing.Color.FromArgb(255, 128, 0);
 					messageBox.OKBackColor = System.Drawing.Color.Orange;
 					messageBox.OKName = "باشه";
-					messageBox.ShowDialog();
+					dialogResult = messageBox.ShowDialog();
 				}
-				return;
 			}
-			if (icon == icon.Warning && button == button.Ok)
+			if (icon == MessageBoxIcon.Warning && button == MessageBoxButtons.Ok)
 			{
 				using (MessageBoxSIBForm messageBox = new MessageBoxSIBForm())
 				{
@@ -100,13 +76,12 @@ namespace Mbb.Windows.Forms
 					messageBox.BackColor = System.Drawing.Color.DarkRed;
 					messageBox.OKBackColor = System.Drawing.Color.Red;
 					messageBox.OKName = "باشه";
-					messageBox.ShowDialog();
+					dialogResult = messageBox.ShowDialog();
 				}
-				return;
 			}
 
 			//-----Double Buttons
-			if (icon == icon.Question && button == button.YesNo)
+			if (icon == MessageBoxIcon.Question && button == MessageBoxButtons.YesNo)
 			{
 				using (MessageBoxDOBForm messageBox = new MessageBoxDOBForm())
 				{
@@ -118,11 +93,10 @@ namespace Mbb.Windows.Forms
 					messageBox.YesOkName = "بله";
 					messageBox.NoCancelBackColor = System.Drawing.Color.Blue;
 					messageBox.NoCancelName = "خیر";
-					messageBox.ShowDialog();
+					dialogResult = messageBox.ShowDialog();
 				}
-				return;
 			}
-			if (icon == icon.Alert && button == button.YesNo)
+			if (icon == MessageBoxIcon.Alert && button == MessageBoxButtons.YesNo)
 			{
 				using (MessageBoxDOBForm messageBox = new MessageBoxDOBForm())
 				{
@@ -134,11 +108,10 @@ namespace Mbb.Windows.Forms
 					messageBox.YesOkName = "بله";
 					messageBox.NoCancelBackColor = System.Drawing.Color.Orange;
 					messageBox.NoCancelName = "خیر";
-					messageBox.ShowDialog();
+					dialogResult = messageBox.ShowDialog();
 				}
-				return;
 			}
-			if (icon == icon.Warning && button == button.YesNo)
+			if (icon == MessageBoxIcon.Warning && button == MessageBoxButtons.YesNo)
 			{
 				using (MessageBoxDOBForm messageBox = new MessageBoxDOBForm())
 				{
@@ -150,12 +123,15 @@ namespace Mbb.Windows.Forms
 					messageBox.YesOkName = "بله";
 					messageBox.NoCancelBackColor = System.Drawing.Color.Red;
 					messageBox.NoCancelName = "خیر";
-					messageBox.ShowDialog();
+					dialogResult = messageBox.ShowDialog();
+
 				}
-				return;
+
 			}
 
 			//-----Sobel Buttons
+			return dialogResult;
+
 		}
 		#endregion /Show
 

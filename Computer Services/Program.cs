@@ -90,7 +90,7 @@ namespace ComputerServices
 			catch (System.Exception ex)
 			{
 
-				Mbb.Windows.Forms.MessageBox.ErrorMessage(ex.Message);
+				Infrastructure.Utility.PopupNotification(ex);
 			}
 			finally
 			{
@@ -212,7 +212,7 @@ namespace ComputerServices
 
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new RegisterForm());
+			Application.Run(new ForgetPasswordForm());
 		}
 	}
 }

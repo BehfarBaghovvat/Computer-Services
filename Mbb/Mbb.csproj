@@ -66,12 +66,14 @@
     <Compile Include="Windows\Forms\ComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Windows\Forms\MessageBoxButtons.cs" />
     <Compile Include="Windows\Forms\MessageBoxDOBForm .cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Windows\Forms\MessageBoxDOBForm .Designer.cs">
       <DependentUpon>MessageBoxDOBForm .cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Forms\MessageBoxIcon.cs" />
     <Compile Include="Windows\Forms\MessageBoxSIBForm.cs">
       <SubType>Form</SubType>
     </Compile>

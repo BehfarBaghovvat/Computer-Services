@@ -930,22 +930,36 @@ namespace ComputerServices
 						telTextBox.Focus();
 					}
 
-					Mbb.Windows.Forms.MessageBox.Message
-						(message: inputError,
+					Mbb.Windows.Forms.MessageBox.Show
+						(text: inputError,
 						caption: "خطای ورودی",
-						icon: Mbb.Windows.Forms.MessageBox.MessageIcon.Error,
-						button: Mbb.Windows.Forms.MessageBox.MessageButton.Ok);
+						icon: Mbb.Windows.Forms.MessageBoxIcon.Error,
+						button: Mbb.Windows.Forms.MessageBoxButtons.Ok);
+					return;
+				}
+
+				if (Infrastructure.Utility.PasswordSet(password: Password, passwordConfirm: PasswordConfirm) == false)
+				{
+					Mbb.Windows.Forms.MessageBox.Show
+						(text: "عدم تطابق پسوردها",
+						caption: "خطای ورودی",
+						icon: Mbb.Windows.Forms.MessageBoxIcon.Error,
+						button: Mbb.Windows.Forms.MessageBoxButtons.Ok);
+					passwordTextBox.Focus();
 					return;
 				}
 				#endregion/Validation
 
-				System.Windows.Forms.DialogResult dialogResult;
 
-				dialogResult = Mbb.Windows.Forms.MessageBox.Message
-					(message: $"نام کاربری {Username} ذخیره گردد؟.",
+
+				System.Windows.Forms.DialogResult dialogResult;
+				string message = $"نام کاربری {Username} ذخیره گردد؟.";
+
+				dialogResult = Mbb.Windows.Forms.MessageBox.Show
+					(text: message,
 						caption: "ذخیره اطلاعات",
-						icon: Mbb.Windows.Forms.MessageBox.MessageIcon.Question,
-						button: Mbb.Windows.Forms.MessageBox.MessageButton.YesNo);
+						icon: Mbb.Windows.Forms.MessageBoxIcon.Question,
+						button: Mbb.Windows.Forms.MessageBoxButtons.YesNo);
 
 				if (dialogResult == System.Windows.Forms.DialogResult.Yes)
 				{
@@ -956,11 +970,11 @@ namespace ComputerServices
 
 					if (username != null)
 					{
-						Mbb.Windows.Forms.MessageBox.Message
-						(message: $"نام کاربری {Username} در سیستم موجود میباشد. لطفا از نام دیگری استفاده نمایید.",
+						Mbb.Windows.Forms.MessageBox.Show
+						(text: $"نام کاربری {Username} در سیستم موجود میباشد. لطفا از نام دیگری استفاده نمایید.",
 						caption: "اطلاعات مشابه",
-						icon: Mbb.Windows.Forms.MessageBox.MessageIcon.Information,
-						button: Mbb.Windows.Forms.MessageBox.MessageButton.Ok);
+						icon: Mbb.Windows.Forms.MessageBoxIcon.Information,
+						button: Mbb.Windows.Forms.MessageBoxButtons.Ok);
 
 						usernameTextBox.Focus();
 						return;
@@ -1010,13 +1024,13 @@ namespace ComputerServices
 			}
 			catch (System.Exception ex)
 			{
-				Infrastructure.Utility.PopupNotification(ex);
-				
-				//Mbb.Windows.Forms.MessageBox.Message
-				//	(message: ex.Message,
+				Infrastructure.Utility.ExceptionShow(ex);
+
+				//Mbb.Windows.Forms.MessageBox.Show
+				//	(text: ex.Message,
 				//	caption: "Exception Error!",
-				//	icon: Mbb.Windows.Forms.MessageBox.MessageIcon.Error,
-				//	button: Mbb.Windows.Forms.MessageBox.MessageButton.Ok);
+				//	icon: Mbb.Windows.Forms.MessageBoxIcon.Error,
+				//	button: Mbb.Windows.Forms.MessageBoxButtons.Ok);
 			}
 			finally
 			{
@@ -1046,11 +1060,11 @@ namespace ComputerServices
 				string.IsNullOrEmpty(NationalCode) != true ||
 				string.IsNullOrEmpty(Address) != true)
 			{
-				dialogResult = Mbb.Windows.Forms.MessageBox.Message
-					(message: "آیا از ادامه ثبت نام صرفه نظر کردید؟",
+				dialogResult = Mbb.Windows.Forms.MessageBox.Show
+					(text: "آیا از ادامه ثبت نام صرفه نظر کردید؟",
 					caption: "انصراف از ثبت نام",
-					icon: Mbb.Windows.Forms.MessageBox.MessageIcon.Question,
-					button: Mbb.Windows.Forms.MessageBox.MessageButton.YesNo);
+					icon: Mbb.Windows.Forms.MessageBoxIcon.Question,
+					button: Mbb.Windows.Forms.MessageBoxButtons.YesNo);
 
 				if (dialogResult == System.Windows.Forms.DialogResult.Yes)
 				{
@@ -1070,7 +1084,7 @@ namespace ComputerServices
 
 		//-----End of coding line
 
-		#region Methods
+		#region Founctions
 		//*****
 		#region AllClear
 		private void AllClear()
@@ -1180,11 +1194,6 @@ namespace ComputerServices
 		}
 		#endregion /AllClear
 		//*****
-		#endregion /Methods
-
-		private void button1_Click(object sender, EventArgs e)
-		{
-			Infrastructure.Utility.WindowsNotification(message: NationalCode, caption: Infrastructure.PopupNotificationForm.Caption.اطلاع);
-		}
+		#endregion /Founctions
 	}
 }
