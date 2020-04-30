@@ -71,6 +71,7 @@
 			this.saveButton = new Mbb.Windows.Forms.Button();
 			this.resetButton = new Mbb.Windows.Forms.Button();
 			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.titlePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.RegisterLogoPicturBox)).BeginInit();
 			this.personalInformationGroupBox.SuspendLayout();
@@ -316,6 +317,7 @@
 			this.telTextBox.Size = new System.Drawing.Size(250, 28);
 			this.telTextBox.TabIndex = 2;
 			this.telTextBox.Text = "شماره تماس";
+			this.toolTip1.SetToolTip(this.telTextBox, "شماره مبایل معتبر وارد نمایید!");
 			this.telTextBox.Enter += new System.EventHandler(this.TelTextBox_Enter);
 			this.telTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TelTextBox_KeyPress);
 			this.telTextBox.Leave += new System.EventHandler(this.TelTextBox_Leave);
@@ -370,6 +372,7 @@
 			this.emailTextBox.Size = new System.Drawing.Size(220, 28);
 			this.emailTextBox.TabIndex = 1;
 			this.emailTextBox.Text = "پست الکترونیکی";
+			this.toolTip1.SetToolTip(this.emailTextBox, "پست الکترونیک معتبر وارد نمایید!");
 			this.emailTextBox.Enter += new System.EventHandler(this.EmailTextBox_Enter);
 			this.emailTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmailTextBox_KeyPress);
 			this.emailTextBox.Leave += new System.EventHandler(this.EmailTextBox_Leave);
@@ -629,6 +632,16 @@
 			this.bunifuElipse1.ElipseRadius = 25;
 			this.bunifuElipse1.TargetControl = this;
 			// 
+			// toolTip1
+			// 
+			this.toolTip1.AutomaticDelay = 50;
+			this.toolTip1.AutoPopDelay = 5000;
+			this.toolTip1.InitialDelay = 50;
+			this.toolTip1.ReshowDelay = 10;
+			this.toolTip1.ShowAlways = true;
+			this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+			this.toolTip1.ToolTipTitle = "اطلاعات";
+			// 
 			// RegisterForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
@@ -706,5 +719,6 @@
 		private Mbb.Windows.Forms.CircularPictureBox userImagePicturBox;
 		private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
 		private Mbb.Windows.Forms.TextBox emailTextBox;
+		private System.Windows.Forms.ToolTip toolTip1;
 	}
 }

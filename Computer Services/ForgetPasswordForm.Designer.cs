@@ -124,6 +124,7 @@
 			this.minimizeButton.Size = new System.Drawing.Size(13, 15);
 			this.minimizeButton.TabIndex = 3;
 			this.minimizeButton.UseVisualStyleBackColor = true;
+			this.minimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
 			// 
 			// closeButton
 			// 
@@ -137,6 +138,7 @@
 			this.closeButton.Size = new System.Drawing.Size(13, 15);
 			this.closeButton.TabIndex = 2;
 			this.closeButton.UseVisualStyleBackColor = true;
+			this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
 			// 
 			// checkIntenetTimer
 			// 
@@ -475,12 +477,12 @@
 			// 
 			this.notificationLabel.AutoSize = true;
 			this.notificationLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.notificationLabel.Location = new System.Drawing.Point(235, 7);
+			this.notificationLabel.Location = new System.Drawing.Point(155, 7);
 			this.notificationLabel.Name = "notificationLabel";
 			this.notificationLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.notificationLabel.Size = new System.Drawing.Size(192, 19);
+			this.notificationLabel.Size = new System.Drawing.Size(267, 19);
 			this.notificationLabel.TabIndex = 26;
-			this.notificationLabel.Text = "این قسمت در حال حاضر غیر فعال میباشد.";
+			this.notificationLabel.Text = "جهت فعال سازی باید هزینه سرویس مورد نظر پرداخت گردد.";
 			// 
 			// groupBox11
 			// 

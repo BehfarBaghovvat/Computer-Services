@@ -563,7 +563,7 @@ namespace ComputerServices
 					Infrastructure.Utility.DimGrayColor();
 				lastNamePanel.BackColor =
 					Infrastructure.Utility.DimGrayColor();
-				lastNameTextBox.Text = "نام خانوداگی";
+				lastNameTextBox.Text = "نام خانوادگی";
 				LastName = string.Empty;
 			}
 			else
@@ -895,9 +895,9 @@ namespace ComputerServices
 						System.Windows.Forms.OpenFileDialog openFileDialog =
 							new System.Windows.Forms.OpenFileDialog
 							{
-								Filter = 
-								"JPG (*.jpg)|*.jpg|" + 
-								"PNG (*.png)|*.png|" + 
+								Filter =
+								"JPG (*.jpg)|*.jpg|" +
+								"PNG (*.png)|*.png|" +
 								"BMP (*.bmp)|*.bmp",
 								Title = "Load user picture ",
 							};
@@ -950,8 +950,6 @@ namespace ComputerServices
 				}
 				#endregion/Validation
 
-
-
 				System.Windows.Forms.DialogResult dialogResult;
 				string message = $"نام کاربری {Username} ذخیره گردد؟.";
 
@@ -981,6 +979,7 @@ namespace ComputerServices
 					}
 					else
 					{
+						//dataBaseContext.Configuration.ValidateOnSaveEnabled = false;
 						RegisterDate = Infrastructure.Utility.PersianCalendar(System.DateTime.Now);
 						RegisterTime = Infrastructure.Utility.ShowTime();
 
@@ -993,19 +992,22 @@ namespace ComputerServices
 								Email = Email,
 								Password = Password,
 								Description = Description,
-								User_Image = System.IO.File.ReadAllBytes(UserImage),
+								
 								First_Name = FirstName,
 								Last_Name = LastName,
-								Telephone = Tel,
+								Telephone = Tel.Replace("-",""),
 								National_Code = NationalCode,
 								Marital_Status = Marride,
 								Address = Address,
 								Registration_Date = RegisterDate,
 								Registration_Time = RegisterTime,
+
+								User_Image = System.IO.File.ReadAllBytes(UserImage),
 							};
+						
 						dataBaseContext.Users.Add(username);
 						dataBaseContext.SaveChanges();
-					} 
+					}
 				}
 				else
 				{
@@ -1025,12 +1027,6 @@ namespace ComputerServices
 			catch (System.Exception ex)
 			{
 				Infrastructure.Utility.ExceptionShow(ex);
-
-				//Mbb.Windows.Forms.MessageBox.Show
-				//	(text: ex.Message,
-				//	caption: "Exception Error!",
-				//	icon: Mbb.Windows.Forms.MessageBoxIcon.Error,
-				//	button: Mbb.Windows.Forms.MessageBoxButtons.Ok);
 			}
 			finally
 			{

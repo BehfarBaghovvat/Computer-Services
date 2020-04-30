@@ -148,13 +148,13 @@ namespace ComputerServices
 		{
 			AuthenticatedUser = null;
 			//LoginForm.Initialize();
-			LoginForm.ShowDialog();
+			LoginForm.Show();
 		}
 		#endregion /LoginShow
 
 		public static void LogIn(object sender,System.Windows.Forms.FormClosedEventArgs e)
 		{
-			LoginForm.ShowDialog();
+			LoginForm.Show();
 		}
 		#endregion /LoginForm
 		//-----
@@ -209,10 +209,10 @@ namespace ComputerServices
 		[STAThread]
 		static void Main()
 		{
-
+			//Administrator();
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new ForgetPasswordForm());
+			Application.Run(new RegisterForm());
 		}
 	}
 }

@@ -192,7 +192,7 @@ namespace ComputerServices
 
 				if (ApprovalUsername(text: UsernameEmail) == false && ApprovalEmail(text: UsernameEmail) == false)
 				{
-
+					i++;
 					errorMessage =
 								"شناسه کاربری و/یا رمز عبور صحیح نمی باشد!";
 					Mbb.Windows.Forms.MessageBox.Show
@@ -200,8 +200,12 @@ namespace ComputerServices
 						caption: "خطای ورودی",
 						icon: Mbb.Windows.Forms.MessageBoxIcon.Error,
 						button: Mbb.Windows.Forms.MessageBoxButtons.Ok);
-					usernameEmailTextBox.Focus();
-					UsernameEmail = string.Empty;
+					//usernameEmailTextBox.Focus();
+					//UsernameEmail = string.Empty;
+					if (i >= 2)
+					{
+						forgetPasswordLinkLabel.Visible = true;
+					}
 					return;
 				}
 				else if (ApprovalUsername(text: UsernameEmail) == true && ApprovalEmail(text: UsernameEmail) == false)
@@ -318,7 +322,10 @@ namespace ComputerServices
 		#region ForgetPasswordLinkLabel_LinkClicked
 		private void ForgetPasswordLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			ForgetPasswordForm.ShowDialog();
+			this.Hide();
+			ForgetPasswordForm.Show();
+
+			ForgetPasswordForm.FormClosed += LogOut;
 		}
 		#endregion /ForgetPasswordLinkLabel_LinkClicked
 
@@ -331,35 +338,6 @@ namespace ComputerServices
 		#endregion /NewAccountLinkLabel_LinkClicked
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		//-----End of coding line
 
 		#region Founctions
@@ -367,10 +345,6 @@ namespace ComputerServices
 		#region ApprovalUsername
 		private bool ApprovalUsername(string text)
 		{
-			bool status = false;
-
-
-
 			Models.DataBaseContext dataBaseContext = null;
 			dataBaseContext =
 				new Models.DataBaseContext();
@@ -382,12 +356,12 @@ namespace ComputerServices
 
 			if (user != null)
 			{
-				return status = true;
+				return true;
 
 			}
 			else
 			{
-				return status = false;
+				return false;
 			}
 		}
 		#endregion /ApprovalUsername
@@ -395,8 +369,6 @@ namespace ComputerServices
 		#region ApprovalEmail
 		private bool ApprovalEmail(string text)
 		{
-			bool status = false;
-
 			Models.DataBaseContext dataBaseContext = null;
 			dataBaseContext =
 				new Models.DataBaseContext();
@@ -408,11 +380,11 @@ namespace ComputerServices
 
 			if (user != null)
 			{
-				return status = true;
+				return true;
 			}
 			else
 			{
-				return status = false;
+				return false;
 			}
 		}
 
@@ -427,6 +399,17 @@ namespace ComputerServices
 
 		#endregion /ApprovalEmail
 
+		#region LogOut
+		public void LogOut(object sender, System.Windows.Forms.FormClosedEventArgs e)
+		{
+			Program.AuthenticatedUser = null;
+			usernameEmailTextBox.Text = "Username\\Email";
+
+			passwordTextBox.Text = "Password";
+			passwordTextBox.UseSystemPasswordChar = false;
+			this.Show();
+		}
+		#endregion LogOut
 		//-----
 		#endregion /Founctions
 

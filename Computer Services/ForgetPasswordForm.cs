@@ -39,6 +39,21 @@ namespace ComputerServices
 
 		//-----The beginning of the coding line.
 
+		#region CloseButton_Click
+		private void CloseButton_Click(object sender, EventArgs e)
+		{
+			this.Close();
+			Program.LoginShow();
+		}
+		#endregion /CloseButton_Click
+
+		#region MinimizeButton_Click
+		private void MinimizeButton_Click(object sender, EventArgs e)
+		{
+			this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+		}
+		#endregion /MinimizeButton_Click
+
 		#region smsRadioButton_CheckedChanged
 		private void smsRadioButton_CheckedChanged(object sender, EventArgs e)
 		{
@@ -250,11 +265,11 @@ namespace ComputerServices
 				MailMessage mailMessage = new MailMessage();
 				SmtpClient smtp = new SmtpClient("smtp.gmail.com");
 
-				SenderEmail = "behfar.baghovvat@gmail.com";
-				PasswordSenderEmail = "b@9h077a+";
+				SenderEmail = "resetcodegoolge@gmail.com";
+				PasswordSenderEmail = "B@9#077a+";
 				MessageEmail = $"Reset Password Code {securityCodeLabel.Text}";
 
-				mailMessage.From = new MailAddress("baghovvatb@gmail.com");
+				mailMessage.From = new MailAddress(SenderEmail);
 				mailMessage.To.Add(Email);
 				mailMessage.Subject = "Reset Password";
 				mailMessage.Body = MessageEmail;
@@ -262,7 +277,6 @@ namespace ComputerServices
 
 				smtp.EnableSsl = true;
 				smtp.Port = 587;
-				smtp.UseDefaultCredentials = false;
 				smtp.Credentials = new NetworkCredential(SenderEmail, PasswordSenderEmail);
 				smtp.Send(message: mailMessage);
 
@@ -489,6 +503,8 @@ namespace ComputerServices
 		{
 			UpdatePassword();
 			AllClear();
+			this.Close();
+			Program.LoginShow();
 		}
 		#endregion /ChangePasswordButton_Click
 
@@ -580,10 +596,6 @@ namespace ComputerServices
 		#region ApprovalUsername
 		private bool ApprovalUsername(string text)
 		{
-			bool status = false;
-
-
-
 			Models.DataBaseContext dataBaseContext = null;
 			dataBaseContext =
 				new Models.DataBaseContext();
@@ -595,11 +607,11 @@ namespace ComputerServices
 
 			if (user != null && string.Compare(user.Email, Email, true) == 0 && user.IsActive == true)
 			{
-				return status = true;
+				return true;
 			}
 			else
 			{
-				return status = false;
+				return false;
 			}
 		}
 		#endregion /ApprovalUsername
@@ -607,8 +619,6 @@ namespace ComputerServices
 		#region ApprovalEmail
 		private bool ApprovalEmail(string text)
 		{
-			bool status = false;
-
 			Models.DataBaseContext dataBaseContext = null;
 			dataBaseContext =
 				new Models.DataBaseContext();
@@ -620,11 +630,11 @@ namespace ComputerServices
 
 			if (user != null)
 			{
-				return status = true;
+				return true;
 			}
 			else
 			{
-				return status = false;
+				return false;
 			}
 		}
 
@@ -815,6 +825,7 @@ namespace ComputerServices
 			changePasswordButton.Enabled = false;
 
 		}
+
 
 		#endregion /AllClear 
 		//******

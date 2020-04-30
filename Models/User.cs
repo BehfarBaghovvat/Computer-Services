@@ -37,7 +37,7 @@
 			(AllowEmptyStrings = false)]
 		//--Lenght Email
 		[System.ComponentModel.DataAnnotations.StringLength
-			(maximumLength: 60)]
+			(maximumLength: 100)]
 		public string Email { get; set; }
 		#endregion /Email
 		//------
@@ -94,7 +94,7 @@
 			(AllowEmptyStrings = false)]
 		//--Length Telephone
 		[System.ComponentModel.DataAnnotations.StringLength
-		(maximumLength: 11)]
+		(maximumLength: 12)]
 		public string Telephone { get; set; }
 		#endregion /Telephone
 		//-----
