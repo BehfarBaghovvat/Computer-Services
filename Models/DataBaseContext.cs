@@ -13,9 +13,20 @@
 
 		}
 
+		/// <summary>
+		/// Table of User
+		/// </summary>
 		public System.Data.Entity.DbSet<User> Users { get; set; }
+
+
 		//public System.Data.Entity.DbSet<Client> Clients { get; set; }
-		//public System.Data.Entity.DbSet<LogHistory> LogHistories { get; set; }
+
+		/// <summary>
+		/// Table of LogHistory
+		/// </summary>
+		public System.Data.Entity.DbSet<LogHistory> LogHistories { get; set; }
 		//public System.Data.Entity.DbSet<ActivityHistory> ActivityHistories { get; set; }
+
+
 	}
 }

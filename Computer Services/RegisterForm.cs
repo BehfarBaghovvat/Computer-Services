@@ -1,6 +1,4 @@
-﻿using System;
-using System.Data.Entity;
-using System.Linq;
+﻿using System.Linq;
 using System.Runtime.InteropServices;
 
 namespace ComputerServices
@@ -207,13 +205,25 @@ namespace ComputerServices
 			{
 				if (Infrastructure.Utility.EmailChecker(email: emailTextBox.Text) == true)
 				{
-					emailTextBox.ForeColor =
-				Infrastructure.Utility.WhiteColor();
-					emailPanel.BackColor =
+					if (EmailConfirmation(emailTextBox.Text) == true)
+					{
+						emailTextBox.ForeColor =
 						Infrastructure.Utility.WhiteColor();
-					confirmEmailTickPicturBox.Image = Properties.Resources.Tik_True;
-					confirmEmailTickPicturBox.Visible = true;
-					Email = emailTextBox.Text;
+						emailPanel.BackColor =
+							Infrastructure.Utility.WhiteColor();
+						confirmEmailTickPicturBox.Image = Properties.Resources.Tik_True;
+						confirmEmailTickPicturBox.Visible = true;
+						Email = emailTextBox.Text;
+					}
+					else
+					{
+						Mbb.Windows.Forms.MessageBox.Show
+							(text: "پست الکترونیک وارد شده در سیستم موجود می باشد. \n لطفا یک پست الکترونیکی دیگر وارد کنید.",
+							caption: "خطای ورودی",
+							icon: Mbb.Windows.Forms.MessageBoxIcon.Warning,
+							button: Mbb.Windows.Forms.MessageBoxButtons.Ok);
+						emailTextBox.Focus();
+					}
 					return;
 				}
 				else
@@ -622,21 +632,38 @@ namespace ComputerServices
 			}
 			else
 			{
-				telTextBox.ForeColor =
-					Infrastructure.Utility.WhiteColor();
-				telPanel.BackColor =
-					Infrastructure.Utility.WhiteColor();
 
-				if (telTextBox.Text.StartsWith("09"))
+
+				if (TelConfirmation(telTextBox.Text) == true)
 				{
-					telTextBox.Text = telTextBox.Text.Insert(4, "-");
+					telTextBox.ForeColor =
+								Infrastructure.Utility.WhiteColor();
+					telPanel.BackColor =
+						Infrastructure.Utility.WhiteColor();
+
+					if (telTextBox.Text.StartsWith("09"))
+					{
+						telTextBox.Text = telTextBox.Text.Insert(4, "-");
+					}
+					else
+					{
+						telTextBox.Text = telTextBox.Text.Insert(3, "-");
+					}
+
+					Tel = telTextBox.Text;
+					return;
 				}
+
 				else
 				{
-					telTextBox.Text = telTextBox.Text.Insert(3, "-");
+					Mbb.Windows.Forms.MessageBox.Show
+							(text: "شماره تماس وارد شده در سیستم موجود می باشد. \n لطفا یک شماره تماس دیگر وارد کنید.",
+							caption: "خطای ورودی",
+							icon: Mbb.Windows.Forms.MessageBoxIcon.Warning,
+							button: Mbb.Windows.Forms.MessageBoxButtons.Ok);
+					telTextBox.Focus();
+					return;
 				}
-
-				Tel = telTextBox.Text;
 			}
 		}
 
@@ -690,13 +717,27 @@ namespace ComputerServices
 			}
 			else
 			{
-				nationalCodeTextBox.ForeColor =
-					Infrastructure.Utility.WhiteColor();
-				nationalCodePanel.BackColor =
-					Infrastructure.Utility.WhiteColor();
+				if (NationalCodeConfirmation(nationalCodeTextBox.Text) == true)
+				{
+					nationalCodeTextBox.ForeColor =
+								Infrastructure.Utility.WhiteColor();
+					nationalCodePanel.BackColor =
+						Infrastructure.Utility.WhiteColor();
 
-				nationalCodeTextBox.Text = nationalCodeTextBox.Text.Insert(3, "-").Insert(10, "-");
-				NationalCode = nationalCodeTextBox.Text;
+					nationalCodeTextBox.Text = nationalCodeTextBox.Text.Insert(3, "-").Insert(10, "-");
+					NationalCode = nationalCodeTextBox.Text;
+					return;
+				}
+				else
+				{
+					Mbb.Windows.Forms.MessageBox.Show
+							(text: "کد ملی وارد شده در سیستم موجود می باشد. \n لطفا کد ملی صحیح را وارد کنید.",
+							caption: "خطای ورودی",
+							icon: Mbb.Windows.Forms.MessageBoxIcon.Warning,
+							button: Mbb.Windows.Forms.MessageBoxButtons.Ok);
+					nationalCodeTextBox.Focus();
+					return;
+				}
 			}
 		}
 
@@ -746,12 +787,26 @@ namespace ComputerServices
 			}
 			else
 			{
-				addressTextBox.ForeColor =
-					Infrastructure.Utility.WhiteColor();
-				addressPanel.BackColor =
-					Infrastructure.Utility.WhiteColor();
+				if (AddressConfimation(addressTextBox.Text) == true)
+				{
+					addressTextBox.ForeColor =
+								Infrastructure.Utility.WhiteColor();
+					addressPanel.BackColor =
+						Infrastructure.Utility.WhiteColor();
 
-				Address = addressTextBox.Text;
+					Address = addressTextBox.Text;
+					return;
+				}
+				else
+				{
+					Mbb.Windows.Forms.MessageBox.Show
+							(text: "آدرس وارد شده در سیستم موجود می باشد. \n لطفا آدرس صحیح را وارد کنید.",
+							caption: "خطای ورودی",
+							icon: Mbb.Windows.Forms.MessageBoxIcon.Warning,
+							button: Mbb.Windows.Forms.MessageBoxButtons.Ok);
+					addressTextBox.Focus();
+					return;
+				}
 			}
 		}
 
@@ -963,7 +1018,7 @@ namespace ComputerServices
 				{
 					Models.User username =
 								dataBaseContext.Users
-								.Where(current => String.Compare(current.Username, Username) == 0)
+								.Where(current => string.Compare(current.Username, Username) == 0)
 								.FirstOrDefault();
 
 					if (username != null)
@@ -979,7 +1034,6 @@ namespace ComputerServices
 					}
 					else
 					{
-						//dataBaseContext.Configuration.ValidateOnSaveEnabled = false;
 						RegisterDate = Infrastructure.Utility.PersianCalendar(System.DateTime.Now);
 						RegisterTime = Infrastructure.Utility.ShowTime();
 
@@ -992,7 +1046,6 @@ namespace ComputerServices
 								Email = Email,
 								Password = Password,
 								Description = Description,
-								
 								First_Name = FirstName,
 								Last_Name = LastName,
 								Telephone = Tel.Replace("-",""),
@@ -1082,6 +1135,115 @@ namespace ComputerServices
 
 		#region Functions
 		//*****
+		#region EmailConfirmation
+		private bool EmailConfirmation(string email)
+		{
+			bool status;
+
+			Models.DataBaseContext dataBaseContext = null;
+			dataBaseContext =
+					new Models.DataBaseContext();
+
+			Models.User user =
+				dataBaseContext.Users
+				.Where(current => string.Compare(current.Email, email) == 0)
+				.FirstOrDefault();
+
+			if (user == null)
+			{
+				status = true;
+			}
+			else
+			{
+				status = false;
+			}
+
+			return status;
+
+		}
+		#endregion /EmailConfirmation
+
+		#region TelConfirmation
+		private static bool TelConfirmation(string tel)
+		{
+			bool status;
+
+			Models.DataBaseContext dataBaseContext = null;
+			dataBaseContext =
+					new Models.DataBaseContext();
+
+			Models.User user =
+				dataBaseContext.Users
+				.Where(current => string.Compare(current.Telephone, tel) == 0)
+				.FirstOrDefault();
+
+			if (user == null)
+			{
+				status = true;
+			}
+			else
+			{
+				status = false;
+			}
+
+			return status;
+		}
+		#endregion /TelConfirmation
+
+		#region NationalCodeConfirmation
+		private static bool NationalCodeConfirmation(string nationalCode)
+		{
+			bool status;
+
+			Models.DataBaseContext dataBaseContext = null;
+			dataBaseContext =
+					new Models.DataBaseContext();
+
+			Models.User user =
+				dataBaseContext.Users
+				.Where(current => string.Compare(current.National_Code, nationalCode) == 0)
+				.FirstOrDefault();
+
+			if (user == null)
+			{
+				status = true;
+			}
+			else
+			{
+				status = false;
+			}
+
+			return status;
+		}
+		#endregion /NationalCodeConfirmation
+
+		#region AddressConfimation
+		private static bool AddressConfimation(string address)
+		{
+			bool status;
+
+			Models.DataBaseContext dataBaseContext = null;
+			dataBaseContext =
+					new Models.DataBaseContext();
+
+			Models.User user =
+				dataBaseContext.Users
+				.Where(current => string.Compare(current.Address, address) == 0)
+				.FirstOrDefault();
+
+			if (user == null)
+			{
+				status = true;
+			}
+			else
+			{
+				status = false;
+			}
+
+			return status;
+		}
+		#endregion /AddressConfimation
+
 		#region AllClear
 		private void AllClear()
 		{
@@ -1158,7 +1320,7 @@ namespace ComputerServices
 			lastNamePanel.BackColor =
 				Infrastructure.Utility.DimGrayColor();
 
-			Tel = String.Empty;
+			Tel = string.Empty;
 			telTextBox.Text =
 				"نام خانوادگی";
 			telTextBox.ForeColor =

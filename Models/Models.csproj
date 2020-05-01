@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
     <Compile Include="DataBaseContext.cs" />
+    <Compile Include="LogHistory.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

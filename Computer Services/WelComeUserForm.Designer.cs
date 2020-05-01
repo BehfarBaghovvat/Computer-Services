@@ -129,7 +129,7 @@
 			// 
 			// usernameLabel
 			// 
-			this.usernameLabel.Font = new System.Drawing.Font("IRANSans", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.usernameLabel.Font = new System.Drawing.Font("IRANSans", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.usernameLabel.ForeColor = System.Drawing.Color.Gold;
 			this.usernameLabel.Location = new System.Drawing.Point(12, 91);
 			this.usernameLabel.Name = "usernameLabel";
@@ -141,14 +141,14 @@
 			// 
 			// welcomeLabel
 			// 
-			this.welcomeLabel.AutoSize = true;
-			this.welcomeLabel.Font = new System.Drawing.Font("B Yekan", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.welcomeLabel.Font = new System.Drawing.Font("B Yekan", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.welcomeLabel.ForeColor = System.Drawing.Color.Gray;
-			this.welcomeLabel.Location = new System.Drawing.Point(417, 41);
+			this.welcomeLabel.Location = new System.Drawing.Point(371, 33);
 			this.welcomeLabel.Name = "welcomeLabel";
-			this.welcomeLabel.Size = new System.Drawing.Size(171, 50);
+			this.welcomeLabel.Size = new System.Drawing.Size(217, 50);
 			this.welcomeLabel.TabIndex = 0;
 			this.welcomeLabel.Text = "خوش آمدید";
+			this.welcomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// timer1
 			// 
@@ -175,7 +175,6 @@
 			this.titlePanel.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.userImagePictureBox)).EndInit();
 			this.welcomeUserPanel.ResumeLayout(false);
-			this.welcomeUserPanel.PerformLayout();
 			this.ResumeLayout(false);
 
 		}

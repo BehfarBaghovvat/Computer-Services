@@ -9,6 +9,9 @@ namespace ComputerServices
 	static class Program
 	{
 		public static Models.User AuthenticatedUser { get; set; }
+		public static Models.LogHistory AutenticatLogHistory { get; set; }
+
+
 
 		#region Administrator
 		public static void Administrator()
@@ -36,17 +39,17 @@ namespace ComputerServices
 					"null";
 				string lastName =
 					"null";
-				int tel =
-					0;
-				int nationalCode =
-					0;
+				string tel =
+					"null";
+				string nationalCode =
+					"null";
 				string address =
 					"null";
 				string married =
 					"null";
 				Models.User adminUser =
 					dataBaseContext.Users
-					.Where(admin => string.Compare(username, admin.Username, true) == 0)
+					.Where(current => string.Compare(current.Username, username, true) == 0)
 					.FirstOrDefault();
 
 				if (adminUser == null)
@@ -102,7 +105,7 @@ namespace ComputerServices
 			}
 		}
 		#endregion /Administrator
-
+		//-----
 		#region StartUpProgramForm
 		private static StartUpProgramForm startUpProgramForm;
 		public static StartUpProgramForm  StartUpProgramForm
@@ -127,7 +130,6 @@ namespace ComputerServices
 		}
 		#endregion /StartUpShow
 		#endregion /StartUpProgramForm
-
 		//-----
 		#region LoginForm
 		private static LoginForm loginForm;
@@ -203,16 +205,19 @@ namespace ComputerServices
 		}
 		#endregion /MainShow
 		#endregion /MainForm
+
 		/// <summary>
 		/// The main entry point for the application.
 		/// </summary>
 		[STAThread]
 		static void Main()
 		{
-			//Administrator();
+			Administrator();
+
+
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new WelComeUserForm());
+			Application.Run(new StartUpProgramForm());
 		}
 	}
 }

@@ -36,9 +36,19 @@ namespace ComputerServices
 		public string UsernameEmail { get; set; }
 		public string Password { get; set; }
 
+		public string LoginTime { get; set; }
+
+		public string LogOutTime { get; set; }
 		#endregion /Properties
 
 		//-----The beginning of the coding line.
+
+		#region LoginForm_Load
+		private void LoginForm_Load(object sender, System.EventArgs e)
+		{
+			
+		}
+		#endregion /LoginForm_Load
 
 		#region CloseButton_Click
 		private void CloseButton_Click(object sender, System.EventArgs e)
@@ -200,8 +210,6 @@ namespace ComputerServices
 						caption: "خطای ورودی",
 						icon: Mbb.Windows.Forms.MessageBoxIcon.Error,
 						button: Mbb.Windows.Forms.MessageBoxButtons.Ok);
-					//usernameEmailTextBox.Focus();
-					//UsernameEmail = string.Empty;
 					if (i >= 2)
 					{
 						forgetPasswordLinkLabel.Visible = true;
@@ -235,25 +243,17 @@ namespace ComputerServices
 					}
 					else
 					{
-						errorMessage = string.Empty;
-						errorMessage =
-								"خوش آمدید!";
-						Mbb.Windows.Forms.MessageBox.Show
-							(text: errorMessage, caption: "ورودی",
-							icon: Mbb.Windows.Forms.MessageBoxIcon.Success,
-							button: Mbb.Windows.Forms.MessageBoxButtons.Ok);
+						this.Hide();
+						Program.AuthenticatedUser = user;
+						SaveLoginHistory(user);
+
+						WelComeUserForm welComeUserForm =
+							new WelComeUserForm();
+
+						welComeUserForm.ShowDialog();
+
+						Program.MainForm.FormClosed += LogOut;
 					}
-
-					this.Hide();
-					//Program.AuthenticatedUser = foundUser;
-					//SaveLoginHistory(foundUser);
-
-					//WelcomeForm welcomeForm =
-					//	new WelcomeForm();
-
-					//welcomeForm.ShowDialog();
-
-					//Program.MainForm.FormClosed += LogOut;
 				}
 
 				else if (ApprovalUsername(text: UsernameEmail) == false && ApprovalEmail(text: UsernameEmail) == true)
@@ -272,7 +272,6 @@ namespace ComputerServices
 							(text: errorMessage, caption: "خطای ورودی",
 							icon: Mbb.Windows.Forms.MessageBoxIcon.Error,
 							button: Mbb.Windows.Forms.MessageBoxButtons.Ok);
-						//usernameEmailTextBox.Focus();
 						if (i >= 2)
 						{
 							forgetPasswordLinkLabel.Visible = true;
@@ -281,25 +280,17 @@ namespace ComputerServices
 
 					else
 					{
-						errorMessage =
-										"خوش آمدید!";
-						Mbb.Windows.Forms.MessageBox.Show
-							(text: errorMessage, caption: "ورودی",
-							icon: Mbb.Windows.Forms.MessageBoxIcon.Success,
-							button: Mbb.Windows.Forms.MessageBoxButtons.Ok);
+						this.Hide();
+						Program.AuthenticatedUser = user;
+						SaveLoginHistory(user);
+
+						WelComeUserForm welComeUserForm =
+							new WelComeUserForm();
+
+						welComeUserForm.ShowDialog();
+
+						Program.MainForm.FormClosed += LogOut;
 					}
-					//usernameEmailTextBox.Focus();
-
-					//this.Hide();
-					//Program.AuthenticatedUser = foundUser;
-					//SaveLoginHistory(foundUser);
-
-					//WelcomeForm welcomeForm =
-					//	new WelcomeForm();
-
-					//welcomeForm.ShowDialog();
-
-					//Program.MainForm.FormClosed += LogOut;
 				}
 			}
 			catch (System.Exception ex)
@@ -335,7 +326,6 @@ namespace ComputerServices
 			Program.RegistrShow();
 		}
 		#endregion /NewAccountLinkLabel_LinkClicked
-
 
 		//-----End of coding line
 
@@ -398,6 +388,61 @@ namespace ComputerServices
 
 		#endregion /ApprovalEmail
 
+		#region SaveLoginHistory
+		private void SaveLoginHistory(Models.User user)
+		{
+			LoginTime = $"{Infrastructure.Utility.PersianCalendar(System.DateTime.Now).ToString()} " +
+				$"{Infrastructure.Utility.ShowTime().ToString()}";
+
+			LogOutTime = $"Null";
+
+			string fullName;
+			Models.DataBaseContext dataBaseContext = null;
+			try
+			{
+				if (string.IsNullOrWhiteSpace(user.First_Name) && string.IsNullOrWhiteSpace(user.Last_Name))
+				{
+					fullName = "Null";
+				}
+				else
+				{
+					fullName = $"{user.First_Name} {user.First_Name}";
+				}
+
+				dataBaseContext =
+					new Models.DataBaseContext();
+				Models.LogHistory logHistory =
+					dataBaseContext.LogHistories
+					.OrderBy(current => current.LoginTime)
+					.FirstOrDefault();
+
+				logHistory =
+					new Models.LogHistory
+					{
+						FullName = fullName,
+						Username = user.Username,
+						UserPicture = user.User_Image,
+						LoginTime = LoginTime,
+						LogoutTime = LogOutTime,
+					};
+
+				dataBaseContext.LogHistories.Add(logHistory);
+				dataBaseContext.SaveChanges();
+
+				Program.AutenticatLogHistory = logHistory;
+			}
+			catch (System.Exception ex)
+			{
+				Infrastructure.Utility.PopupNotification(ex);
+			}
+			if (dataBaseContext != null)
+			{
+				dataBaseContext.Dispose();
+				dataBaseContext = null;
+			}
+		}
+		#endregion /SaveLoginHistory
+
 		#region LogOut
 		public void LogOut(object sender, System.Windows.Forms.FormClosedEventArgs e)
 		{
@@ -411,12 +456,5 @@ namespace ComputerServices
 		#endregion LogOut
 		//-----
 		#endregion /Functions
-
-		private void LoginForm_Load(object sender, System.EventArgs e)
-		{
-
-		}
-
-		
 	}
 }

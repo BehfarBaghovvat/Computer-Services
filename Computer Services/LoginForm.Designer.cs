@@ -128,6 +128,7 @@
 			// 
 			this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
 			this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.closeButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.closeButton.FlatAppearance.BorderSize = 0;
 			this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
 			this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -272,6 +273,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+			this.CancelButton = this.closeButton;
 			this.ClientSize = new System.Drawing.Size(750, 250);
 			this.Controls.Add(this.forgetPasswordLinkLabel);
 			this.Controls.Add(this.bottomPanel);
