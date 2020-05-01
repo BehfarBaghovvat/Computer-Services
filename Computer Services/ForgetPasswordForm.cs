@@ -267,7 +267,10 @@ namespace ComputerServices
 
 				SenderEmail = "resetcodegoolge@gmail.com";
 				PasswordSenderEmail = "B@9#077a+";
-				MessageEmail = $"Reset Password Code {securityCodeLabel.Text}";
+				MessageEmail = $"کد امینتی که برای شما ارسال گردیده {securityCodeLabel.Text} میباشد. " +
+					$"\n اگر این ایمیل برای شما نمیباشد " +
+					$"\n لطفا این ایمیل را نادیده بگیرید. " +
+					$"\n با تشکر گروه نرم افزاری هزاره سوم";
 
 				mailMessage.From = new MailAddress(SenderEmail);
 				mailMessage.To.Add(Email);
@@ -564,7 +567,7 @@ namespace ComputerServices
 
 		//-----End of coding line.
 
-		#region Founctions
+		#region Functions
 		//*****
 		#region RandomCode
 		private void RandomCode()
@@ -829,7 +832,7 @@ namespace ComputerServices
 
 		#endregion /AllClear 
 		//******
-		#endregion /Founctions
+		#endregion /Functions
 
 		
 	}

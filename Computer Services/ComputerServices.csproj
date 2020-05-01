@@ -36,8 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\My Program\Microsoft Visual Studio\Bunifu_UI_v1.5.3.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Mbb\bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
@@ -146,11 +147,11 @@
     <Compile Include="UC_Project\MainBackgroundUC4.Designer.cs">
       <DependentUpon>MainBackgroundUC4.cs</DependentUpon>
     </Compile>
-    <Compile Include="WelComeForm.cs">
+    <Compile Include="WelComeUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WelComeForm.Designer.cs">
-      <DependentUpon>WelComeForm.cs</DependentUpon>
+    <Compile Include="WelComeUserForm.Designer.cs">
+      <DependentUpon>WelComeUserForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ForgetPasswordForm.resx">
       <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
@@ -198,8 +199,8 @@
     <EmbeddedResource Include="UC_Project\MainBackgroundUC4.resx">
       <DependentUpon>MainBackgroundUC4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WelComeForm.resx">
-      <DependentUpon>WelComeForm.cs</DependentUpon>
+    <EmbeddedResource Include="WelComeUserForm.resx">
+      <DependentUpon>WelComeUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

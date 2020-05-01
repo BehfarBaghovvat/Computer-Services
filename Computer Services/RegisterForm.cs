@@ -1080,7 +1080,7 @@ namespace ComputerServices
 
 		//-----End of coding line
 
-		#region Founctions
+		#region Functions
 		//*****
 		#region AllClear
 		private void AllClear()
@@ -1190,6 +1190,6 @@ namespace ComputerServices
 		}
 		#endregion /AllClear
 		//*****
-		#endregion /Founctions
+		#endregion /Functions
 	}
 }

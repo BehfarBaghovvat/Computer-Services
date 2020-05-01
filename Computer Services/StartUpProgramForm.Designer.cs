@@ -51,15 +51,15 @@
 			// 
 			// timer1
 			// 
-			this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+			this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
 			// 
 			// timer2
 			// 
-			this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+			this.timer2.Tick += new System.EventHandler(this.Timer2_Tick);
 			// 
 			// timer3
 			// 
-			this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+			this.timer3.Tick += new System.EventHandler(this.Timer3_Tick);
 			// 
 			// bunifuElipse1
 			// 

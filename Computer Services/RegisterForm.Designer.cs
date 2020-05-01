@@ -31,10 +31,7 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
 			this.titlePanel = new Mbb.Windows.Forms.Panel();
-			this.RegisterLogoPicturBox = new Mbb.Windows.Forms.PicturBox();
 			this.Registerlabel = new Mbb.Windows.Forms.Label();
-			this.minimizeButton = new Mbb.Windows.Forms.Button();
-			this.closeButton = new Mbb.Windows.Forms.Button();
 			this.firstNamePanel = new Mbb.Windows.Forms.Panel();
 			this.firstNameTextBox = new Mbb.Windows.Forms.TextBox();
 			this.personalInformationGroupBox = new Mbb.Windows.Forms.GroupBox();
@@ -51,13 +48,7 @@
 			this.telPanel = new Mbb.Windows.Forms.Panel();
 			this.userInformationGroupBox = new Mbb.Windows.Forms.GroupBox();
 			this.emailTextBox = new Mbb.Windows.Forms.TextBox();
-			this.userImagePicturBox = new Mbb.Windows.Forms.CircularPictureBox();
-			this.deleteImageButton = new Mbb.Windows.Forms.Button();
-			this.passwordShowPicturBox2 = new Mbb.Windows.Forms.PicturBox();
 			this.addPictureLinkLabel = new Mbb.Windows.Forms.LinkLabel();
-			this.passwordShowPicturBox1 = new Mbb.Windows.Forms.PicturBox();
-			this.confirmEmailTickPicturBox = new Mbb.Windows.Forms.PicturBox();
-			this.confirmUsernameTickPicturBox = new Mbb.Windows.Forms.PicturBox();
 			this.descriptionTextBox = new Mbb.Windows.Forms.TextBox();
 			this.descriptionPanel = new Mbb.Windows.Forms.Panel();
 			this.passwordConfirmTextBox = new Mbb.Windows.Forms.TextBox();
@@ -67,13 +58,20 @@
 			this.emailPanel = new Mbb.Windows.Forms.Panel();
 			this.usernameTextBox = new Mbb.Windows.Forms.TextBox();
 			this.usernamePanel = new Mbb.Windows.Forms.Panel();
+			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.loginButton = new Mbb.Windows.Forms.Button();
 			this.saveButton = new Mbb.Windows.Forms.Button();
 			this.resetButton = new Mbb.Windows.Forms.Button();
-			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+			this.userImagePicturBox = new Mbb.Windows.Forms.CircularPictureBox();
+			this.deleteImageButton = new Mbb.Windows.Forms.Button();
+			this.passwordShowPicturBox2 = new Mbb.Windows.Forms.PicturBox();
+			this.passwordShowPicturBox1 = new Mbb.Windows.Forms.PicturBox();
+			this.confirmEmailTickPicturBox = new Mbb.Windows.Forms.PicturBox();
+			this.confirmUsernameTickPicturBox = new Mbb.Windows.Forms.PicturBox();
+			this.RegisterLogoPicturBox = new Mbb.Windows.Forms.PicturBox();
+			this.minimizeButton = new Mbb.Windows.Forms.Button();
+			this.closeButton = new Mbb.Windows.Forms.Button();
 			this.titlePanel.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.RegisterLogoPicturBox)).BeginInit();
 			this.personalInformationGroupBox.SuspendLayout();
 			this.maritalStatusGroupBox.SuspendLayout();
 			this.userInformationGroupBox.SuspendLayout();
@@ -82,6 +80,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.passwordShowPicturBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.confirmEmailTickPicturBox)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.confirmUsernameTickPicturBox)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.RegisterLogoPicturBox)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// titlePanel
@@ -97,17 +96,6 @@
 			this.titlePanel.TabIndex = 0;
 			this.titlePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitlePanel_MouseDown);
 			// 
-			// RegisterLogoPicturBox
-			// 
-			this.RegisterLogoPicturBox.Dock = System.Windows.Forms.DockStyle.Right;
-			this.RegisterLogoPicturBox.Image = ((System.Drawing.Image)(resources.GetObject("RegisterLogoPicturBox.Image")));
-			this.RegisterLogoPicturBox.Location = new System.Drawing.Point(770, 0);
-			this.RegisterLogoPicturBox.Name = "RegisterLogoPicturBox";
-			this.RegisterLogoPicturBox.Size = new System.Drawing.Size(30, 30);
-			this.RegisterLogoPicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.RegisterLogoPicturBox.TabIndex = 5;
-			this.RegisterLogoPicturBox.TabStop = false;
-			// 
 			// Registerlabel
 			// 
 			this.Registerlabel.AutoSize = true;
@@ -118,33 +106,6 @@
 			this.Registerlabel.Size = new System.Drawing.Size(113, 24);
 			this.Registerlabel.TabIndex = 0;
 			this.Registerlabel.Text = "ثبت حساب کاربری";
-			// 
-			// minimizeButton
-			// 
-			this.minimizeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("minimizeButton.BackgroundImage")));
-			this.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.minimizeButton.FlatAppearance.BorderSize = 0;
-			this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.minimizeButton.Location = new System.Drawing.Point(33, 8);
-			this.minimizeButton.Name = "minimizeButton";
-			this.minimizeButton.Size = new System.Drawing.Size(15, 15);
-			this.minimizeButton.TabIndex = 2;
-			this.minimizeButton.UseVisualStyleBackColor = true;
-			this.minimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
-			// 
-			// closeButton
-			// 
-			this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
-			this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.closeButton.FlatAppearance.BorderSize = 0;
-			this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-			this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.closeButton.Location = new System.Drawing.Point(12, 8);
-			this.closeButton.Name = "closeButton";
-			this.closeButton.Size = new System.Drawing.Size(15, 15);
-			this.closeButton.TabIndex = 1;
-			this.closeButton.UseVisualStyleBackColor = true;
-			this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
 			// 
 			// firstNamePanel
 			// 
@@ -377,44 +338,6 @@
 			this.emailTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmailTextBox_KeyPress);
 			this.emailTextBox.Leave += new System.EventHandler(this.EmailTextBox_Leave);
 			// 
-			// userImagePicturBox
-			// 
-			this.userImagePicturBox.BackgroundImage = global::ComputerServices.Properties.Resources.user_1024;
-			this.userImagePicturBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.userImagePicturBox.Image = ((System.Drawing.Image)(resources.GetObject("userImagePicturBox.Image")));
-			this.userImagePicturBox.Location = new System.Drawing.Point(27, 32);
-			this.userImagePicturBox.Name = "userImagePicturBox";
-			this.userImagePicturBox.Size = new System.Drawing.Size(170, 170);
-			this.userImagePicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.userImagePicturBox.TabIndex = 17;
-			this.userImagePicturBox.TabStop = false;
-			// 
-			// deleteImageButton
-			// 
-			this.deleteImageButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteImageButton.BackgroundImage")));
-			this.deleteImageButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.deleteImageButton.FlatAppearance.BorderSize = 0;
-			this.deleteImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.deleteImageButton.Location = new System.Drawing.Point(60, 216);
-			this.deleteImageButton.Name = "deleteImageButton";
-			this.deleteImageButton.Size = new System.Drawing.Size(15, 15);
-			this.deleteImageButton.TabIndex = 6;
-			this.deleteImageButton.UseVisualStyleBackColor = true;
-			this.deleteImageButton.Visible = false;
-			this.deleteImageButton.Click += new System.EventHandler(this.DeleteImageButton_Click);
-			// 
-			// passwordShowPicturBox2
-			// 
-			this.passwordShowPicturBox2.Image = global::ComputerServices.Properties.Resources.show_512;
-			this.passwordShowPicturBox2.Location = new System.Drawing.Point(224, 90);
-			this.passwordShowPicturBox2.Name = "passwordShowPicturBox2";
-			this.passwordShowPicturBox2.Size = new System.Drawing.Size(25, 25);
-			this.passwordShowPicturBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.passwordShowPicturBox2.TabIndex = 15;
-			this.passwordShowPicturBox2.TabStop = false;
-			this.passwordShowPicturBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ShowPasswordPicturBox2_MouseDown);
-			this.passwordShowPicturBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ShowPasswordPicturBox2_MouseUp);
-			// 
 			// addPictureLinkLabel
 			// 
 			this.addPictureLinkLabel.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -428,40 +351,6 @@
 			this.addPictureLinkLabel.TabStop = true;
 			this.addPictureLinkLabel.Text = "افزودن عکس";
 			this.addPictureLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddPictureLinkLabel_LinkClicked);
-			// 
-			// passwordShowPicturBox1
-			// 
-			this.passwordShowPicturBox1.Image = global::ComputerServices.Properties.Resources.show_512;
-			this.passwordShowPicturBox1.Location = new System.Drawing.Point(496, 90);
-			this.passwordShowPicturBox1.Name = "passwordShowPicturBox1";
-			this.passwordShowPicturBox1.Size = new System.Drawing.Size(25, 25);
-			this.passwordShowPicturBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.passwordShowPicturBox1.TabIndex = 14;
-			this.passwordShowPicturBox1.TabStop = false;
-			this.passwordShowPicturBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ShowPasswordPicturBox1_MouseDown);
-			this.passwordShowPicturBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ShowPasswordPicturBox1_MouseUp);
-			// 
-			// confirmEmailTickPicturBox
-			// 
-			this.confirmEmailTickPicturBox.Image = global::ComputerServices.Properties.Resources.Tik_True;
-			this.confirmEmailTickPicturBox.Location = new System.Drawing.Point(223, 33);
-			this.confirmEmailTickPicturBox.Name = "confirmEmailTickPicturBox";
-			this.confirmEmailTickPicturBox.Size = new System.Drawing.Size(25, 25);
-			this.confirmEmailTickPicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.confirmEmailTickPicturBox.TabIndex = 13;
-			this.confirmEmailTickPicturBox.TabStop = false;
-			this.confirmEmailTickPicturBox.Visible = false;
-			// 
-			// confirmUsernameTickPicturBox
-			// 
-			this.confirmUsernameTickPicturBox.Image = global::ComputerServices.Properties.Resources.Tik_True;
-			this.confirmUsernameTickPicturBox.Location = new System.Drawing.Point(495, 34);
-			this.confirmUsernameTickPicturBox.Name = "confirmUsernameTickPicturBox";
-			this.confirmUsernameTickPicturBox.Size = new System.Drawing.Size(25, 25);
-			this.confirmUsernameTickPicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.confirmUsernameTickPicturBox.TabIndex = 12;
-			this.confirmUsernameTickPicturBox.TabStop = false;
-			this.confirmUsernameTickPicturBox.Visible = false;
 			// 
 			// descriptionTextBox
 			// 
@@ -570,6 +459,16 @@
 			this.usernamePanel.Size = new System.Drawing.Size(220, 1);
 			this.usernamePanel.TabIndex = 7;
 			// 
+			// toolTip1
+			// 
+			this.toolTip1.AutomaticDelay = 50;
+			this.toolTip1.AutoPopDelay = 5000;
+			this.toolTip1.InitialDelay = 50;
+			this.toolTip1.ReshowDelay = 10;
+			this.toolTip1.ShowAlways = true;
+			this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+			this.toolTip1.ToolTipTitle = "اطلاعات";
+			// 
 			// loginButton
 			// 
 			this.loginButton.BackColor = System.Drawing.Color.SeaGreen;
@@ -627,20 +526,115 @@
 			this.resetButton.UseVisualStyleBackColor = false;
 			this.resetButton.Click += new System.EventHandler(this.ResetButton_Click);
 			// 
-			// bunifuElipse1
+			// userImagePicturBox
 			// 
-			this.bunifuElipse1.ElipseRadius = 25;
-			this.bunifuElipse1.TargetControl = this;
+			this.userImagePicturBox.BackgroundImage = global::ComputerServices.Properties.Resources.user_1024;
+			this.userImagePicturBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.userImagePicturBox.Image = ((System.Drawing.Image)(resources.GetObject("userImagePicturBox.Image")));
+			this.userImagePicturBox.Location = new System.Drawing.Point(27, 32);
+			this.userImagePicturBox.Name = "userImagePicturBox";
+			this.userImagePicturBox.Size = new System.Drawing.Size(170, 170);
+			this.userImagePicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.userImagePicturBox.TabIndex = 17;
+			this.userImagePicturBox.TabStop = false;
 			// 
-			// toolTip1
+			// deleteImageButton
 			// 
-			this.toolTip1.AutomaticDelay = 50;
-			this.toolTip1.AutoPopDelay = 5000;
-			this.toolTip1.InitialDelay = 50;
-			this.toolTip1.ReshowDelay = 10;
-			this.toolTip1.ShowAlways = true;
-			this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-			this.toolTip1.ToolTipTitle = "اطلاعات";
+			this.deleteImageButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteImageButton.BackgroundImage")));
+			this.deleteImageButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.deleteImageButton.FlatAppearance.BorderSize = 0;
+			this.deleteImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.deleteImageButton.Location = new System.Drawing.Point(60, 216);
+			this.deleteImageButton.Name = "deleteImageButton";
+			this.deleteImageButton.Size = new System.Drawing.Size(15, 15);
+			this.deleteImageButton.TabIndex = 6;
+			this.deleteImageButton.UseVisualStyleBackColor = true;
+			this.deleteImageButton.Visible = false;
+			this.deleteImageButton.Click += new System.EventHandler(this.DeleteImageButton_Click);
+			// 
+			// passwordShowPicturBox2
+			// 
+			this.passwordShowPicturBox2.Image = global::ComputerServices.Properties.Resources.show_512;
+			this.passwordShowPicturBox2.Location = new System.Drawing.Point(224, 90);
+			this.passwordShowPicturBox2.Name = "passwordShowPicturBox2";
+			this.passwordShowPicturBox2.Size = new System.Drawing.Size(25, 25);
+			this.passwordShowPicturBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.passwordShowPicturBox2.TabIndex = 15;
+			this.passwordShowPicturBox2.TabStop = false;
+			this.passwordShowPicturBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ShowPasswordPicturBox2_MouseDown);
+			this.passwordShowPicturBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ShowPasswordPicturBox2_MouseUp);
+			// 
+			// passwordShowPicturBox1
+			// 
+			this.passwordShowPicturBox1.Image = global::ComputerServices.Properties.Resources.show_512;
+			this.passwordShowPicturBox1.Location = new System.Drawing.Point(496, 90);
+			this.passwordShowPicturBox1.Name = "passwordShowPicturBox1";
+			this.passwordShowPicturBox1.Size = new System.Drawing.Size(25, 25);
+			this.passwordShowPicturBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.passwordShowPicturBox1.TabIndex = 14;
+			this.passwordShowPicturBox1.TabStop = false;
+			this.passwordShowPicturBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ShowPasswordPicturBox1_MouseDown);
+			this.passwordShowPicturBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ShowPasswordPicturBox1_MouseUp);
+			// 
+			// confirmEmailTickPicturBox
+			// 
+			this.confirmEmailTickPicturBox.Image = global::ComputerServices.Properties.Resources.Tik_True;
+			this.confirmEmailTickPicturBox.Location = new System.Drawing.Point(223, 33);
+			this.confirmEmailTickPicturBox.Name = "confirmEmailTickPicturBox";
+			this.confirmEmailTickPicturBox.Size = new System.Drawing.Size(25, 25);
+			this.confirmEmailTickPicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.confirmEmailTickPicturBox.TabIndex = 13;
+			this.confirmEmailTickPicturBox.TabStop = false;
+			this.confirmEmailTickPicturBox.Visible = false;
+			// 
+			// confirmUsernameTickPicturBox
+			// 
+			this.confirmUsernameTickPicturBox.Image = global::ComputerServices.Properties.Resources.Tik_True;
+			this.confirmUsernameTickPicturBox.Location = new System.Drawing.Point(495, 34);
+			this.confirmUsernameTickPicturBox.Name = "confirmUsernameTickPicturBox";
+			this.confirmUsernameTickPicturBox.Size = new System.Drawing.Size(25, 25);
+			this.confirmUsernameTickPicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.confirmUsernameTickPicturBox.TabIndex = 12;
+			this.confirmUsernameTickPicturBox.TabStop = false;
+			this.confirmUsernameTickPicturBox.Visible = false;
+			// 
+			// RegisterLogoPicturBox
+			// 
+			this.RegisterLogoPicturBox.Dock = System.Windows.Forms.DockStyle.Right;
+			this.RegisterLogoPicturBox.Image = ((System.Drawing.Image)(resources.GetObject("RegisterLogoPicturBox.Image")));
+			this.RegisterLogoPicturBox.Location = new System.Drawing.Point(770, 0);
+			this.RegisterLogoPicturBox.Name = "RegisterLogoPicturBox";
+			this.RegisterLogoPicturBox.Size = new System.Drawing.Size(30, 30);
+			this.RegisterLogoPicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.RegisterLogoPicturBox.TabIndex = 5;
+			this.RegisterLogoPicturBox.TabStop = false;
+			// 
+			// minimizeButton
+			// 
+			this.minimizeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("minimizeButton.BackgroundImage")));
+			this.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.minimizeButton.FlatAppearance.BorderSize = 0;
+			this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.minimizeButton.Location = new System.Drawing.Point(33, 8);
+			this.minimizeButton.Name = "minimizeButton";
+			this.minimizeButton.Size = new System.Drawing.Size(15, 15);
+			this.minimizeButton.TabIndex = 2;
+			this.minimizeButton.UseVisualStyleBackColor = true;
+			this.minimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
+			// 
+			// closeButton
+			// 
+			this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
+			this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.closeButton.FlatAppearance.BorderSize = 0;
+			this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+			this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.closeButton.Location = new System.Drawing.Point(12, 8);
+			this.closeButton.Name = "closeButton";
+			this.closeButton.Size = new System.Drawing.Size(15, 15);
+			this.closeButton.TabIndex = 1;
+			this.closeButton.UseVisualStyleBackColor = true;
+			this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
 			// 
 			// RegisterForm
 			// 
@@ -660,7 +654,6 @@
 			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RegisterForm_MouseDown);
 			this.titlePanel.ResumeLayout(false);
 			this.titlePanel.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.RegisterLogoPicturBox)).EndInit();
 			this.personalInformationGroupBox.ResumeLayout(false);
 			this.personalInformationGroupBox.PerformLayout();
 			this.maritalStatusGroupBox.ResumeLayout(false);
@@ -672,6 +665,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.passwordShowPicturBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.confirmEmailTickPicturBox)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.confirmUsernameTickPicturBox)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.RegisterLogoPicturBox)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -717,7 +711,6 @@
 		private Mbb.Windows.Forms.RadioButton singleRadioButton;
 		private Mbb.Windows.Forms.RadioButton marriedRadioButton;
 		private Mbb.Windows.Forms.CircularPictureBox userImagePicturBox;
-		private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
 		private Mbb.Windows.Forms.TextBox emailTextBox;
 		private System.Windows.Forms.ToolTip toolTip1;
 	}

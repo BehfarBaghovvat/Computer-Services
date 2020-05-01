@@ -94,7 +94,7 @@
 			(AllowEmptyStrings = false)]
 		//--Length Telephone
 		[System.ComponentModel.DataAnnotations.StringLength
-		(maximumLength: 12)]
+		(maximumLength: 11)]
 		public string Telephone { get; set; }
 		#endregion /Telephone
 		//-----

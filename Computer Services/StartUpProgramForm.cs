@@ -17,14 +17,18 @@ namespace ComputerServices
 			InitializeComponent();
 		}
 
+		//-----The beginning of the coding line.
+
+		#region StartUpProgramForm_Load
 		private void StartUpProgramForm_Load(object sender, EventArgs e)
 		{
-			//bunifuFormFadeTransition1.ShowAsyc(this);
 			this.Opacity = 0.0;
 			timer1.Start();
 		}
+		#endregion /StartUpProgramForm_Load
 
-		private void timer1_Tick(object sender, EventArgs e)
+		#region Timer1_Tick
+		private void Timer1_Tick(object sender, EventArgs e)
 		{
 			this.Opacity += 0.05;
 
@@ -34,8 +38,10 @@ namespace ComputerServices
 				timer2.Start();
 			}
 		}
+		#endregion /Timer1_Tick
 
-		private void timer2_Tick(object sender, EventArgs e)
+		#region Timer2_Tick
+		private void Timer2_Tick(object sender, EventArgs e)
 		{
 			timer2.Interval += 50;
 
@@ -51,7 +57,7 @@ namespace ComputerServices
 				bunifuTransition3.ShowSync(mainBackgroundUC31);
 			}
 
-			if (timer2.Interval ==550)
+			if (timer2.Interval == 550)
 			{
 				bunifuTransition3.HideSync(mainBackgroundUC31);
 				bunifuTransition1.ShowSync(mainBackgroundUC41);
@@ -64,7 +70,10 @@ namespace ComputerServices
 			}
 		}
 
-		private void timer3_Tick(object sender, EventArgs e)
+		#endregion /Timer2_Tick
+
+		#region Timer3_Tick
+		private void Timer3_Tick(object sender, EventArgs e)
 		{
 			this.Opacity -= 0.05;
 
@@ -75,5 +84,9 @@ namespace ComputerServices
 				Program.LoginShow();
 			}
 		}
+
+		#endregion /Timer3_Tick
+
+		//-----End of coding line
 	}
 }

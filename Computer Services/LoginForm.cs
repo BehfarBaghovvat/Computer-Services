@@ -225,7 +225,7 @@ namespace ComputerServices
 							(text: errorMessage, caption: "خطای ورودی",
 							icon: Mbb.Windows.Forms.MessageBoxIcon.Error,
 							button: Mbb.Windows.Forms.MessageBoxButtons.Ok);
-						//usernameEmailTextBox.Focus();
+						
 						if (i >= 2)
 						{
 
@@ -243,9 +243,8 @@ namespace ComputerServices
 							icon: Mbb.Windows.Forms.MessageBoxIcon.Success,
 							button: Mbb.Windows.Forms.MessageBoxButtons.Ok);
 					}
-					//usernameEmailTextBox.Focus();
 
-					//this.Hide();
+					this.Hide();
 					//Program.AuthenticatedUser = foundUser;
 					//SaveLoginHistory(foundUser);
 
@@ -340,7 +339,7 @@ namespace ComputerServices
 
 		//-----End of coding line
 
-		#region Founctions
+		#region Functions
 		//------
 		#region ApprovalUsername
 		private bool ApprovalUsername(string text)
@@ -411,7 +410,7 @@ namespace ComputerServices
 		}
 		#endregion LogOut
 		//-----
-		#endregion /Founctions
+		#endregion /Functions
 
 		private void LoginForm_Load(object sender, System.EventArgs e)
 		{
