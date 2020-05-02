@@ -592,6 +592,7 @@ namespace ComputerServices
 		#endregion /LastNameTextBox
 
 		#region TelTextBox
+		//-----
 		#region TelTextBox_Enter
 		private void TelTextBox_Enter(object sender, System.EventArgs e)
 		{
@@ -668,7 +669,7 @@ namespace ComputerServices
 		}
 
 		#endregion /TelTextBox_Leave 
-
+		//-----
 		#endregion TelTextBox
 
 		#region NationalCodeTextBox

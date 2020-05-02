@@ -259,6 +259,33 @@
   <ItemGroup>
     <None Include="Resources\warning-512.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_button_512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore_down_512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrative_tools_512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cafe_net_512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer_support_512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delivery-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_document_512.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

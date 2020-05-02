@@ -67,7 +67,7 @@
 			string name =
 				$"{Program.AuthenticatedUser.First_Name} {Program.AuthenticatedUser.Last_Name}" ;
 
-			if (string.IsNullOrEmpty(name))
+			if (string.IsNullOrEmpty(Program.AuthenticatedUser.First_Name) || string.IsNullOrEmpty(Program.AuthenticatedUser.Last_Name) || Program.AuthenticatedUser.First_Name=="null" || Program.AuthenticatedUser.Last_Name == "null")
 			{
 				name =
 					Program.AuthenticatedUser.Username;

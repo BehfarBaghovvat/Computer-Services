@@ -288,7 +288,7 @@ namespace ComputerServices
 							new WelComeUserForm();
 
 						welComeUserForm.ShowDialog();
-
+						Program.MainShow();
 						Program.MainForm.FormClosed += LogOut;
 					}
 				}
@@ -331,6 +331,17 @@ namespace ComputerServices
 
 		#region Functions
 		//------
+		#region Initialize
+		public void Initialize()
+		{
+			UsernameEmail = string.Empty;
+			usernameEmailTextBox.Text = "Username\\Email";
+			Password = string.Empty;
+			passwordTextBox.Text = "Password";
+			passwordTextBox.UseSystemPasswordChar = false;
+		}
+		#endregion /Initialize
+
 		#region ApprovalUsername
 		private bool ApprovalUsername(string text)
 		{

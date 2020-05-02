@@ -67,8 +67,8 @@
 		//------
 		#region FirstName
 		//--Not allowed to be empty FirstName
-		[System.ComponentModel.DataAnnotations.Required
-			(AllowEmptyStrings = false)]
+		//[System.ComponentModel.DataAnnotations.Required
+		//	(AllowEmptyStrings = false)]
 		//--Lenght FirstName
 		[System.ComponentModel.DataAnnotations.StringLength
 			(maximumLength: 20)]
@@ -77,8 +77,8 @@
 		//-----
 		#region LastName
 		//--Not allowed to be empty LastName
-		[System.ComponentModel.DataAnnotations.Required
-			(AllowEmptyStrings = false)]
+		//[System.ComponentModel.DataAnnotations.Required
+		//	(AllowEmptyStrings = false)]
 		//--Lenght LastName
 		[System.ComponentModel.DataAnnotations.StringLength
 			(maximumLength: 25)]
