@@ -66,20 +66,12 @@
 		#endregion /Description
 		//------
 		#region FirstName
-		//--Not allowed to be empty FirstName
-		//[System.ComponentModel.DataAnnotations.Required
-		//	(AllowEmptyStrings = false)]
-		//--Lenght FirstName
 		[System.ComponentModel.DataAnnotations.StringLength
 			(maximumLength: 20)]
 		public string First_Name { get; set; }
 		#endregion /FirstName
 		//-----
 		#region LastName
-		//--Not allowed to be empty LastName
-		//[System.ComponentModel.DataAnnotations.Required
-		//	(AllowEmptyStrings = false)]
-		//--Lenght LastName
 		[System.ComponentModel.DataAnnotations.StringLength
 			(maximumLength: 25)]
 		public string Last_Name { get; set; }

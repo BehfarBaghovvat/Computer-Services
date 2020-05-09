@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace ComputerServices
@@ -193,7 +192,7 @@ namespace ComputerServices
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Administrator();
-			Application.Run(new LoginForm());
+			Application.Run(new Menu.Service.ServiceForm());
 		}
 	}
 }

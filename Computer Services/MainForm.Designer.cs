@@ -185,7 +185,7 @@
 			this.menuPanel.Dock = System.Windows.Forms.DockStyle.Left;
 			this.menuPanel.Location = new System.Drawing.Point(0, 30);
 			this.menuPanel.Name = "menuPanel";
-			this.menuPanel.Size = new System.Drawing.Size(230, 670);
+			this.menuPanel.Size = new System.Drawing.Size(210, 670);
 			this.menuPanel.TabIndex = 1;
 			this.menuPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MenuPanel_MouseDown);
 			// 
@@ -199,9 +199,9 @@
 			this.cafeNetButton.ForeColor = System.Drawing.Color.White;
 			this.cafeNetButton.Image = ((System.Drawing.Image)(resources.GetObject("cafeNetButton.Image")));
 			this.cafeNetButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.cafeNetButton.Location = new System.Drawing.Point(1, 453);
+			this.cafeNetButton.Location = new System.Drawing.Point(-1, 453);
 			this.cafeNetButton.Name = "cafeNetButton";
-			this.cafeNetButton.Size = new System.Drawing.Size(220, 40);
+			this.cafeNetButton.Size = new System.Drawing.Size(200, 40);
 			this.cafeNetButton.TabIndex = 12;
 			this.cafeNetButton.Text = "کافی نت";
 			this.cafeNetButton.UseVisualStyleBackColor = false;
@@ -217,9 +217,9 @@
 			this.administratorToolsButton.ForeColor = System.Drawing.Color.White;
 			this.administratorToolsButton.Image = ((System.Drawing.Image)(resources.GetObject("administratorToolsButton.Image")));
 			this.administratorToolsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.administratorToolsButton.Location = new System.Drawing.Point(1, 407);
+			this.administratorToolsButton.Location = new System.Drawing.Point(-1, 407);
 			this.administratorToolsButton.Name = "administratorToolsButton";
-			this.administratorToolsButton.Size = new System.Drawing.Size(220, 40);
+			this.administratorToolsButton.Size = new System.Drawing.Size(200, 40);
 			this.administratorToolsButton.TabIndex = 11;
 			this.administratorToolsButton.Text = "ابزار مدیریت";
 			this.administratorToolsButton.UseVisualStyleBackColor = false;
@@ -231,7 +231,7 @@
 			this.usernameLoginLabel.AutoSize = true;
 			this.usernameLoginLabel.Font = new System.Drawing.Font("IRANSans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.usernameLoginLabel.ForeColor = System.Drawing.Color.White;
-			this.usernameLoginLabel.Location = new System.Drawing.Point(72, 147);
+			this.usernameLoginLabel.Location = new System.Drawing.Point(62, 147);
 			this.usernameLoginLabel.Name = "usernameLoginLabel";
 			this.usernameLoginLabel.Size = new System.Drawing.Size(87, 20);
 			this.usernameLoginLabel.TabIndex = 10;
@@ -242,7 +242,7 @@
 			this.userImagePicturBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.userImagePicturBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.userImagePicturBox.Image = ((System.Drawing.Image)(resources.GetObject("userImagePicturBox.Image")));
-			this.userImagePicturBox.Location = new System.Drawing.Point(65, 42);
+			this.userImagePicturBox.Location = new System.Drawing.Point(55, 42);
 			this.userImagePicturBox.Name = "userImagePicturBox";
 			this.userImagePicturBox.Size = new System.Drawing.Size(100, 100);
 			this.userImagePicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -256,7 +256,7 @@
 			this.logputButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.logputButton.FlatAppearance.BorderSize = 0;
 			this.logputButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.logputButton.Location = new System.Drawing.Point(159, 635);
+			this.logputButton.Location = new System.Drawing.Point(139, 635);
 			this.logputButton.Name = "logputButton";
 			this.logputButton.Size = new System.Drawing.Size(30, 30);
 			this.logputButton.TabIndex = 8;
@@ -271,7 +271,7 @@
 			this.shutDownButton.FlatAppearance.BorderSize = 0;
 			this.shutDownButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
 			this.shutDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.shutDownButton.Location = new System.Drawing.Point(195, 635);
+			this.shutDownButton.Location = new System.Drawing.Point(175, 635);
 			this.shutDownButton.Name = "shutDownButton";
 			this.shutDownButton.Size = new System.Drawing.Size(30, 30);
 			this.shutDownButton.TabIndex = 7;
@@ -288,9 +288,9 @@
 			this.deliveryButton.ForeColor = System.Drawing.Color.White;
 			this.deliveryButton.Image = ((System.Drawing.Image)(resources.GetObject("deliveryButton.Image")));
 			this.deliveryButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.deliveryButton.Location = new System.Drawing.Point(1, 361);
+			this.deliveryButton.Location = new System.Drawing.Point(-1, 361);
 			this.deliveryButton.Name = "deliveryButton";
-			this.deliveryButton.Size = new System.Drawing.Size(220, 40);
+			this.deliveryButton.Size = new System.Drawing.Size(200, 40);
 			this.deliveryButton.TabIndex = 6;
 			this.deliveryButton.Text = "ارسالی";
 			this.deliveryButton.UseVisualStyleBackColor = false;
@@ -306,9 +306,9 @@
 			this.productButton.ForeColor = System.Drawing.Color.White;
 			this.productButton.Image = ((System.Drawing.Image)(resources.GetObject("productButton.Image")));
 			this.productButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.productButton.Location = new System.Drawing.Point(1, 315);
+			this.productButton.Location = new System.Drawing.Point(-1, 315);
 			this.productButton.Name = "productButton";
-			this.productButton.Size = new System.Drawing.Size(220, 40);
+			this.productButton.Size = new System.Drawing.Size(200, 40);
 			this.productButton.TabIndex = 5;
 			this.productButton.Text = "محصولات";
 			this.productButton.UseVisualStyleBackColor = false;
@@ -324,9 +324,9 @@
 			this.reportButton.ForeColor = System.Drawing.Color.White;
 			this.reportButton.Image = ((System.Drawing.Image)(resources.GetObject("reportButton.Image")));
 			this.reportButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.reportButton.Location = new System.Drawing.Point(1, 269);
+			this.reportButton.Location = new System.Drawing.Point(-1, 269);
 			this.reportButton.Name = "reportButton";
-			this.reportButton.Size = new System.Drawing.Size(220, 40);
+			this.reportButton.Size = new System.Drawing.Size(200, 40);
 			this.reportButton.TabIndex = 4;
 			this.reportButton.Text = "گزارش";
 			this.reportButton.UseVisualStyleBackColor = false;
@@ -342,9 +342,9 @@
 			this.clientButton.ForeColor = System.Drawing.Color.White;
 			this.clientButton.Image = ((System.Drawing.Image)(resources.GetObject("clientButton.Image")));
 			this.clientButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.clientButton.Location = new System.Drawing.Point(1, 223);
+			this.clientButton.Location = new System.Drawing.Point(-1, 223);
 			this.clientButton.Name = "clientButton";
-			this.clientButton.Size = new System.Drawing.Size(220, 40);
+			this.clientButton.Size = new System.Drawing.Size(200, 40);
 			this.clientButton.TabIndex = 3;
 			this.clientButton.Text = "مشتری";
 			this.clientButton.UseVisualStyleBackColor = false;
@@ -354,7 +354,7 @@
 			// 
 			this.focusPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.focusPanel.BackColor = System.Drawing.Color.Lime;
-			this.focusPanel.Location = new System.Drawing.Point(220, 177);
+			this.focusPanel.Location = new System.Drawing.Point(200, 177);
 			this.focusPanel.Name = "focusPanel";
 			this.focusPanel.Size = new System.Drawing.Size(10, 40);
 			this.focusPanel.TabIndex = 2;
@@ -369,9 +369,9 @@
 			this.servicesButton.ForeColor = System.Drawing.Color.White;
 			this.servicesButton.Image = ((System.Drawing.Image)(resources.GetObject("servicesButton.Image")));
 			this.servicesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.servicesButton.Location = new System.Drawing.Point(1, 177);
+			this.servicesButton.Location = new System.Drawing.Point(-1, 177);
 			this.servicesButton.Name = "servicesButton";
-			this.servicesButton.Size = new System.Drawing.Size(220, 40);
+			this.servicesButton.Size = new System.Drawing.Size(200, 40);
 			this.servicesButton.TabIndex = 1;
 			this.servicesButton.Text = "خدمات";
 			this.servicesButton.UseVisualStyleBackColor = false;
@@ -406,9 +406,9 @@
 			// mainPanel
 			// 
 			this.mainPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.mainPanel.Location = new System.Drawing.Point(230, 141);
+			this.mainPanel.Location = new System.Drawing.Point(210, 141);
 			this.mainPanel.Name = "mainPanel";
-			this.mainPanel.Size = new System.Drawing.Size(1070, 559);
+			this.mainPanel.Size = new System.Drawing.Size(1090, 559);
 			this.mainPanel.TabIndex = 2;
 			// 
 			// notificationPanel
@@ -419,9 +419,9 @@
 			this.notificationPanel.Controls.Add(this.solarDateLabel);
 			this.notificationPanel.Controls.Add(this.timePanel);
 			this.notificationPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.notificationPanel.Location = new System.Drawing.Point(230, 30);
+			this.notificationPanel.Location = new System.Drawing.Point(210, 30);
 			this.notificationPanel.Name = "notificationPanel";
-			this.notificationPanel.Size = new System.Drawing.Size(1070, 111);
+			this.notificationPanel.Size = new System.Drawing.Size(1090, 111);
 			this.notificationPanel.TabIndex = 4;
 			this.notificationPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NotificationPanel_MouseDown);
 			// 
@@ -460,7 +460,7 @@
 			// 
 			this.adDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.adDateLabel.Font = new System.Drawing.Font("IRANSans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.adDateLabel.Location = new System.Drawing.Point(823, 83);
+			this.adDateLabel.Location = new System.Drawing.Point(843, 83);
 			this.adDateLabel.Name = "adDateLabel";
 			this.adDateLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.adDateLabel.Size = new System.Drawing.Size(241, 20);
@@ -472,7 +472,7 @@
 			// 
 			this.solarDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.solarDateLabel.Font = new System.Drawing.Font("IRANSans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.solarDateLabel.Location = new System.Drawing.Point(823, 55);
+			this.solarDateLabel.Location = new System.Drawing.Point(843, 55);
 			this.solarDateLabel.Name = "solarDateLabel";
 			this.solarDateLabel.Size = new System.Drawing.Size(240, 20);
 			this.solarDateLabel.TabIndex = 24;
@@ -487,7 +487,7 @@
 			this.timePanel.Controls.Add(this.separatorLabel1);
 			this.timePanel.Controls.Add(this.separatorLabel2);
 			this.timePanel.Controls.Add(this.minuteLabel);
-			this.timePanel.Location = new System.Drawing.Point(823, 6);
+			this.timePanel.Location = new System.Drawing.Point(843, 6);
 			this.timePanel.Name = "timePanel";
 			this.timePanel.Size = new System.Drawing.Size(241, 46);
 			this.timePanel.TabIndex = 23;

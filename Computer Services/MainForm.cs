@@ -92,7 +92,7 @@
 		#region SecondSizeButton_Click
 		private void SecondSizeButton_Click(object sender, System.EventArgs e)
 		{
-			menuPanel.Size = new System.Drawing.Size(width: 230, height: 670);
+			menuPanel.Size = new System.Drawing.Size(width: 210, height: 670);
 			logputButton.Location = new System.Drawing.Point(x: 159, y: 635);
 			firstSizeButton.BringToFront();
 			secondSizeButton.SendToBack();
