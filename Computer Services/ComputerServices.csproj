@@ -49,32 +49,9 @@
     <Reference Include="Kavenegar, Version=1.2.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Kavenegar.1.2.4\lib\net35\Kavenegar.dll</HintPath>
     </Reference>
-    <Reference Include="Stimulsoft.Base, Version=2020.2.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\My Program\Stimulsoft.Reports.Ultimate\Stimulsoft.Reports.Ultimate-Designer.2020.2.1\Stimulsoft.Base.dll</HintPath>
-    </Reference>
-    <Reference Include="Stimulsoft.Controls, Version=2020.2.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\My Program\Stimulsoft.Reports.Ultimate\Stimulsoft.Reports.Ultimate-Designer.2020.2.1\Stimulsoft.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="Stimulsoft.Controls.Win, Version=2020.2.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\My Program\Stimulsoft.Reports.Ultimate\Stimulsoft.Reports.Ultimate-Designer.2020.2.1\Stimulsoft.Controls.Win.dll</HintPath>
-    </Reference>
-    <Reference Include="Stimulsoft.Report, Version=2020.2.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\My Program\Stimulsoft.Reports.Ultimate\Stimulsoft.Reports.Ultimate-Designer.2020.2.1\Stimulsoft.Report.dll</HintPath>
-    </Reference>
-    <Reference Include="Stimulsoft.Report.Win, Version=2020.2.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\My Program\Stimulsoft.Reports.Ultimate\Stimulsoft.Reports.Ultimate-Designer.2020.2.1\Stimulsoft.Report.Win.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="Tulpep.NotificationWindow, Version=1.1.31.0, Culture=neutral, processorArchitecture=MSIL">
@@ -112,6 +89,12 @@
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Service\OrderInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Service\OrderInformationForm.Designer.cs">
+      <DependentUpon>OrderInformationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu\Service\ServiceForm.cs">
       <SubType>Form</SubType>
@@ -184,6 +167,9 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Service\OrderInformationForm.resx">
+      <DependentUpon>OrderInformationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\Service\ServiceForm.resx">
       <DependentUpon>ServiceForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +208,7 @@
       <DependentUpon>WelComeUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Models.ServiceComputer.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

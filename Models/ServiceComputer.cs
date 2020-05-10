@@ -8,9 +8,6 @@
 		}
 
 		#region Register_Date
-		//--Uniq Username
-		[System.ComponentModel.DataAnnotations.Schema.Index
-			(IsUnique = true)]
 		//--Not allowed to be empty Username
 		[System.ComponentModel.DataAnnotations.Required
 			(AllowEmptyStrings = false)]
@@ -31,8 +28,8 @@
 
 		//--Lenght Invoice_Number
 		[System.ComponentModel.DataAnnotations.StringLength
-			(maximumLength: 24)]
-		public string Invoice_Number { get; set; }
+			(maximumLength: 25)]
+		public string Invoice_Serial { get; set; }
 		#endregion Invoice_Number
 		//------
 		#region Client_Name
@@ -53,8 +50,8 @@
 
 		//--Lenght Order_Service
 		[System.ComponentModel.DataAnnotations.StringLength
-			(maximumLength: 63)]
-		public string Order_Service { get; set; }
+			(maximumLength: 65)]
+		public string Service_Type { get; set; }
 		#endregion /Order_Service
 		//------
 		#region Description
@@ -71,7 +68,7 @@
 
 		//--Lenght Invoice_Number
 		[System.ComponentModel.DataAnnotations.StringLength
-			(maximumLength: 13)]
+			(maximumLength: 15)]
 		public string Request_Status { get; set; }
 		#endregion /Request_Status
 	}

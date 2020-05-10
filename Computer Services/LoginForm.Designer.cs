@@ -61,17 +61,17 @@
 			this.rightSidePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.rightSidePanel.Controls.Add(this.picturBox1);
 			this.rightSidePanel.Dock = System.Windows.Forms.DockStyle.Right;
-			this.rightSidePanel.Location = new System.Drawing.Point(546, 0);
+			this.rightSidePanel.Location = new System.Drawing.Point(468, 0);
 			this.rightSidePanel.Name = "rightSidePanel";
-			this.rightSidePanel.Size = new System.Drawing.Size(204, 250);
+			this.rightSidePanel.Size = new System.Drawing.Size(175, 224);
 			this.rightSidePanel.TabIndex = 2;
 			// 
 			// picturBox1
 			// 
 			this.picturBox1.Image = ((System.Drawing.Image)(resources.GetObject("picturBox1.Image")));
-			this.picturBox1.Location = new System.Drawing.Point(27, 50);
+			this.picturBox1.Location = new System.Drawing.Point(23, 45);
 			this.picturBox1.Name = "picturBox1";
-			this.picturBox1.Size = new System.Drawing.Size(150, 150);
+			this.picturBox1.Size = new System.Drawing.Size(129, 134);
 			this.picturBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.picturBox1.TabIndex = 3;
 			this.picturBox1.TabStop = false;
@@ -81,9 +81,9 @@
 			this.loginLabel.AutoSize = true;
 			this.loginLabel.Font = new System.Drawing.Font("IRANSans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.loginLabel.ForeColor = System.Drawing.Color.White;
-			this.loginLabel.Location = new System.Drawing.Point(423, 3);
+			this.loginLabel.Location = new System.Drawing.Point(363, 3);
 			this.loginLabel.Name = "loginLabel";
-			this.loginLabel.Size = new System.Drawing.Size(91, 24);
+			this.loginLabel.Size = new System.Drawing.Size(91, 22);
 			this.loginLabel.TabIndex = 2;
 			this.loginLabel.Text = "ورود به حساب";
 			// 
@@ -97,16 +97,16 @@
 			this.titlePanel.Dock = System.Windows.Forms.DockStyle.Top;
 			this.titlePanel.Location = new System.Drawing.Point(0, 0);
 			this.titlePanel.Name = "titlePanel";
-			this.titlePanel.Size = new System.Drawing.Size(546, 30);
+			this.titlePanel.Size = new System.Drawing.Size(468, 27);
 			this.titlePanel.TabIndex = 0;
 			// 
 			// loginPicturBox
 			// 
 			this.loginPicturBox.Dock = System.Windows.Forms.DockStyle.Right;
 			this.loginPicturBox.Image = ((System.Drawing.Image)(resources.GetObject("loginPicturBox.Image")));
-			this.loginPicturBox.Location = new System.Drawing.Point(516, 0);
+			this.loginPicturBox.Location = new System.Drawing.Point(442, 0);
 			this.loginPicturBox.Name = "loginPicturBox";
-			this.loginPicturBox.Size = new System.Drawing.Size(30, 30);
+			this.loginPicturBox.Size = new System.Drawing.Size(26, 27);
 			this.loginPicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.loginPicturBox.TabIndex = 3;
 			this.loginPicturBox.TabStop = false;
@@ -117,7 +117,7 @@
 			this.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.minimizeButton.FlatAppearance.BorderSize = 0;
 			this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.minimizeButton.Location = new System.Drawing.Point(33, 8);
+			this.minimizeButton.Location = new System.Drawing.Point(33, 6);
 			this.minimizeButton.Name = "minimizeButton";
 			this.minimizeButton.Size = new System.Drawing.Size(15, 15);
 			this.minimizeButton.TabIndex = 1;
@@ -132,7 +132,7 @@
 			this.closeButton.FlatAppearance.BorderSize = 0;
 			this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
 			this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.closeButton.Location = new System.Drawing.Point(12, 8);
+			this.closeButton.Location = new System.Drawing.Point(12, 6);
 			this.closeButton.Name = "closeButton";
 			this.closeButton.Size = new System.Drawing.Size(15, 15);
 			this.closeButton.TabIndex = 0;
@@ -145,10 +145,10 @@
 			this.usernameEmailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.usernameEmailTextBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.usernameEmailTextBox.ForeColor = System.Drawing.Color.Gray;
-			this.usernameEmailTextBox.Location = new System.Drawing.Point(123, 42);
+			this.usernameEmailTextBox.Location = new System.Drawing.Point(105, 38);
 			this.usernameEmailTextBox.Name = "usernameEmailTextBox";
 			this.usernameEmailTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.usernameEmailTextBox.Size = new System.Drawing.Size(300, 17);
+			this.usernameEmailTextBox.Size = new System.Drawing.Size(257, 17);
 			this.usernameEmailTextBox.TabIndex = 3;
 			this.usernameEmailTextBox.Text = "Username\\Email";
 			this.usernameEmailTextBox.Enter += new System.EventHandler(this.UsernameEmailTextBox_Enter);
@@ -158,17 +158,17 @@
 			// usernameEmailPanel
 			// 
 			this.usernameEmailPanel.BackColor = System.Drawing.Color.Gray;
-			this.usernameEmailPanel.Location = new System.Drawing.Point(123, 68);
+			this.usernameEmailPanel.Location = new System.Drawing.Point(105, 61);
 			this.usernameEmailPanel.Name = "usernameEmailPanel";
-			this.usernameEmailPanel.Size = new System.Drawing.Size(300, 1);
+			this.usernameEmailPanel.Size = new System.Drawing.Size(257, 1);
 			this.usernameEmailPanel.TabIndex = 7;
 			// 
 			// passwordPanel
 			// 
 			this.passwordPanel.BackColor = System.Drawing.Color.Gray;
-			this.passwordPanel.Location = new System.Drawing.Point(123, 115);
+			this.passwordPanel.Location = new System.Drawing.Point(105, 103);
 			this.passwordPanel.Name = "passwordPanel";
-			this.passwordPanel.Size = new System.Drawing.Size(300, 1);
+			this.passwordPanel.Size = new System.Drawing.Size(257, 1);
 			this.passwordPanel.TabIndex = 8;
 			// 
 			// passwordTextBox
@@ -177,10 +177,10 @@
 			this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.passwordTextBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.passwordTextBox.ForeColor = System.Drawing.Color.Gray;
-			this.passwordTextBox.Location = new System.Drawing.Point(123, 89);
+			this.passwordTextBox.Location = new System.Drawing.Point(105, 80);
 			this.passwordTextBox.Name = "passwordTextBox";
 			this.passwordTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.passwordTextBox.Size = new System.Drawing.Size(300, 17);
+			this.passwordTextBox.Size = new System.Drawing.Size(257, 17);
 			this.passwordTextBox.TabIndex = 4;
 			this.passwordTextBox.Text = "Password";
 			this.passwordTextBox.Enter += new System.EventHandler(this.PasswordTextBox_Enter);
@@ -198,10 +198,10 @@
 			this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.loginButton.Font = new System.Drawing.Font("IRANSans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.loginButton.ForeColor = System.Drawing.Color.White;
-			this.loginButton.Location = new System.Drawing.Point(123, 131);
+			this.loginButton.Location = new System.Drawing.Point(105, 117);
 			this.loginButton.Name = "loginButton";
 			this.loginButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.loginButton.Size = new System.Drawing.Size(300, 35);
+			this.loginButton.Size = new System.Drawing.Size(257, 31);
 			this.loginButton.TabIndex = 5;
 			this.loginButton.Text = "ورود";
 			this.loginButton.UseVisualStyleBackColor = false;
@@ -213,9 +213,9 @@
 			this.newAccountLinkLabel.AutoSize = true;
 			this.newAccountLinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
 			this.newAccountLinkLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			this.newAccountLinkLabel.Location = new System.Drawing.Point(201, 16);
+			this.newAccountLinkLabel.Location = new System.Drawing.Point(172, 14);
 			this.newAccountLinkLabel.Name = "newAccountLinkLabel";
-			this.newAccountLinkLabel.Size = new System.Drawing.Size(77, 19);
+			this.newAccountLinkLabel.Size = new System.Drawing.Size(78, 17);
 			this.newAccountLinkLabel.TabIndex = 1;
 			this.newAccountLinkLabel.TabStop = true;
 			this.newAccountLinkLabel.Text = "نام کاربری جدید";
@@ -225,9 +225,9 @@
 			// 
 			this.captionLabel1.AutoSize = true;
 			this.captionLabel1.ForeColor = System.Drawing.Color.Gray;
-			this.captionLabel1.Location = new System.Drawing.Point(273, 16);
+			this.captionLabel1.Location = new System.Drawing.Point(234, 14);
 			this.captionLabel1.Name = "captionLabel1";
-			this.captionLabel1.Size = new System.Drawing.Size(122, 19);
+			this.captionLabel1.Size = new System.Drawing.Size(123, 17);
 			this.captionLabel1.TabIndex = 0;
 			this.captionLabel1.Text = "برای ایجاد حساب جدید از";
 			// 
@@ -235,10 +235,10 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.ForeColor = System.Drawing.Color.Gray;
-			this.label1.Location = new System.Drawing.Point(151, 16);
+			this.label1.Location = new System.Drawing.Point(129, 14);
 			this.label1.Name = "label1";
 			this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.label1.Size = new System.Drawing.Size(55, 19);
+			this.label1.Size = new System.Drawing.Size(54, 17);
 			this.label1.TabIndex = 2;
 			this.label1.Text = "وارد شوید.";
 			// 
@@ -248,9 +248,9 @@
 			this.bottomPanel.Controls.Add(this.captionLabel1);
 			this.bottomPanel.Controls.Add(this.newAccountLinkLabel);
 			this.bottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.bottomPanel.Location = new System.Drawing.Point(0, 200);
+			this.bottomPanel.Location = new System.Drawing.Point(0, 179);
 			this.bottomPanel.Name = "bottomPanel";
-			this.bottomPanel.Size = new System.Drawing.Size(546, 50);
+			this.bottomPanel.Size = new System.Drawing.Size(468, 45);
 			this.bottomPanel.TabIndex = 1;
 			// 
 			// forgetPasswordLinkLabel
@@ -258,9 +258,9 @@
 			this.forgetPasswordLinkLabel.AutoSize = true;
 			this.forgetPasswordLinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
 			this.forgetPasswordLinkLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			this.forgetPasswordLinkLabel.Location = new System.Drawing.Point(221, 172);
+			this.forgetPasswordLinkLabel.Location = new System.Drawing.Point(189, 154);
 			this.forgetPasswordLinkLabel.Name = "forgetPasswordLinkLabel";
-			this.forgetPasswordLinkLabel.Size = new System.Drawing.Size(104, 19);
+			this.forgetPasswordLinkLabel.Size = new System.Drawing.Size(102, 17);
 			this.forgetPasswordLinkLabel.TabIndex = 6;
 			this.forgetPasswordLinkLabel.TabStop = true;
 			this.forgetPasswordLinkLabel.Text = "رمز را فراموش کردید؟";
@@ -270,11 +270,11 @@
 			// LoginForm
 			// 
 			this.AcceptButton = this.loginButton;
-			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
 			this.CancelButton = this.closeButton;
-			this.ClientSize = new System.Drawing.Size(750, 250);
+			this.ClientSize = new System.Drawing.Size(643, 224);
 			this.Controls.Add(this.forgetPasswordLinkLabel);
 			this.Controls.Add(this.bottomPanel);
 			this.Controls.Add(this.loginButton);
@@ -285,6 +285,7 @@
 			this.Controls.Add(this.titlePanel);
 			this.Controls.Add(this.rightSidePanel);
 			this.ForeColor = System.Drawing.Color.Black;
+			this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
 			this.Name = "LoginForm";
 			this.Opacity = 0.95D;
 			this.Text = "LoginForm";

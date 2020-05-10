@@ -50,9 +50,9 @@
 			// 
 			this.notificationStatusPicturBox.BackColor = System.Drawing.Color.Transparent;
 			this.notificationStatusPicturBox.Image = global::ComputerServices.Properties.Resources.succes_512;
-			this.notificationStatusPicturBox.Location = new System.Drawing.Point(4, 20);
+			this.notificationStatusPicturBox.Location = new System.Drawing.Point(3, 20);
 			this.notificationStatusPicturBox.Name = "notificationStatusPicturBox";
-			this.notificationStatusPicturBox.Size = new System.Drawing.Size(50, 50);
+			this.notificationStatusPicturBox.Size = new System.Drawing.Size(43, 45);
 			this.notificationStatusPicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.notificationStatusPicturBox.TabIndex = 1;
 			this.notificationStatusPicturBox.TabStop = false;
@@ -61,19 +61,18 @@
 			// 
 			this.messageLabel.Font = new System.Drawing.Font("IRANSans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.messageLabel.ForeColor = System.Drawing.Color.White;
-			this.messageLabel.Location = new System.Drawing.Point(60, 33);
+			this.messageLabel.Location = new System.Drawing.Point(51, 14);
 			this.messageLabel.Name = "messageLabel";
-			this.messageLabel.Size = new System.Drawing.Size(272, 25);
+			this.messageLabel.Size = new System.Drawing.Size(290, 56);
 			this.messageLabel.TabIndex = 2;
 			this.messageLabel.Text = "پیغام";
-			this.messageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// objectPictureBox
 			// 
 			this.objectPictureBox.BackColor = System.Drawing.Color.Transparent;
-			this.objectPictureBox.Location = new System.Drawing.Point(338, 20);
+			this.objectPictureBox.Location = new System.Drawing.Point(347, 20);
 			this.objectPictureBox.Name = "objectPictureBox";
-			this.objectPictureBox.Size = new System.Drawing.Size(50, 50);
+			this.objectPictureBox.Size = new System.Drawing.Size(43, 45);
 			this.objectPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.objectPictureBox.TabIndex = 4;
 			this.objectPictureBox.TabStop = false;
@@ -85,9 +84,9 @@
 			this.cancelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.cancelButton.FlatAppearance.BorderSize = 0;
 			this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.cancelButton.Location = new System.Drawing.Point(394, 30);
+			this.cancelButton.Location = new System.Drawing.Point(395, 29);
 			this.cancelButton.Name = "cancelButton";
-			this.cancelButton.Size = new System.Drawing.Size(50, 30);
+			this.cancelButton.Size = new System.Drawing.Size(43, 27);
 			this.cancelButton.TabIndex = 5;
 			this.cancelButton.UseVisualStyleBackColor = false;
 			this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
@@ -100,19 +99,19 @@
 			// 
 			this.captionLabel.Font = new System.Drawing.Font("IRANSans", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.captionLabel.ForeColor = System.Drawing.Color.White;
-			this.captionLabel.Location = new System.Drawing.Point(12, -2);
+			this.captionLabel.Location = new System.Drawing.Point(10, -2);
 			this.captionLabel.Name = "captionLabel";
-			this.captionLabel.Size = new System.Drawing.Size(120, 20);
+			this.captionLabel.Size = new System.Drawing.Size(103, 18);
 			this.captionLabel.TabIndex = 6;
 			this.captionLabel.Text = "عنوان";
 			this.captionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// PopupNotificationForm
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.RoyalBlue;
-			this.ClientSize = new System.Drawing.Size(450, 90);
+			this.ClientSize = new System.Drawing.Size(450, 85);
 			this.Controls.Add(this.captionLabel);
 			this.Controls.Add(this.cancelButton);
 			this.Controls.Add(this.objectPictureBox);

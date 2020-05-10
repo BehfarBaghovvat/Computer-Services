@@ -552,6 +552,15 @@ namespace Infrastructure
 		}
 		#endregion /PopupNotification
 
+		#region PurpleColor
+		public static System.Drawing.Color PurpleColor()
+		{
+			System.Drawing.Color color = System.Drawing.Color.FromArgb(128, 128, 255);
+
+			return color;
+		}
+		#endregion /PurpleColor
+
 		#region TextFixed
 		/// <summary>
 		/// A function that removes the excess distance of a text from both sides.
