@@ -30,13 +30,20 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-			this.titlePanel = new Mbb.Windows.Forms.Panel();
-			this.loginPicturBox = new Mbb.Windows.Forms.PicturBox();
-			this.mainPageLabel = new Mbb.Windows.Forms.Label();
-			this.minimizeButton = new Mbb.Windows.Forms.Button();
-			this.closeButton = new Mbb.Windows.Forms.Button();
-			this.maximizeButton = new Mbb.Windows.Forms.Button();
-			this.restoreButton = new Mbb.Windows.Forms.Button();
+			this.clockTimer = new System.Windows.Forms.Timer(this.components);
+			this.notificationPanel = new Mbb.Windows.Forms.Panel();
+			this.captionPanel = new Mbb.Windows.Forms.Panel();
+			this.iconPagePicturBox = new Mbb.Windows.Forms.PicturBox();
+			this.currentPageLabel = new Mbb.Windows.Forms.Label();
+			this.adDateLabel = new Mbb.Windows.Forms.Label();
+			this.solarDateLabel = new Mbb.Windows.Forms.Label();
+			this.timePanel = new Mbb.Windows.Forms.Panel();
+			this.secondLabel = new Mbb.Windows.Forms.Label();
+			this.hourLabel = new Mbb.Windows.Forms.Label();
+			this.separatorLabel1 = new Mbb.Windows.Forms.Label();
+			this.separatorLabel2 = new Mbb.Windows.Forms.Label();
+			this.minuteLabel = new Mbb.Windows.Forms.Label();
+			this.mainPanel = new Mbb.Windows.Forms.Panel();
 			this.menuPanel = new Mbb.Windows.Forms.Panel();
 			this.cafeNetButton = new Mbb.Windows.Forms.Button();
 			this.administratorToolsButton = new Mbb.Windows.Forms.Button();
@@ -52,119 +59,187 @@
 			this.servicesButton = new Mbb.Windows.Forms.Button();
 			this.firstSizeButton = new Mbb.Windows.Forms.Button();
 			this.secondSizeButton = new Mbb.Windows.Forms.Button();
-			this.mainPanel = new Mbb.Windows.Forms.Panel();
-			this.notificationPanel = new Mbb.Windows.Forms.Panel();
-			this.captionPanel = new Mbb.Windows.Forms.Panel();
-			this.iconPagePicturBox = new Mbb.Windows.Forms.PicturBox();
-			this.currentPageLabel = new Mbb.Windows.Forms.Label();
-			this.adDateLabel = new Mbb.Windows.Forms.Label();
-			this.solarDateLabel = new Mbb.Windows.Forms.Label();
-			this.timePanel = new Mbb.Windows.Forms.Panel();
-			this.secondLabel = new Mbb.Windows.Forms.Label();
-			this.hourLabel = new Mbb.Windows.Forms.Label();
-			this.separatorLabel1 = new Mbb.Windows.Forms.Label();
-			this.separatorLabel2 = new Mbb.Windows.Forms.Label();
-			this.minuteLabel = new Mbb.Windows.Forms.Label();
-			this.clockTimer = new System.Windows.Forms.Timer(this.components);
-			this.titlePanel.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.loginPicturBox)).BeginInit();
-			this.menuPanel.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.userImagePicturBox)).BeginInit();
+			this.titlePanel = new Mbb.Windows.Forms.Panel();
+			this.loginPicturBox = new Mbb.Windows.Forms.PicturBox();
+			this.mainPageLabel = new Mbb.Windows.Forms.Label();
+			this.minimizeButton = new Mbb.Windows.Forms.Button();
+			this.closeButton = new Mbb.Windows.Forms.Button();
+			this.maximizeButton = new Mbb.Windows.Forms.Button();
+			this.restoreButton = new Mbb.Windows.Forms.Button();
 			this.notificationPanel.SuspendLayout();
 			this.captionPanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.iconPagePicturBox)).BeginInit();
 			this.timePanel.SuspendLayout();
+			this.menuPanel.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.userImagePicturBox)).BeginInit();
+			this.titlePanel.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.loginPicturBox)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// titlePanel
+			// clockTimer
 			// 
-			this.titlePanel.Controls.Add(this.loginPicturBox);
-			this.titlePanel.Controls.Add(this.mainPageLabel);
-			this.titlePanel.Controls.Add(this.minimizeButton);
-			this.titlePanel.Controls.Add(this.closeButton);
-			this.titlePanel.Controls.Add(this.maximizeButton);
-			this.titlePanel.Controls.Add(this.restoreButton);
-			this.titlePanel.Dock = System.Windows.Forms.DockStyle.Top;
-			this.titlePanel.Location = new System.Drawing.Point(0, 0);
-			this.titlePanel.Name = "titlePanel";
-			this.titlePanel.Size = new System.Drawing.Size(1114, 27);
-			this.titlePanel.TabIndex = 0;
-			this.titlePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitlePanel_MouseDown);
+			this.clockTimer.Tick += new System.EventHandler(this.ClockTimer_Tick);
 			// 
-			// loginPicturBox
+			// notificationPanel
 			// 
-			this.loginPicturBox.Dock = System.Windows.Forms.DockStyle.Right;
-			this.loginPicturBox.Image = ((System.Drawing.Image)(resources.GetObject("loginPicturBox.Image")));
-			this.loginPicturBox.Location = new System.Drawing.Point(1088, 0);
-			this.loginPicturBox.Name = "loginPicturBox";
-			this.loginPicturBox.Size = new System.Drawing.Size(26, 27);
-			this.loginPicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.loginPicturBox.TabIndex = 7;
-			this.loginPicturBox.TabStop = false;
+			this.notificationPanel.BackColor = System.Drawing.Color.SeaGreen;
+			this.notificationPanel.Controls.Add(this.captionPanel);
+			this.notificationPanel.Controls.Add(this.adDateLabel);
+			this.notificationPanel.Controls.Add(this.solarDateLabel);
+			this.notificationPanel.Controls.Add(this.timePanel);
+			this.notificationPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.notificationPanel.Location = new System.Drawing.Point(180, 27);
+			this.notificationPanel.Name = "notificationPanel";
+			this.notificationPanel.Size = new System.Drawing.Size(934, 100);
+			this.notificationPanel.TabIndex = 4;
+			this.notificationPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NotificationPanel_MouseDown);
 			// 
-			// mainPageLabel
+			// captionPanel
 			// 
-			this.mainPageLabel.AutoSize = true;
-			this.mainPageLabel.Font = new System.Drawing.Font("IRANSans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.mainPageLabel.ForeColor = System.Drawing.Color.White;
-			this.mainPageLabel.Location = new System.Drawing.Point(1005, 2);
-			this.mainPageLabel.Name = "mainPageLabel";
-			this.mainPageLabel.Size = new System.Drawing.Size(78, 22);
-			this.mainPageLabel.TabIndex = 6;
-			this.mainPageLabel.Text = "صفحه اصلی";
+			this.captionPanel.Controls.Add(this.iconPagePicturBox);
+			this.captionPanel.Controls.Add(this.currentPageLabel);
+			this.captionPanel.Location = new System.Drawing.Point(11, 4);
+			this.captionPanel.Name = "captionPanel";
+			this.captionPanel.Size = new System.Drawing.Size(288, 89);
+			this.captionPanel.TabIndex = 27;
 			// 
-			// minimizeButton
+			// iconPagePicturBox
 			// 
-			this.minimizeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("minimizeButton.BackgroundImage")));
-			this.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.minimizeButton.FlatAppearance.BorderSize = 0;
-			this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.minimizeButton.Location = new System.Drawing.Point(54, 6);
-			this.minimizeButton.Name = "minimizeButton";
-			this.minimizeButton.Size = new System.Drawing.Size(15, 15);
-			this.minimizeButton.TabIndex = 5;
-			this.minimizeButton.UseVisualStyleBackColor = true;
-			this.minimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
+			this.iconPagePicturBox.Image = global::ComputerServices.Properties.Resources.computer_support_512;
+			this.iconPagePicturBox.Location = new System.Drawing.Point(124, 3);
+			this.iconPagePicturBox.Name = "iconPagePicturBox";
+			this.iconPagePicturBox.Size = new System.Drawing.Size(40, 40);
+			this.iconPagePicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.iconPagePicturBox.TabIndex = 27;
+			this.iconPagePicturBox.TabStop = false;
 			// 
-			// closeButton
+			// currentPageLabel
 			// 
-			this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
-			this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.closeButton.FlatAppearance.BorderSize = 0;
-			this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-			this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.closeButton.Location = new System.Drawing.Point(12, 6);
-			this.closeButton.Name = "closeButton";
-			this.closeButton.Size = new System.Drawing.Size(15, 15);
-			this.closeButton.TabIndex = 4;
-			this.closeButton.UseVisualStyleBackColor = true;
-			this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
+			this.currentPageLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.currentPageLabel.Font = new System.Drawing.Font("B Yekan", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.currentPageLabel.ForeColor = System.Drawing.Color.Yellow;
+			this.currentPageLabel.Location = new System.Drawing.Point(0, 34);
+			this.currentPageLabel.Name = "currentPageLabel";
+			this.currentPageLabel.Size = new System.Drawing.Size(288, 55);
+			this.currentPageLabel.TabIndex = 26;
+			this.currentPageLabel.Text = "خدمات";
+			this.currentPageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// maximizeButton
+			// adDateLabel
 			// 
-			this.maximizeButton.BackgroundImage = global::ComputerServices.Properties.Resources.maximize_button_512;
-			this.maximizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.maximizeButton.FlatAppearance.BorderSize = 0;
-			this.maximizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.maximizeButton.Location = new System.Drawing.Point(33, 6);
-			this.maximizeButton.Name = "maximizeButton";
-			this.maximizeButton.Size = new System.Drawing.Size(15, 15);
-			this.maximizeButton.TabIndex = 8;
-			this.maximizeButton.UseVisualStyleBackColor = true;
-			this.maximizeButton.Click += new System.EventHandler(this.MaximizeButton_Click);
+			this.adDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.adDateLabel.Font = new System.Drawing.Font("IRANSans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.adDateLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.adDateLabel.Location = new System.Drawing.Point(723, 72);
+			this.adDateLabel.Name = "adDateLabel";
+			this.adDateLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.adDateLabel.Size = new System.Drawing.Size(207, 25);
+			this.adDateLabel.TabIndex = 25;
+			this.adDateLabel.Text = "تقویم میلادی";
+			this.adDateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
-			// restoreButton
+			// solarDateLabel
 			// 
-			this.restoreButton.BackgroundImage = global::ComputerServices.Properties.Resources.restore_down_512;
-			this.restoreButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.restoreButton.FlatAppearance.BorderSize = 0;
-			this.restoreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.restoreButton.Location = new System.Drawing.Point(33, 6);
-			this.restoreButton.Name = "restoreButton";
-			this.restoreButton.Size = new System.Drawing.Size(15, 15);
-			this.restoreButton.TabIndex = 9;
-			this.restoreButton.UseVisualStyleBackColor = true;
-			this.restoreButton.Click += new System.EventHandler(this.RestoreButton_Click);
+			this.solarDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.solarDateLabel.Font = new System.Drawing.Font("IRANSans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.solarDateLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.solarDateLabel.Location = new System.Drawing.Point(689, 49);
+			this.solarDateLabel.Name = "solarDateLabel";
+			this.solarDateLabel.Size = new System.Drawing.Size(206, 25);
+			this.solarDateLabel.TabIndex = 24;
+			this.solarDateLabel.Text = "تقویم شمسی";
+			this.solarDateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// timePanel
+			// 
+			this.timePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.timePanel.Controls.Add(this.secondLabel);
+			this.timePanel.Controls.Add(this.hourLabel);
+			this.timePanel.Controls.Add(this.separatorLabel1);
+			this.timePanel.Controls.Add(this.separatorLabel2);
+			this.timePanel.Controls.Add(this.minuteLabel);
+			this.timePanel.Location = new System.Drawing.Point(689, 5);
+			this.timePanel.Name = "timePanel";
+			this.timePanel.Size = new System.Drawing.Size(241, 41);
+			this.timePanel.TabIndex = 23;
+			// 
+			// secondLabel
+			// 
+			this.secondLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.secondLabel.AutoSize = true;
+			this.secondLabel.Font = new System.Drawing.Font("Castellar", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.secondLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.secondLabel.Location = new System.Drawing.Point(166, 0);
+			this.secondLabel.Name = "secondLabel";
+			this.secondLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.secondLabel.Size = new System.Drawing.Size(65, 40);
+			this.secondLabel.TabIndex = 13;
+			this.secondLabel.Text = "00";
+			this.secondLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// hourLabel
+			// 
+			this.hourLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.hourLabel.AutoSize = true;
+			this.hourLabel.Font = new System.Drawing.Font("Castellar", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.hourLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.hourLabel.Location = new System.Drawing.Point(9, 0);
+			this.hourLabel.Name = "hourLabel";
+			this.hourLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.hourLabel.Size = new System.Drawing.Size(65, 40);
+			this.hourLabel.TabIndex = 9;
+			this.hourLabel.Text = "00";
+			this.hourLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// separatorLabel1
+			// 
+			this.separatorLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.separatorLabel1.AutoSize = true;
+			this.separatorLabel1.Font = new System.Drawing.Font("Castellar", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.separatorLabel1.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.separatorLabel1.Location = new System.Drawing.Point(68, 0);
+			this.separatorLabel1.Name = "separatorLabel1";
+			this.separatorLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.separatorLabel1.Size = new System.Drawing.Size(25, 40);
+			this.separatorLabel1.TabIndex = 10;
+			this.separatorLabel1.Text = ":";
+			this.separatorLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// separatorLabel2
+			// 
+			this.separatorLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.separatorLabel2.AutoSize = true;
+			this.separatorLabel2.Font = new System.Drawing.Font("Castellar", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.separatorLabel2.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.separatorLabel2.Location = new System.Drawing.Point(147, 0);
+			this.separatorLabel2.Name = "separatorLabel2";
+			this.separatorLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.separatorLabel2.Size = new System.Drawing.Size(25, 40);
+			this.separatorLabel2.TabIndex = 12;
+			this.separatorLabel2.Text = ":";
+			this.separatorLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// minuteLabel
+			// 
+			this.minuteLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.minuteLabel.AutoSize = true;
+			this.minuteLabel.Font = new System.Drawing.Font("Castellar", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.minuteLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.minuteLabel.Location = new System.Drawing.Point(88, 0);
+			this.minuteLabel.Name = "minuteLabel";
+			this.minuteLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.minuteLabel.Size = new System.Drawing.Size(65, 40);
+			this.minuteLabel.TabIndex = 11;
+			this.minuteLabel.Text = "00";
+			this.minuteLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// mainPanel
+			// 
+			this.mainPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.mainPanel.Location = new System.Drawing.Point(180, 127);
+			this.mainPanel.Name = "mainPanel";
+			this.mainPanel.Size = new System.Drawing.Size(934, 500);
+			this.mainPanel.TabIndex = 2;
 			// 
 			// menuPanel
 			// 
@@ -256,7 +331,7 @@
 			this.logputButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.logputButton.FlatAppearance.BorderSize = 0;
 			this.logputButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.logputButton.Location = new System.Drawing.Point(119, 568);
+			this.logputButton.Location = new System.Drawing.Point(112, 561);
 			this.logputButton.Name = "logputButton";
 			this.logputButton.Size = new System.Drawing.Size(26, 27);
 			this.logputButton.TabIndex = 8;
@@ -271,7 +346,7 @@
 			this.shutDownButton.FlatAppearance.BorderSize = 0;
 			this.shutDownButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
 			this.shutDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.shutDownButton.Location = new System.Drawing.Point(150, 568);
+			this.shutDownButton.Location = new System.Drawing.Point(144, 561);
 			this.shutDownButton.Name = "shutDownButton";
 			this.shutDownButton.Size = new System.Drawing.Size(26, 27);
 			this.shutDownButton.TabIndex = 7;
@@ -385,7 +460,7 @@
 			this.firstSizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.firstSizeButton.Location = new System.Drawing.Point(0, 0);
 			this.firstSizeButton.Name = "firstSizeButton";
-			this.firstSizeButton.Size = new System.Drawing.Size(34, 18);
+			this.firstSizeButton.Size = new System.Drawing.Size(40, 18);
 			this.firstSizeButton.TabIndex = 0;
 			this.firstSizeButton.UseVisualStyleBackColor = true;
 			this.firstSizeButton.Click += new System.EventHandler(this.FirstSizeButton_Click);
@@ -398,175 +473,100 @@
 			this.secondSizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.secondSizeButton.Location = new System.Drawing.Point(0, 0);
 			this.secondSizeButton.Name = "secondSizeButton";
-			this.secondSizeButton.Size = new System.Drawing.Size(34, 18);
+			this.secondSizeButton.Size = new System.Drawing.Size(40, 18);
 			this.secondSizeButton.TabIndex = 13;
 			this.secondSizeButton.UseVisualStyleBackColor = true;
 			this.secondSizeButton.Click += new System.EventHandler(this.SecondSizeButton_Click);
 			// 
-			// mainPanel
+			// titlePanel
 			// 
-			this.mainPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.mainPanel.Location = new System.Drawing.Point(180, 127);
-			this.mainPanel.Name = "mainPanel";
-			this.mainPanel.Size = new System.Drawing.Size(934, 500);
-			this.mainPanel.TabIndex = 2;
+			this.titlePanel.Controls.Add(this.loginPicturBox);
+			this.titlePanel.Controls.Add(this.mainPageLabel);
+			this.titlePanel.Controls.Add(this.minimizeButton);
+			this.titlePanel.Controls.Add(this.closeButton);
+			this.titlePanel.Controls.Add(this.maximizeButton);
+			this.titlePanel.Controls.Add(this.restoreButton);
+			this.titlePanel.Dock = System.Windows.Forms.DockStyle.Top;
+			this.titlePanel.Location = new System.Drawing.Point(0, 0);
+			this.titlePanel.Name = "titlePanel";
+			this.titlePanel.Size = new System.Drawing.Size(1114, 27);
+			this.titlePanel.TabIndex = 0;
+			this.titlePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitlePanel_MouseDown);
 			// 
-			// notificationPanel
+			// loginPicturBox
 			// 
-			this.notificationPanel.BackColor = System.Drawing.Color.SeaGreen;
-			this.notificationPanel.Controls.Add(this.captionPanel);
-			this.notificationPanel.Controls.Add(this.adDateLabel);
-			this.notificationPanel.Controls.Add(this.solarDateLabel);
-			this.notificationPanel.Controls.Add(this.timePanel);
-			this.notificationPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.notificationPanel.Location = new System.Drawing.Point(180, 27);
-			this.notificationPanel.Name = "notificationPanel";
-			this.notificationPanel.Size = new System.Drawing.Size(934, 100);
-			this.notificationPanel.TabIndex = 4;
-			this.notificationPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NotificationPanel_MouseDown);
+			this.loginPicturBox.Dock = System.Windows.Forms.DockStyle.Right;
+			this.loginPicturBox.Image = ((System.Drawing.Image)(resources.GetObject("loginPicturBox.Image")));
+			this.loginPicturBox.Location = new System.Drawing.Point(1088, 0);
+			this.loginPicturBox.Name = "loginPicturBox";
+			this.loginPicturBox.Size = new System.Drawing.Size(26, 27);
+			this.loginPicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.loginPicturBox.TabIndex = 7;
+			this.loginPicturBox.TabStop = false;
 			// 
-			// captionPanel
+			// mainPageLabel
 			// 
-			this.captionPanel.Controls.Add(this.iconPagePicturBox);
-			this.captionPanel.Controls.Add(this.currentPageLabel);
-			this.captionPanel.Location = new System.Drawing.Point(11, 4);
-			this.captionPanel.Name = "captionPanel";
-			this.captionPanel.Size = new System.Drawing.Size(288, 89);
-			this.captionPanel.TabIndex = 27;
+			this.mainPageLabel.AutoSize = true;
+			this.mainPageLabel.Font = new System.Drawing.Font("IRANSans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.mainPageLabel.ForeColor = System.Drawing.Color.White;
+			this.mainPageLabel.Location = new System.Drawing.Point(1005, 2);
+			this.mainPageLabel.Name = "mainPageLabel";
+			this.mainPageLabel.Size = new System.Drawing.Size(78, 22);
+			this.mainPageLabel.TabIndex = 6;
+			this.mainPageLabel.Text = "صفحه اصلی";
 			// 
-			// iconPagePicturBox
+			// minimizeButton
 			// 
-			this.iconPagePicturBox.Image = global::ComputerServices.Properties.Resources.computer_support_512;
-			this.iconPagePicturBox.Location = new System.Drawing.Point(123, 4);
-			this.iconPagePicturBox.Name = "iconPagePicturBox";
-			this.iconPagePicturBox.Size = new System.Drawing.Size(43, 45);
-			this.iconPagePicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.iconPagePicturBox.TabIndex = 27;
-			this.iconPagePicturBox.TabStop = false;
+			this.minimizeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("minimizeButton.BackgroundImage")));
+			this.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.minimizeButton.FlatAppearance.BorderSize = 0;
+			this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.minimizeButton.Location = new System.Drawing.Point(54, 6);
+			this.minimizeButton.Name = "minimizeButton";
+			this.minimizeButton.Size = new System.Drawing.Size(15, 15);
+			this.minimizeButton.TabIndex = 5;
+			this.minimizeButton.UseVisualStyleBackColor = true;
+			this.minimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
 			// 
-			// currentPageLabel
+			// closeButton
 			// 
-			this.currentPageLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.currentPageLabel.Font = new System.Drawing.Font("B Yekan", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.currentPageLabel.ForeColor = System.Drawing.Color.Yellow;
-			this.currentPageLabel.Location = new System.Drawing.Point(0, 51);
-			this.currentPageLabel.Name = "currentPageLabel";
-			this.currentPageLabel.Size = new System.Drawing.Size(288, 38);
-			this.currentPageLabel.TabIndex = 26;
-			this.currentPageLabel.Text = "خدمات";
-			this.currentPageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
+			this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.closeButton.FlatAppearance.BorderSize = 0;
+			this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+			this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.closeButton.Location = new System.Drawing.Point(12, 6);
+			this.closeButton.Name = "closeButton";
+			this.closeButton.Size = new System.Drawing.Size(15, 15);
+			this.closeButton.TabIndex = 4;
+			this.closeButton.UseVisualStyleBackColor = true;
+			this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
 			// 
-			// adDateLabel
+			// maximizeButton
 			// 
-			this.adDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.adDateLabel.Font = new System.Drawing.Font("IRANSans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.adDateLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-			this.adDateLabel.Location = new System.Drawing.Point(723, 72);
-			this.adDateLabel.Name = "adDateLabel";
-			this.adDateLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.adDateLabel.Size = new System.Drawing.Size(207, 25);
-			this.adDateLabel.TabIndex = 25;
-			this.adDateLabel.Text = "تقویم میلادی";
-			this.adDateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.maximizeButton.BackgroundImage = global::ComputerServices.Properties.Resources.maximize_button_512;
+			this.maximizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.maximizeButton.FlatAppearance.BorderSize = 0;
+			this.maximizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.maximizeButton.Location = new System.Drawing.Point(33, 6);
+			this.maximizeButton.Name = "maximizeButton";
+			this.maximizeButton.Size = new System.Drawing.Size(15, 15);
+			this.maximizeButton.TabIndex = 8;
+			this.maximizeButton.UseVisualStyleBackColor = true;
+			this.maximizeButton.Click += new System.EventHandler(this.MaximizeButton_Click);
 			// 
-			// solarDateLabel
+			// restoreButton
 			// 
-			this.solarDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.solarDateLabel.Font = new System.Drawing.Font("IRANSans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.solarDateLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-			this.solarDateLabel.Location = new System.Drawing.Point(689, 49);
-			this.solarDateLabel.Name = "solarDateLabel";
-			this.solarDateLabel.Size = new System.Drawing.Size(206, 25);
-			this.solarDateLabel.TabIndex = 24;
-			this.solarDateLabel.Text = "تقویم شمسی";
-			this.solarDateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// timePanel
-			// 
-			this.timePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.timePanel.Controls.Add(this.secondLabel);
-			this.timePanel.Controls.Add(this.hourLabel);
-			this.timePanel.Controls.Add(this.separatorLabel1);
-			this.timePanel.Controls.Add(this.separatorLabel2);
-			this.timePanel.Controls.Add(this.minuteLabel);
-			this.timePanel.Location = new System.Drawing.Point(689, 5);
-			this.timePanel.Name = "timePanel";
-			this.timePanel.Size = new System.Drawing.Size(241, 41);
-			this.timePanel.TabIndex = 23;
-			// 
-			// secondLabel
-			// 
-			this.secondLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.secondLabel.AutoSize = true;
-			this.secondLabel.Font = new System.Drawing.Font("Castellar", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.secondLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-			this.secondLabel.Location = new System.Drawing.Point(166, 0);
-			this.secondLabel.Name = "secondLabel";
-			this.secondLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.secondLabel.Size = new System.Drawing.Size(65, 40);
-			this.secondLabel.TabIndex = 13;
-			this.secondLabel.Text = "00";
-			this.secondLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// hourLabel
-			// 
-			this.hourLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.hourLabel.AutoSize = true;
-			this.hourLabel.Font = new System.Drawing.Font("Castellar", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.hourLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-			this.hourLabel.Location = new System.Drawing.Point(9, 0);
-			this.hourLabel.Name = "hourLabel";
-			this.hourLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.hourLabel.Size = new System.Drawing.Size(65, 40);
-			this.hourLabel.TabIndex = 9;
-			this.hourLabel.Text = "00";
-			this.hourLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// separatorLabel1
-			// 
-			this.separatorLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.separatorLabel1.AutoSize = true;
-			this.separatorLabel1.Font = new System.Drawing.Font("Castellar", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.separatorLabel1.ForeColor = System.Drawing.Color.WhiteSmoke;
-			this.separatorLabel1.Location = new System.Drawing.Point(68, 0);
-			this.separatorLabel1.Name = "separatorLabel1";
-			this.separatorLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.separatorLabel1.Size = new System.Drawing.Size(25, 40);
-			this.separatorLabel1.TabIndex = 10;
-			this.separatorLabel1.Text = ":";
-			this.separatorLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// separatorLabel2
-			// 
-			this.separatorLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.separatorLabel2.AutoSize = true;
-			this.separatorLabel2.Font = new System.Drawing.Font("Castellar", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.separatorLabel2.ForeColor = System.Drawing.Color.WhiteSmoke;
-			this.separatorLabel2.Location = new System.Drawing.Point(147, 0);
-			this.separatorLabel2.Name = "separatorLabel2";
-			this.separatorLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.separatorLabel2.Size = new System.Drawing.Size(25, 40);
-			this.separatorLabel2.TabIndex = 12;
-			this.separatorLabel2.Text = ":";
-			this.separatorLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// minuteLabel
-			// 
-			this.minuteLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.minuteLabel.AutoSize = true;
-			this.minuteLabel.Font = new System.Drawing.Font("Castellar", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.minuteLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-			this.minuteLabel.Location = new System.Drawing.Point(88, 0);
-			this.minuteLabel.Name = "minuteLabel";
-			this.minuteLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.minuteLabel.Size = new System.Drawing.Size(65, 40);
-			this.minuteLabel.TabIndex = 11;
-			this.minuteLabel.Text = "00";
-			this.minuteLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// clockTimer
-			// 
-			this.clockTimer.Tick += new System.EventHandler(this.ClockTimer_Tick);
+			this.restoreButton.BackgroundImage = global::ComputerServices.Properties.Resources.restore_down_512;
+			this.restoreButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.restoreButton.FlatAppearance.BorderSize = 0;
+			this.restoreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.restoreButton.Location = new System.Drawing.Point(33, 6);
+			this.restoreButton.Name = "restoreButton";
+			this.restoreButton.Size = new System.Drawing.Size(15, 15);
+			this.restoreButton.TabIndex = 9;
+			this.restoreButton.UseVisualStyleBackColor = true;
+			this.restoreButton.Click += new System.EventHandler(this.RestoreButton_Click);
 			// 
 			// MainForm
 			// 
@@ -584,17 +584,17 @@
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.Text = "MainForm";
 			this.Load += new System.EventHandler(this.MainForm_Load);
-			this.titlePanel.ResumeLayout(false);
-			this.titlePanel.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.loginPicturBox)).EndInit();
-			this.menuPanel.ResumeLayout(false);
-			this.menuPanel.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.userImagePicturBox)).EndInit();
 			this.notificationPanel.ResumeLayout(false);
 			this.captionPanel.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.iconPagePicturBox)).EndInit();
 			this.timePanel.ResumeLayout(false);
 			this.timePanel.PerformLayout();
+			this.menuPanel.ResumeLayout(false);
+			this.menuPanel.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.userImagePicturBox)).EndInit();
+			this.titlePanel.ResumeLayout(false);
+			this.titlePanel.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.loginPicturBox)).EndInit();
 			this.ResumeLayout(false);
 
 		}

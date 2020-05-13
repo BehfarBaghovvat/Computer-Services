@@ -1,8 +1,8 @@
 ﻿namespace ComputerServices
 {
-	public partial class WelComeUserForm : Infrastructure.BaseForm
+	public partial class WelcomeUserForm : Infrastructure.BaseForm
 	{
-		public WelComeUserForm()
+		public WelcomeUserForm()
 		{
 			InitializeComponent();
 		}

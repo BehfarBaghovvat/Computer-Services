@@ -247,8 +247,8 @@ namespace ComputerServices
 						Program.AuthenticatedUser = user;
 						SaveLoginHistory(user);
 
-						WelComeUserForm welComeUserForm =
-							new WelComeUserForm();
+						WelcomeUserForm welComeUserForm =
+							new WelcomeUserForm();
 
 						welComeUserForm.ShowDialog();
 
@@ -284,8 +284,8 @@ namespace ComputerServices
 						Program.AuthenticatedUser = user;
 						SaveLoginHistory(user);
 
-						WelComeUserForm welComeUserForm =
-							new WelComeUserForm();
+						WelcomeUserForm welComeUserForm =
+							new WelcomeUserForm();
 
 						welComeUserForm.ShowDialog();
 						Program.MainShow();

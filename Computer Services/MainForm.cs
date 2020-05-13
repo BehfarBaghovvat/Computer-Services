@@ -14,6 +14,22 @@
 
 		//----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+		//private Menu.Service.ServiceForm serviceForm;
+
+		//public Menu.Service.ServiceForm ServiceForm
+		//{
+		//	get 
+		//	{
+		//		if (serviceForm == null)
+		//		{
+
+		//		}
+		//		return serviceForm;
+		//	}
+		//}
+
+
+
 		#region Properties
 		public int LX { get; set; }
 		public int LY { get; set; }
@@ -82,8 +98,8 @@
 		#region FirstSizeButton_Click
 		private void FirstSizeButton_Click(object sender, System.EventArgs e)
 		{
-			logputButton.Location = new System.Drawing.Point(x: 195, y: 599);
-			menuPanel.Size = new System.Drawing.Size(width: 40, height: 670);
+			logputButton.Location = new System.Drawing.Point(x: 144, y: 528);
+			menuPanel.Size = new System.Drawing.Size(width: 40, height: 600);
 			firstSizeButton.SendToBack();
 			secondSizeButton.BringToFront();
 		}
@@ -92,8 +108,8 @@
 		#region SecondSizeButton_Click
 		private void SecondSizeButton_Click(object sender, System.EventArgs e)
 		{
-			menuPanel.Size = new System.Drawing.Size(width: 210, height: 670);
-			logputButton.Location = new System.Drawing.Point(x: 159, y: 635);
+			menuPanel.Size = new System.Drawing.Size(width: 180, height: 600);
+			logputButton.Location = new System.Drawing.Point(x: 112, y: 561);
 			firstSizeButton.BringToFront();
 			secondSizeButton.SendToBack();
 		}
@@ -105,8 +121,20 @@
 			focusPanel.Height = servicesButton.Height;
 			focusPanel.Top = servicesButton.Top;
 
+			Menu.Service.ServiceForm serviceForm =
+				new Menu.Service.ServiceForm();
+
+			serviceForm.Dock = System.Windows.Forms.DockStyle.Fill;
+			serviceForm.TopLevel = false;
+			serviceForm.TopMost = true;
+
 			currentPageLabel.Text = servicesButton.Text;
 			iconPagePicturBox.Image = Properties.Resources.computer_support_512;
+
+			mainPanel.Controls.Clear();
+			mainPanel.Controls.Add(serviceForm);
+			serviceForm.Show();
+
 		}
 		#endregion /ServicesButton_Click
 

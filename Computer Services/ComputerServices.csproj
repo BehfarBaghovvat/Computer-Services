@@ -146,11 +146,11 @@
     <Compile Include="UC_Project\MainBackgroundUC4.Designer.cs">
       <DependentUpon>MainBackgroundUC4.cs</DependentUpon>
     </Compile>
-    <Compile Include="WelComeUserForm.cs">
+    <Compile Include="WelcomeUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WelComeUserForm.Designer.cs">
-      <DependentUpon>WelComeUserForm.cs</DependentUpon>
+    <Compile Include="WelcomeUserForm.Designer.cs">
+      <DependentUpon>WelcomeUserForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ForgetPasswordForm.resx">
       <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
@@ -204,10 +204,12 @@
     <EmbeddedResource Include="UC_Project\MainBackgroundUC4.resx">
       <DependentUpon>MainBackgroundUC4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WelComeUserForm.resx">
-      <DependentUpon>WelComeUserForm.cs</DependentUpon>
+    <EmbeddedResource Include="WelcomeUserForm.resx">
+      <DependentUpon>WelcomeUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Models.CellphoneService.datasource" />
+    <None Include="Properties\DataSources\Models.ComputerService.datasource" />
     <None Include="Properties\DataSources\Models.ServiceComputer.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

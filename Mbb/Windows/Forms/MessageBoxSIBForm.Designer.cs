@@ -119,7 +119,7 @@
 			// 
 			// MessageBoxSIBForm
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.RoyalBlue;
 			this.ClientSize = new System.Drawing.Size(450, 135);
@@ -128,6 +128,8 @@
 			this.Controls.Add(this.okButton);
 			this.Controls.Add(this.messageLabel);
 			this.Font = new System.Drawing.Font("IRANSans", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.MaximumSize = new System.Drawing.Size(450, 135);
+			this.MinimumSize = new System.Drawing.Size(450, 135);
 			this.Name = "MessageBoxSIBForm";
 			this.Opacity = 0.9D;
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

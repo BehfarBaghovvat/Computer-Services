@@ -26,9 +26,14 @@
 		public System.Data.Entity.DbSet<LogHistory> LogHistories { get; set; }
 
 		/// <summary>
-		///  Table of ServiceComputers
+		///  Table of ComputerServices
 		/// </summary>
-		public System.Data.Entity.DbSet<ServiceComputer> ServiceComputers { get; set; }
+		public System.Data.Entity.DbSet<ComputerService> ComputerServices { get; set; }
+
+		/// <summary>
+		/// Table of CellphoneServices
+		/// </summary>
+		public System.Data.Entity.DbSet<CellphoneService> CellphoneServices { get; set; }
 
 		//public System.Data.Entity.DbSet<ActivityHistory> ActivityHistories { get; set; }
 

@@ -1,8 +1,8 @@
 ﻿namespace Models
 {
-	public class ServiceComputer : BaseEntity
+	public class ComputerService : BaseEntity
 	{
-		public ServiceComputer() : base()
+		public ComputerService() : base()
 		{
 
 		}
