@@ -61,6 +61,9 @@
     <Compile Include="Windows\Forms\CheckBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Windows\Forms\CircularButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Windows\Forms\CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>

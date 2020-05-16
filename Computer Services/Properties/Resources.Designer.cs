@@ -103,6 +103,16 @@ namespace ComputerServices.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap combo_chart_512 {
+            get {
+                object obj = ResourceManager.GetObject("combo_chart_512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap computer_support_512 {
             get {
                 object obj = ResourceManager.GetObject("computer_support_512", resourceCulture);
@@ -166,16 +176,6 @@ namespace ComputerServices.Properties {
         internal static System.Drawing.Bitmap maximize_button_512 {
             get {
                 object obj = ResourceManager.GetObject("maximize_button_512", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap order_document_512 {
-            get {
-                object obj = ResourceManager.GetObject("order_document_512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

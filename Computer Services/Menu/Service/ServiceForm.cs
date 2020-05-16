@@ -9,7 +9,25 @@ namespace ComputerServices.Menu.Service
 			InitializeComponent();
 		}
 
-		#region Properties
+		//private  MainForm mainForm;
+
+		//public MainForm MainForm
+		//{
+		//	get 
+		//	{
+		//		if (mainForm == null || mainForm.IsDisposed == true)
+		//		{
+		//			mainForm =
+		//				new MainForm();
+		//		}
+		//		return mainForm;
+		//	}
+		//}
+
+
+		#region Properties_Service
+		public bool ComputerService { get; set; }
+		public bool CellPhoneService { get; set; }
 		public string RegisterDate { get; set; }
 		public string InvoiceSerial { get; set; }
 		public string ClientName { get; set; }
@@ -36,7 +54,7 @@ namespace ComputerServices.Menu.Service
 		public bool SetupIPA { get; set; }
 		public bool ResetFactory { get; set; }
 		public bool OtherSoftwaareService { get; set; }
-		#endregion /Properties
+		#endregion /Properties_Service
 
 		//-----The beginning of the coding line.
 
@@ -46,18 +64,18 @@ namespace ComputerServices.Menu.Service
 			computerServicePanel.Visible = true;
 			cellphoneServicePanel.Visible = false;
 
+			ComputerService = true;
+			CellPhoneService = false;
+
 			descriptionTextBox2.Location = new System.Drawing.Point(x: descriptionTextBox2.Location.X, y: 293);
-			descriptionPanel2.Location = new System.Drawing.Point(x: descriptionPanel2.Location.X, y: 379);
-			saveOrderButton2.Location = new System.Drawing.Point(x: saveOrderButton2.Location.X, y: 386);
+			descriptionPanel2.Location = new System.Drawing.Point(x: descriptionPanel2.Location.X, y: 570);
+			saveOrderButton2.Location = new System.Drawing.Point(x: saveOrderButton2.Location.X, y: 577);
 
 			ComputerServicesLoader();
+			CellphoneServicesLoader();
+
 			RegisterDate = Infrastructure.Utility.PersianCalendar(System.DateTime.Now);
 			registerDateLabel1.Text = RegisterDate;
-
-			RegisterDate = Infrastructure.Utility.PersianCalendar(System.DateTime.Now);
-			registerDateLabel2.Text = RegisterDate;
-
-			RequestStatus = "در حال بررسی";
 		}
 		#endregion /ServiceForm_Load
 
@@ -66,6 +84,11 @@ namespace ComputerServices.Menu.Service
 		#region ComputerServiceButton_Click
 		private void ComputerServiceButton_Click(object sender, System.EventArgs e)
 		{
+			currentPagePanel.Location = new System.Drawing.Point(x: 575, y: 43);
+			ComputerService = true;
+			CellPhoneService = false;
+			RegisterDate = Infrastructure.Utility.PersianCalendar(System.DateTime.Now);
+			registerDateLabel1.Text = RegisterDate;
 			computerServicePanel.Visible = true;
 			cellphoneServicePanel.Visible = false;
 		}
@@ -170,6 +193,7 @@ namespace ComputerServices.Menu.Service
 					confirmStatusPicturBox1.Image =
 						Properties.Resources.Tik_False;
 					saveOrderButton1.Enabled = false;
+					allClearButton1.Visible = false;
 				}
 				else
 				{
@@ -177,6 +201,7 @@ namespace ComputerServices.Menu.Service
 					confirmStatusPicturBox1.Image =
 						Properties.Resources.Tik_True;
 					saveOrderButton1.Enabled = true;
+					allClearButton1.Visible = true;
 				}
 			}
 			catch (System.Exception ex)
@@ -328,6 +353,7 @@ namespace ComputerServices.Menu.Service
 		#region SaveOrderButton1_Click
 		private void SaveOrderButton1_Click(object sender, System.EventArgs e)
 		{
+			RequestStatus = "در حال بررسی";
 			Models.DataBaseContext dataBaseContext = null;
 			try
 			{
@@ -409,13 +435,27 @@ namespace ComputerServices.Menu.Service
 			}
 		}
 		#endregion /SaveOrderButton1_Click
+
+		#region AllClearButton1_Click
+		private void AllClearButton1_Click(object sender, System.EventArgs e)
+		{
+			ComputerServiceClear();
+			allClearButton1.Visible = false;
+		}
+		#endregion /AllClearButton1_Click
 		//===============================================================================================
 		#endregion / Computer_Service
 
 		#region Cellphone_Service
+		//===============================================================================================
 		#region CellphoneServiceButton_Click
 		private void CellphoneServiceButton_Click(object sender, System.EventArgs e)
 		{
+			currentPagePanel.Location = new System.Drawing.Point(x: 0, y: 43);
+			RegisterDate = Infrastructure.Utility.PersianCalendar(System.DateTime.Now);
+			registerDateLabel2.Text = RegisterDate;
+			ComputerService = false;
+			CellPhoneService = true;
 			computerServicePanel.Visible = false;
 			cellphoneServicePanel.Visible = true;
 		}
@@ -527,6 +567,7 @@ namespace ComputerServices.Menu.Service
 					confirmStatusPicturBox2.Image =
 						Properties.Resources.Tik_False;
 					saveOrderButton2.Enabled = false;
+					allClearButton2.Visible = false;
 				}
 				else
 				{
@@ -534,6 +575,7 @@ namespace ComputerServices.Menu.Service
 					confirmStatusPicturBox2.Image =
 						Properties.Resources.Tik_True;
 					saveOrderButton2.Enabled = true;
+					allClearButton2.Visible = true;
 				}
 			}
 			catch (System.Exception ex)
@@ -613,6 +655,7 @@ namespace ComputerServices.Menu.Service
 		#endregion /ClientNametextBox2_Leave 
 		//-----
 		#endregion /ClientNametextBox2
+
 		//------------------------------------------------------------//Hardware Service------------------------------------------------------------
 		#region HardwareServiceRadioButton_CheckedChanged
 		private void HardwareServiceRadioButton_CheckedChanged(object sender, System.EventArgs e)
@@ -621,8 +664,8 @@ namespace ComputerServices.Menu.Service
 			hardwaewServicePanel.Visible = true;
 
 			descriptionTextBox2.Location = new System.Drawing.Point(x: descriptionTextBox2.Location.X, y: 293);
-			descriptionPanel2.Location = new System.Drawing.Point(x: descriptionPanel2.Location.X, y: 379);
-			saveOrderButton2.Location = new System.Drawing.Point(x: saveOrderButton2.Location.X, y: 386);
+			descriptionPanel2.Location = new System.Drawing.Point(x: descriptionPanel2.Location.X, y: 570);
+			saveOrderButton2.Location = new System.Drawing.Point(x: saveOrderButton2.Location.X, y: 577);
 
 		}
 		#endregion /HardwareServiceRadioButton_CheckedChanged
@@ -718,8 +761,8 @@ namespace ComputerServices.Menu.Service
 			hardwaewServicePanel.Visible = false;
 
 			descriptionTextBox2.Location = new System.Drawing.Point(x: descriptionTextBox2.Location.X, y: 268);
-			descriptionPanel2.Location = new System.Drawing.Point(x: descriptionPanel2.Location.X, y: 354);
-			saveOrderButton2.Location = new System.Drawing.Point(x: saveOrderButton2.Location.X, y: 361);
+			descriptionPanel2.Location = new System.Drawing.Point(x: descriptionPanel2.Location.X, y: 575);
+			saveOrderButton2.Location = new System.Drawing.Point(x: saveOrderButton2.Location.X, y: 552);
 		}
 		#endregion /SoftwareServiceRadioButton_CheckedChanged
 
@@ -818,8 +861,8 @@ namespace ComputerServices.Menu.Service
 				OtherSoftwaareService = false;
 		}
 		#endregion /OtherSoftwareServiceCheckBox_CheckedChanged
-
 		//------------------------------------------------------------Software Service\\------------------------------------------------------------
+
 		#region DescriptionTextBox2
 		//-----
 		#region DescriptionTextBox2_Enter
@@ -876,6 +919,7 @@ namespace ComputerServices.Menu.Service
 		#region SaveOrderButton2_Click
 		private void SaveOrderButton2_Click(object sender, System.EventArgs e)
 		{
+			RequestStatus = "در حال بررسی";
 			Models.DataBaseContext dataBaseContext = null;
 			try
 			{
@@ -979,6 +1023,7 @@ namespace ComputerServices.Menu.Service
 						Other_Software_Service = OtherSoftwaareService,
 
 						Description = Description,
+						Request_Status = RequestStatus,
 					};
 
 				dataBaseContext.CellphoneServices.Add(cellphoneService);
@@ -1006,6 +1051,15 @@ namespace ComputerServices.Menu.Service
 			}
 		}
 		#endregion /SaveOrderButton2_Click
+
+		#region AllClearButton2_Click
+		private void AllClearButton2_Click(object sender, System.EventArgs e)
+		{
+			CellPhoneServiceClear();
+			allClearButton2.Visible = false;
+		}
+		#endregion /AllClearButton2_Click
+		//===============================================================================================
 		#endregion /Cellphone_Service
 
 		//-----End of coding line
@@ -1111,7 +1165,7 @@ namespace ComputerServices.Menu.Service
 					.OrderBy(current => current.Register_Date)
 					.ToList();
 
-				computerServiceDataGridView.DataSource = cellphoneServices;
+				cellphoneServiceDataGridView.DataSource = cellphoneServices;
 			}
 			catch (System.Exception ex)
 			{
@@ -1277,6 +1331,8 @@ namespace ComputerServices.Menu.Service
 
 			clientNametextBox2.Text = "نام مشتری";
 			clientNametextBox2.ForeColor =
+				Infrastructure.Utility.WhiteColor();
+			clientNamePanel2.BackColor =
 				Infrastructure.Utility.PurpleColor();
 			ClientName = string.Empty;
 
@@ -1330,5 +1386,127 @@ namespace ComputerServices.Menu.Service
 		#endregion /CheckBoxFalse
 		//-----
 		#endregion /Functions
+
+		private void ServiceForm_SizeChanged(object sender, System.EventArgs e)
+		{
+			//MainForm mainForm =
+			//	new MainForm();
+
+			//if (mainForm.mainPanel.Width == 1840 && mainForm.mainPanel.Height == 890)
+			//{
+			//	if (this.Width == 1840)
+			//	{
+			//		if (ComputerService == true)
+			//		{
+			//			currentPagePanel.Location = new System.Drawing.Point(x: 890, y: 43);
+			//		}
+			//		else if (CellPhoneService == true)
+			//		{
+			//			currentPagePanel.Location = new System.Drawing.Point(x: 0, y: 43);
+			//		}
+
+			//		computerServiceButton.Width = 890;
+			//		computerServiceButton.Location = new System.Drawing.Point(x: 890, y: 0);
+			//		cellphoneServiceButton.Width = 890;
+			//		currentPagePanel.Width = 890;
+			//	}
+			//	else
+			//	{
+			//		if (ComputerService == true)
+			//		{
+			//			currentPagePanel.Location = new System.Drawing.Point(x: 575, y: 43);
+			//		}
+			//		else if (CellPhoneService == true)
+			//		{
+			//			currentPagePanel.Location = new System.Drawing.Point(x: 0, y: 43);
+			//		}
+			//		computerServiceButton.Width = 575;
+			//		computerServiceButton.Location = new System.Drawing.Point(x: 575, y: 0);
+			//		cellphoneServiceButton.Width = 575;
+			//		currentPagePanel.Width = 575;
+			//	}
+
+			//	return;
+			//}
+			//else if (mainForm.mainPanel.Width == 1670 && mainForm.mainPanel.Height == 890)
+			//{
+			//	if (this.Width == 1670)
+			//	{
+			//		if (ComputerService == true)
+			//		{
+			//			currentPagePanel.Location = new System.Drawing.Point(x: 890, y: 43);
+			//		}
+			//		else if (CellPhoneService == true)
+			//		{
+			//			currentPagePanel.Location = new System.Drawing.Point(x: 0, y: 43);
+			//		}
+
+			//		computerServiceButton.Width = 890;
+			//		computerServiceButton.Location = new System.Drawing.Point(x: 890, y: 0);
+			//		cellphoneServiceButton.Width = 890;
+			//		currentPagePanel.Width = 890;
+			//	}
+			//	else
+			//	{
+			//		if (ComputerService == true)
+			//		{
+			//			currentPagePanel.Location = new System.Drawing.Point(x: 575, y: 43);
+			//		}
+			//		else if (CellPhoneService == true)
+			//		{
+			//			currentPagePanel.Location = new System.Drawing.Point(x: 0, y: 43);
+			//		}
+			//		computerServiceButton.Width = 575;
+			//		computerServiceButton.Location = new System.Drawing.Point(x: 575, y: 0);
+			//		cellphoneServiceButton.Width = 575;
+			//		currentPagePanel.Width = 575;
+			//	}
+			//	return;
+			//}
+			//else if (mainForm.mainPanel.Width == 1320 && mainForm.mainPanel.Height == 750)
+			//{
+			//	if (this.Width == 1320)
+			//	{
+			//		if (ComputerService == true)
+			//		{
+			//			currentPagePanel.Width = 660;
+			//			currentPagePanel.Location = new System.Drawing.Point(x: 660, y: 43);
+			//		}
+			//		else if (CellPhoneService == true)
+			//		{
+			//			currentPagePanel.Width = 660;
+			//			currentPagePanel.Location = new System.Drawing.Point(x: 0, y: 43);
+			//		}
+
+			//		computerServiceButton.Width = 660;
+			//		computerServiceButton.Location =
+			//			new System.Drawing.Point(x: 660, y: 0);
+
+			//		cellphoneServiceButton.Width = 660;
+					
+			//	}
+			//	else
+			//	{
+			//		if (ComputerService == true)
+			//		{
+			//			currentPagePanel.Location = new System.Drawing.Point(x: 575, y: 43);
+			//		}
+			//		else if (CellPhoneService == true)
+			//		{
+			//			currentPagePanel.Location = new System.Drawing.Point(x: 0, y: 43);
+			//		}
+			//		computerServiceButton.Width = 575;
+			//		computerServiceButton.Location = new System.Drawing.Point(x: 575, y: 0);
+			//		cellphoneServiceButton.Width = 575;
+			//		currentPagePanel.Width = 575;
+			//	}
+			//	return;
+			//}
+			//else if (mainForm.mainPanel.Width == 1150 && mainForm.mainPanel.Height == 750)
+			//{
+
+			//	return;
+			//}
+		}
 	}
 }
