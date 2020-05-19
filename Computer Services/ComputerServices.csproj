@@ -97,17 +97,17 @@
     <Compile Include="Menu\DashBoard\DashBoardForm.Designer.cs">
       <DependentUpon>DashBoardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu\Service\ComputerAssembelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Service\ComputerAssembelForm.Designer.cs">
+      <DependentUpon>ComputerAssembelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu\Service\OrderInformationForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu\Service\OrderInformationForm.Designer.cs">
       <DependentUpon>OrderInformationForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Menu\Service\ServiceForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu\Service\ServiceForm.Designer.cs">
-      <DependentUpon>ServiceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -177,11 +177,11 @@
     <EmbeddedResource Include="Menu\DashBoard\DashBoardForm.resx">
       <DependentUpon>DashBoardForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Service\ComputerAssembelForm.resx">
+      <DependentUpon>ComputerAssembelForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\Service\OrderInformationForm.resx">
       <DependentUpon>OrderInformationForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menu\Service\ServiceForm.resx">
-      <DependentUpon>ServiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
