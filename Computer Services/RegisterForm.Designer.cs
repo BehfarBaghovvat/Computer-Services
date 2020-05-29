@@ -92,7 +92,7 @@
 			this.titlePanel.Dock = System.Windows.Forms.DockStyle.Top;
 			this.titlePanel.Location = new System.Drawing.Point(0, 0);
 			this.titlePanel.Name = "titlePanel";
-			this.titlePanel.Size = new System.Drawing.Size(686, 27);
+			this.titlePanel.Size = new System.Drawing.Size(700, 30);
 			this.titlePanel.TabIndex = 0;
 			this.titlePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitlePanel_MouseDown);
 			// 
@@ -100,9 +100,9 @@
 			// 
 			this.RegisterLogoPicturBox.Dock = System.Windows.Forms.DockStyle.Right;
 			this.RegisterLogoPicturBox.Image = ((System.Drawing.Image)(resources.GetObject("RegisterLogoPicturBox.Image")));
-			this.RegisterLogoPicturBox.Location = new System.Drawing.Point(660, 0);
+			this.RegisterLogoPicturBox.Location = new System.Drawing.Point(670, 0);
 			this.RegisterLogoPicturBox.Name = "RegisterLogoPicturBox";
-			this.RegisterLogoPicturBox.Size = new System.Drawing.Size(26, 27);
+			this.RegisterLogoPicturBox.Size = new System.Drawing.Size(30, 30);
 			this.RegisterLogoPicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.RegisterLogoPicturBox.TabIndex = 5;
 			this.RegisterLogoPicturBox.TabStop = false;
@@ -112,7 +112,7 @@
 			this.Registerlabel.AutoSize = true;
 			this.Registerlabel.Font = new System.Drawing.Font("IRANSans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.Registerlabel.ForeColor = System.Drawing.Color.White;
-			this.Registerlabel.Location = new System.Drawing.Point(561, 3);
+			this.Registerlabel.Location = new System.Drawing.Point(551, 4);
 			this.Registerlabel.Name = "Registerlabel";
 			this.Registerlabel.Size = new System.Drawing.Size(113, 22);
 			this.Registerlabel.TabIndex = 0;
@@ -124,7 +124,7 @@
 			this.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.minimizeButton.FlatAppearance.BorderSize = 0;
 			this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.minimizeButton.Location = new System.Drawing.Point(33, 6);
+			this.minimizeButton.Location = new System.Drawing.Point(33, 8);
 			this.minimizeButton.Name = "minimizeButton";
 			this.minimizeButton.Size = new System.Drawing.Size(15, 15);
 			this.minimizeButton.TabIndex = 2;
@@ -138,7 +138,7 @@
 			this.closeButton.FlatAppearance.BorderSize = 0;
 			this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
 			this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.closeButton.Location = new System.Drawing.Point(12, 6);
+			this.closeButton.Location = new System.Drawing.Point(12, 8);
 			this.closeButton.Name = "closeButton";
 			this.closeButton.Size = new System.Drawing.Size(15, 15);
 			this.closeButton.TabIndex = 1;
@@ -185,7 +185,7 @@
 			this.personalInformationGroupBox.Controls.Add(this.firstNameTextBox);
 			this.personalInformationGroupBox.Controls.Add(this.firstNamePanel);
 			this.personalInformationGroupBox.ForeColor = System.Drawing.Color.White;
-			this.personalInformationGroupBox.Location = new System.Drawing.Point(13, 256);
+			this.personalInformationGroupBox.Location = new System.Drawing.Point(20, 258);
 			this.personalInformationGroupBox.Name = "personalInformationGroupBox";
 			this.personalInformationGroupBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.personalInformationGroupBox.Size = new System.Drawing.Size(660, 150);
@@ -351,7 +351,7 @@
 			this.userInformationGroupBox.Controls.Add(this.usernameTextBox);
 			this.userInformationGroupBox.Controls.Add(this.usernamePanel);
 			this.userInformationGroupBox.ForeColor = System.Drawing.Color.White;
-			this.userInformationGroupBox.Location = new System.Drawing.Point(13, 31);
+			this.userInformationGroupBox.Location = new System.Drawing.Point(20, 33);
 			this.userInformationGroupBox.Name = "userInformationGroupBox";
 			this.userInformationGroupBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.userInformationGroupBox.Size = new System.Drawing.Size(660, 219);
@@ -587,7 +587,7 @@
 			this.loginButton.ForeColor = System.Drawing.Color.White;
 			this.loginButton.Image = ((System.Drawing.Image)(resources.GetObject("loginButton.Image")));
 			this.loginButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.loginButton.Location = new System.Drawing.Point(14, 412);
+			this.loginButton.Location = new System.Drawing.Point(21, 414);
 			this.loginButton.Name = "loginButton";
 			this.loginButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.loginButton.Size = new System.Drawing.Size(214, 31);
@@ -606,7 +606,7 @@
 			this.saveButton.ForeColor = System.Drawing.Color.White;
 			this.saveButton.Image = ((System.Drawing.Image)(resources.GetObject("saveButton.Image")));
 			this.saveButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.saveButton.Location = new System.Drawing.Point(236, 412);
+			this.saveButton.Location = new System.Drawing.Point(243, 414);
 			this.saveButton.Name = "saveButton";
 			this.saveButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.saveButton.Size = new System.Drawing.Size(214, 31);
@@ -625,7 +625,7 @@
 			this.resetButton.ForeColor = System.Drawing.Color.White;
 			this.resetButton.Image = ((System.Drawing.Image)(resources.GetObject("resetButton.Image")));
 			this.resetButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.resetButton.Location = new System.Drawing.Point(459, 412);
+			this.resetButton.Location = new System.Drawing.Point(466, 414);
 			this.resetButton.Name = "resetButton";
 			this.resetButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.resetButton.Size = new System.Drawing.Size(214, 31);
@@ -641,7 +641,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(0)))), ((int)(((byte)(132)))));
-			this.ClientSize = new System.Drawing.Size(686, 455);
+			this.ClientSize = new System.Drawing.Size(700, 455);
 			this.Controls.Add(this.loginButton);
 			this.Controls.Add(this.saveButton);
 			this.Controls.Add(this.resetButton);
@@ -649,6 +649,8 @@
 			this.Controls.Add(this.personalInformationGroupBox);
 			this.Controls.Add(this.titlePanel);
 			this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+			this.MaximumSize = new System.Drawing.Size(700, 455);
+			this.MinimumSize = new System.Drawing.Size(700, 455);
 			this.Name = "RegisterForm";
 			this.Opacity = 0.9D;
 			this.Text = "RegisterForm";

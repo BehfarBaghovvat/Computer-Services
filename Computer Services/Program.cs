@@ -192,7 +192,7 @@ namespace ComputerServices
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Administrator();
-			Application.Run(new MainForm());
+			Application.Run(new Menu.Service.ComputerAssembelForm());
 		}
 	}
 }

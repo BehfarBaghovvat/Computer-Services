@@ -59,6 +59,8 @@ namespace ComputerServices
 		{
 			sendSMSPanel.BringToFront();
 			sendEmailPanel.SendToBack();
+			notificationLabel.Visible = true;
+
 		}
 
 		#endregion /smsRadioButton_CheckedChanged
@@ -68,6 +70,7 @@ namespace ComputerServices
 		{
 			sendSMSPanel.SendToBack();
 			sendEmailPanel.BringToFront();
+			notificationLabel.Visible = false;
 		}
 		#endregion emailRadioButton_CheckedChanged
 

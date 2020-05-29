@@ -361,6 +361,19 @@ namespace Infrastructure
 		}
 		#endregion /LimeColor
 
+		#region MediumSlateBlueColor
+		/// <summary>
+		/// This function returns a color.
+		/// </summary>
+		/// <returns>MediumSlateBlue Color</returns>
+		public static System.Drawing.Color MediumSlateBlueColor()
+		{
+			System.Drawing.Color color = System.Drawing.Color.FromArgb(128, 128, 255);
+
+			return color;
+		}
+		#endregion /MediumSlateBlueColor
+
 		#region PasswordSet
 		/// <summary>
 		/// This function will be used when you want to make sure that the two passwords are correct.

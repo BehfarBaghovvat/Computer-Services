@@ -61,9 +61,9 @@
 			this.rightSidePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.rightSidePanel.Controls.Add(this.picturBox1);
 			this.rightSidePanel.Dock = System.Windows.Forms.DockStyle.Right;
-			this.rightSidePanel.Location = new System.Drawing.Point(468, 0);
+			this.rightSidePanel.Location = new System.Drawing.Point(525, 0);
 			this.rightSidePanel.Name = "rightSidePanel";
-			this.rightSidePanel.Size = new System.Drawing.Size(175, 224);
+			this.rightSidePanel.Size = new System.Drawing.Size(175, 225);
 			this.rightSidePanel.TabIndex = 2;
 			// 
 			// picturBox1
@@ -81,7 +81,7 @@
 			this.loginLabel.AutoSize = true;
 			this.loginLabel.Font = new System.Drawing.Font("IRANSans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.loginLabel.ForeColor = System.Drawing.Color.White;
-			this.loginLabel.Location = new System.Drawing.Point(363, 3);
+			this.loginLabel.Location = new System.Drawing.Point(398, 4);
 			this.loginLabel.Name = "loginLabel";
 			this.loginLabel.Size = new System.Drawing.Size(91, 22);
 			this.loginLabel.TabIndex = 2;
@@ -97,16 +97,16 @@
 			this.titlePanel.Dock = System.Windows.Forms.DockStyle.Top;
 			this.titlePanel.Location = new System.Drawing.Point(0, 0);
 			this.titlePanel.Name = "titlePanel";
-			this.titlePanel.Size = new System.Drawing.Size(468, 27);
+			this.titlePanel.Size = new System.Drawing.Size(525, 30);
 			this.titlePanel.TabIndex = 0;
 			// 
 			// loginPicturBox
 			// 
 			this.loginPicturBox.Dock = System.Windows.Forms.DockStyle.Right;
 			this.loginPicturBox.Image = ((System.Drawing.Image)(resources.GetObject("loginPicturBox.Image")));
-			this.loginPicturBox.Location = new System.Drawing.Point(442, 0);
+			this.loginPicturBox.Location = new System.Drawing.Point(495, 0);
 			this.loginPicturBox.Name = "loginPicturBox";
-			this.loginPicturBox.Size = new System.Drawing.Size(26, 27);
+			this.loginPicturBox.Size = new System.Drawing.Size(30, 30);
 			this.loginPicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.loginPicturBox.TabIndex = 3;
 			this.loginPicturBox.TabStop = false;
@@ -117,7 +117,7 @@
 			this.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.minimizeButton.FlatAppearance.BorderSize = 0;
 			this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.minimizeButton.Location = new System.Drawing.Point(33, 6);
+			this.minimizeButton.Location = new System.Drawing.Point(33, 8);
 			this.minimizeButton.Name = "minimizeButton";
 			this.minimizeButton.Size = new System.Drawing.Size(15, 15);
 			this.minimizeButton.TabIndex = 1;
@@ -132,7 +132,7 @@
 			this.closeButton.FlatAppearance.BorderSize = 0;
 			this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
 			this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.closeButton.Location = new System.Drawing.Point(12, 6);
+			this.closeButton.Location = new System.Drawing.Point(12, 8);
 			this.closeButton.Name = "closeButton";
 			this.closeButton.Size = new System.Drawing.Size(15, 15);
 			this.closeButton.TabIndex = 0;
@@ -141,6 +141,8 @@
 			// 
 			// usernameEmailTextBox
 			// 
+			this.usernameEmailTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.usernameEmailTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
 			this.usernameEmailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.usernameEmailTextBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -148,7 +150,7 @@
 			this.usernameEmailTextBox.Location = new System.Drawing.Point(105, 38);
 			this.usernameEmailTextBox.Name = "usernameEmailTextBox";
 			this.usernameEmailTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.usernameEmailTextBox.Size = new System.Drawing.Size(257, 17);
+			this.usernameEmailTextBox.Size = new System.Drawing.Size(314, 17);
 			this.usernameEmailTextBox.TabIndex = 3;
 			this.usernameEmailTextBox.Text = "Username\\Email";
 			this.usernameEmailTextBox.Enter += new System.EventHandler(this.UsernameEmailTextBox_Enter);
@@ -157,22 +159,28 @@
 			// 
 			// usernameEmailPanel
 			// 
+			this.usernameEmailPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.usernameEmailPanel.BackColor = System.Drawing.Color.Gray;
 			this.usernameEmailPanel.Location = new System.Drawing.Point(105, 61);
 			this.usernameEmailPanel.Name = "usernameEmailPanel";
-			this.usernameEmailPanel.Size = new System.Drawing.Size(257, 1);
+			this.usernameEmailPanel.Size = new System.Drawing.Size(314, 1);
 			this.usernameEmailPanel.TabIndex = 7;
 			// 
 			// passwordPanel
 			// 
+			this.passwordPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.passwordPanel.BackColor = System.Drawing.Color.Gray;
 			this.passwordPanel.Location = new System.Drawing.Point(105, 103);
 			this.passwordPanel.Name = "passwordPanel";
-			this.passwordPanel.Size = new System.Drawing.Size(257, 1);
+			this.passwordPanel.Size = new System.Drawing.Size(314, 1);
 			this.passwordPanel.TabIndex = 8;
 			// 
 			// passwordTextBox
 			// 
+			this.passwordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.passwordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
 			this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.passwordTextBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -180,7 +188,7 @@
 			this.passwordTextBox.Location = new System.Drawing.Point(105, 80);
 			this.passwordTextBox.Name = "passwordTextBox";
 			this.passwordTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.passwordTextBox.Size = new System.Drawing.Size(257, 17);
+			this.passwordTextBox.Size = new System.Drawing.Size(314, 17);
 			this.passwordTextBox.TabIndex = 4;
 			this.passwordTextBox.Text = "Password";
 			this.passwordTextBox.Enter += new System.EventHandler(this.PasswordTextBox_Enter);
@@ -193,6 +201,8 @@
 			// 
 			// loginButton
 			// 
+			this.loginButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.loginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
 			this.loginButton.FlatAppearance.BorderSize = 0;
 			this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -201,7 +211,7 @@
 			this.loginButton.Location = new System.Drawing.Point(105, 117);
 			this.loginButton.Name = "loginButton";
 			this.loginButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.loginButton.Size = new System.Drawing.Size(257, 31);
+			this.loginButton.Size = new System.Drawing.Size(314, 31);
 			this.loginButton.TabIndex = 5;
 			this.loginButton.Text = "ورود";
 			this.loginButton.UseVisualStyleBackColor = false;
@@ -213,7 +223,7 @@
 			this.newAccountLinkLabel.AutoSize = true;
 			this.newAccountLinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
 			this.newAccountLinkLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			this.newAccountLinkLabel.Location = new System.Drawing.Point(172, 14);
+			this.newAccountLinkLabel.Location = new System.Drawing.Point(191, 14);
 			this.newAccountLinkLabel.Name = "newAccountLinkLabel";
 			this.newAccountLinkLabel.Size = new System.Drawing.Size(78, 17);
 			this.newAccountLinkLabel.TabIndex = 1;
@@ -225,7 +235,7 @@
 			// 
 			this.captionLabel1.AutoSize = true;
 			this.captionLabel1.ForeColor = System.Drawing.Color.Gray;
-			this.captionLabel1.Location = new System.Drawing.Point(234, 14);
+			this.captionLabel1.Location = new System.Drawing.Point(253, 14);
 			this.captionLabel1.Name = "captionLabel1";
 			this.captionLabel1.Size = new System.Drawing.Size(123, 17);
 			this.captionLabel1.TabIndex = 0;
@@ -235,7 +245,7 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.ForeColor = System.Drawing.Color.Gray;
-			this.label1.Location = new System.Drawing.Point(129, 14);
+			this.label1.Location = new System.Drawing.Point(148, 14);
 			this.label1.Name = "label1";
 			this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.label1.Size = new System.Drawing.Size(54, 17);
@@ -248,9 +258,9 @@
 			this.bottomPanel.Controls.Add(this.captionLabel1);
 			this.bottomPanel.Controls.Add(this.newAccountLinkLabel);
 			this.bottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.bottomPanel.Location = new System.Drawing.Point(0, 179);
+			this.bottomPanel.Location = new System.Drawing.Point(0, 180);
 			this.bottomPanel.Name = "bottomPanel";
-			this.bottomPanel.Size = new System.Drawing.Size(468, 45);
+			this.bottomPanel.Size = new System.Drawing.Size(525, 45);
 			this.bottomPanel.TabIndex = 1;
 			// 
 			// forgetPasswordLinkLabel
@@ -258,7 +268,7 @@
 			this.forgetPasswordLinkLabel.AutoSize = true;
 			this.forgetPasswordLinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
 			this.forgetPasswordLinkLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			this.forgetPasswordLinkLabel.Location = new System.Drawing.Point(189, 154);
+			this.forgetPasswordLinkLabel.Location = new System.Drawing.Point(211, 154);
 			this.forgetPasswordLinkLabel.Name = "forgetPasswordLinkLabel";
 			this.forgetPasswordLinkLabel.Size = new System.Drawing.Size(102, 17);
 			this.forgetPasswordLinkLabel.TabIndex = 6;
@@ -274,7 +284,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
 			this.CancelButton = this.closeButton;
-			this.ClientSize = new System.Drawing.Size(643, 224);
+			this.ClientSize = new System.Drawing.Size(700, 225);
 			this.Controls.Add(this.forgetPasswordLinkLabel);
 			this.Controls.Add(this.bottomPanel);
 			this.Controls.Add(this.loginButton);
@@ -286,6 +296,8 @@
 			this.Controls.Add(this.rightSidePanel);
 			this.ForeColor = System.Drawing.Color.Black;
 			this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+			this.MaximumSize = new System.Drawing.Size(700, 225);
+			this.MinimumSize = new System.Drawing.Size(700, 225);
 			this.Name = "LoginForm";
 			this.Opacity = 0.95D;
 			this.Text = "LoginForm";
