@@ -30,12 +30,12 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
 			BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
@@ -85,6 +85,27 @@
 			this.currentPagePanel = new Mbb.Windows.Forms.Panel();
 			this.computerServiceButton = new Mbb.Windows.Forms.Button();
 			this.cellphoneServiceButton = new Mbb.Windows.Forms.Button();
+			this.computerServicePanel = new Bunifu.Framework.UI.BunifuGradientPanel();
+			this.searchInvoiceSerialPicturBox1 = new Mbb.Windows.Forms.PicturBox();
+			this.computerServiceDataGridView = new Mbb.Windows.Forms.DataGridView();
+			this.searchInvoiceSerialTextBox1 = new Mbb.Windows.Forms.TextBox();
+			this.searchInvoiceSerialPanel1 = new Mbb.Windows.Forms.Panel();
+			this.registerComputerServiceGroupBox = new Mbb.Windows.Forms.GroupBox();
+			this.assemblePCButton = new Mbb.Windows.Forms.Button();
+			this.allClearButton1 = new Mbb.Windows.Forms.Button();
+			this.invoiceSerialDeleteButton1 = new Mbb.Windows.Forms.Button();
+			this.confirmStatusPicturBox1 = new Mbb.Windows.Forms.PicturBox();
+			this.saveOrderButton1 = new Mbb.Windows.Forms.Button();
+			this.descriptionPanel1 = new Mbb.Windows.Forms.Panel();
+			this.descriptionTextBox1 = new Mbb.Windows.Forms.TextBox();
+			this.serviceTypeComboBox = new Mbb.Windows.Forms.ComboBox();
+			this.newSerialButton1 = new Mbb.Windows.Forms.Button();
+			this.invoiceSerialLabel1 = new Mbb.Windows.Forms.Label();
+			this.registerDateLabel1 = new Mbb.Windows.Forms.Label();
+			this.serviceTypePanel = new Mbb.Windows.Forms.Panel();
+			this.invoiceSerialPanel1 = new Mbb.Windows.Forms.Panel();
+			this.clientNameTextBox1 = new Mbb.Windows.Forms.TextBox();
+			this.clientNamePanel1 = new Mbb.Windows.Forms.Panel();
 			this.cellphoneServicePanel = new Bunifu.Framework.UI.BunifuGradientPanel();
 			this.registerCellphoneServiceGroupBox = new Mbb.Windows.Forms.GroupBox();
 			this.hardwaewServicePanel = new Mbb.Windows.Forms.Panel();
@@ -122,27 +143,6 @@
 			this.searchInvoiceSerialPicturBox2 = new Mbb.Windows.Forms.PicturBox();
 			this.searchInvoiceSerialTextBox2 = new Mbb.Windows.Forms.TextBox();
 			this.searchInvoiceSerialPanel2 = new Mbb.Windows.Forms.Panel();
-			this.computerServicePanel = new Bunifu.Framework.UI.BunifuGradientPanel();
-			this.searchInvoiceSerialPicturBox1 = new Mbb.Windows.Forms.PicturBox();
-			this.computerServiceDataGridView = new Mbb.Windows.Forms.DataGridView();
-			this.searchInvoiceSerialTextBox1 = new Mbb.Windows.Forms.TextBox();
-			this.searchInvoiceSerialPanel1 = new Mbb.Windows.Forms.Panel();
-			this.registerComputerServiceGroupBox = new Mbb.Windows.Forms.GroupBox();
-			this.assemblePCButton = new Mbb.Windows.Forms.Button();
-			this.allClearButton1 = new Mbb.Windows.Forms.Button();
-			this.invoiceSerialDeleteButton1 = new Mbb.Windows.Forms.Button();
-			this.confirmStatusPicturBox1 = new Mbb.Windows.Forms.PicturBox();
-			this.saveOrderButton1 = new Mbb.Windows.Forms.Button();
-			this.descriptionPanel1 = new Mbb.Windows.Forms.Panel();
-			this.descriptionTextBox1 = new Mbb.Windows.Forms.TextBox();
-			this.serviceTypeComboBox = new Mbb.Windows.Forms.ComboBox();
-			this.newSerialButton1 = new Mbb.Windows.Forms.Button();
-			this.invoiceSerialLabel1 = new Mbb.Windows.Forms.Label();
-			this.registerDateLabel1 = new Mbb.Windows.Forms.Label();
-			this.serviceTypePanel = new Mbb.Windows.Forms.Panel();
-			this.invoiceSerialPanel1 = new Mbb.Windows.Forms.Panel();
-			this.clientNameTextBox1 = new Mbb.Windows.Forms.TextBox();
-			this.clientNamePanel1 = new Mbb.Windows.Forms.Panel();
 			this.menuTransition2 = new BunifuAnimatorNS.BunifuTransition(this.components);
 			this.showPageTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
 			this.showPageTransition2 = new BunifuAnimatorNS.BunifuTransition(this.components);
@@ -160,6 +160,11 @@
 			this.mainPanel.SuspendLayout();
 			this.servicePanel.SuspendLayout();
 			this.titlelServicePanel.SuspendLayout();
+			this.computerServicePanel.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.searchInvoiceSerialPicturBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.computerServiceDataGridView)).BeginInit();
+			this.registerComputerServiceGroupBox.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.confirmStatusPicturBox1)).BeginInit();
 			this.cellphoneServicePanel.SuspendLayout();
 			this.registerCellphoneServiceGroupBox.SuspendLayout();
 			this.hardwaewServicePanel.SuspendLayout();
@@ -167,11 +172,6 @@
 			this.softwareServivePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.cellphoneServiceDataGridView)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.searchInvoiceSerialPicturBox2)).BeginInit();
-			this.computerServicePanel.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.searchInvoiceSerialPicturBox1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.computerServiceDataGridView)).BeginInit();
-			this.registerComputerServiceGroupBox.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.confirmStatusPicturBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.cellphoneServiceBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.computerServiceBindingSource)).BeginInit();
 			this.SuspendLayout();
@@ -999,6 +999,448 @@
 			this.cellphoneServiceButton.UseVisualStyleBackColor = false;
 			this.cellphoneServiceButton.Click += new System.EventHandler(this.CellphoneServiceButton_Click);
 			// 
+			// computerServicePanel
+			// 
+			this.computerServicePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.computerServicePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("computerServicePanel.BackgroundImage")));
+			this.computerServicePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.computerServicePanel.Controls.Add(this.searchInvoiceSerialPicturBox1);
+			this.computerServicePanel.Controls.Add(this.computerServiceDataGridView);
+			this.computerServicePanel.Controls.Add(this.searchInvoiceSerialTextBox1);
+			this.computerServicePanel.Controls.Add(this.searchInvoiceSerialPanel1);
+			this.computerServicePanel.Controls.Add(this.registerComputerServiceGroupBox);
+			this.showPageTransition2.SetDecoration(this.computerServicePanel, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.computerServicePanel, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.computerServicePanel, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition1.SetDecoration(this.computerServicePanel, BunifuAnimatorNS.DecorationType.None);
+			this.computerServicePanel.GradientBottomLeft = System.Drawing.Color.BlueViolet;
+			this.computerServicePanel.GradientBottomRight = System.Drawing.Color.BlueViolet;
+			this.computerServicePanel.GradientTopLeft = System.Drawing.Color.Black;
+			this.computerServicePanel.GradientTopRight = System.Drawing.Color.Black;
+			this.computerServicePanel.Location = new System.Drawing.Point(39, 65);
+			this.computerServicePanel.Name = "computerServicePanel";
+			this.computerServicePanel.Quality = 10;
+			this.computerServicePanel.Size = new System.Drawing.Size(1023, 616);
+			this.computerServicePanel.TabIndex = 27;
+			// 
+			// searchInvoiceSerialPicturBox1
+			// 
+			this.searchInvoiceSerialPicturBox1.BackColor = System.Drawing.Color.Transparent;
+			this.showPageTransition1.SetDecoration(this.searchInvoiceSerialPicturBox1, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition2.SetDecoration(this.searchInvoiceSerialPicturBox1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.searchInvoiceSerialPicturBox1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.searchInvoiceSerialPicturBox1, BunifuAnimatorNS.DecorationType.None);
+			this.searchInvoiceSerialPicturBox1.Image = ((System.Drawing.Image)(resources.GetObject("searchInvoiceSerialPicturBox1.Image")));
+			this.searchInvoiceSerialPicturBox1.Location = new System.Drawing.Point(44, 26);
+			this.searchInvoiceSerialPicturBox1.Name = "searchInvoiceSerialPicturBox1";
+			this.searchInvoiceSerialPicturBox1.Size = new System.Drawing.Size(17, 17);
+			this.searchInvoiceSerialPicturBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.searchInvoiceSerialPicturBox1.TabIndex = 26;
+			this.searchInvoiceSerialPicturBox1.TabStop = false;
+			// 
+			// computerServiceDataGridView
+			// 
+			this.computerServiceDataGridView.AllowUserToAddRows = false;
+			this.computerServiceDataGridView.AllowUserToDeleteRows = false;
+			this.computerServiceDataGridView.AllowUserToResizeColumns = false;
+			this.computerServiceDataGridView.AllowUserToResizeRows = false;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.DimGray;
+			this.computerServiceDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			this.computerServiceDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.computerServiceDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.computerServiceDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(21)))), ((int)(((byte)(113)))));
+			this.computerServiceDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.computerServiceDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+			this.computerServiceDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.RoyalBlue;
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("IRANSans", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.computerServiceDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			this.computerServiceDataGridView.ColumnHeadersHeight = 30;
+			this.computerServiceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+			this.menuTransition2.SetDecoration(this.computerServiceDataGridView, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.computerServiceDataGridView, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition2.SetDecoration(this.computerServiceDataGridView, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition1.SetDecoration(this.computerServiceDataGridView, BunifuAnimatorNS.DecorationType.None);
+			this.computerServiceDataGridView.EnableHeadersVisualStyles = false;
+			this.computerServiceDataGridView.Location = new System.Drawing.Point(44, 57);
+			this.computerServiceDataGridView.Name = "computerServiceDataGridView";
+			this.computerServiceDataGridView.ReadOnly = true;
+			this.computerServiceDataGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.computerServiceDataGridView.RowHeadersVisible = false;
+			this.computerServiceDataGridView.RowHeadersWidth = 45;
+			this.computerServiceDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.CornflowerBlue;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DimGray;
+			this.computerServiceDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
+			this.computerServiceDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.computerServiceDataGridView.Size = new System.Drawing.Size(562, 528);
+			this.computerServiceDataGridView.TabIndex = 25;
+			// 
+			// searchInvoiceSerialTextBox1
+			// 
+			this.searchInvoiceSerialTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.searchInvoiceSerialTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(21)))), ((int)(((byte)(113)))));
+			this.searchInvoiceSerialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.showPageTransition1.SetDecoration(this.searchInvoiceSerialTextBox1, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition2.SetDecoration(this.searchInvoiceSerialTextBox1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.searchInvoiceSerialTextBox1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.searchInvoiceSerialTextBox1, BunifuAnimatorNS.DecorationType.None);
+			this.searchInvoiceSerialTextBox1.ForeColor = System.Drawing.Color.White;
+			this.searchInvoiceSerialTextBox1.Location = new System.Drawing.Point(44, 26);
+			this.searchInvoiceSerialTextBox1.MaxLength = 24;
+			this.searchInvoiceSerialTextBox1.Name = "searchInvoiceSerialTextBox1";
+			this.searchInvoiceSerialTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.searchInvoiceSerialTextBox1.Size = new System.Drawing.Size(562, 17);
+			this.searchInvoiceSerialTextBox1.TabIndex = 23;
+			this.searchInvoiceSerialTextBox1.Text = "سریال فاکتور را وارد نمایید...";
+			this.searchInvoiceSerialTextBox1.TextChanged += new System.EventHandler(this.SearchInvoiceSerialTextBox1_TextChanged);
+			this.searchInvoiceSerialTextBox1.Enter += new System.EventHandler(this.SearchInvoiceSerialTextBox1_Enter);
+			this.searchInvoiceSerialTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SearchInvoiceSerialTextBox1_KeyPress);
+			this.searchInvoiceSerialTextBox1.Leave += new System.EventHandler(this.SearchInvoiceSerialTextBox1_Leave);
+			// 
+			// searchInvoiceSerialPanel1
+			// 
+			this.searchInvoiceSerialPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.searchInvoiceSerialPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+			this.showPageTransition2.SetDecoration(this.searchInvoiceSerialPanel1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.searchInvoiceSerialPanel1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.searchInvoiceSerialPanel1, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition1.SetDecoration(this.searchInvoiceSerialPanel1, BunifuAnimatorNS.DecorationType.None);
+			this.searchInvoiceSerialPanel1.Location = new System.Drawing.Point(44, 49);
+			this.searchInvoiceSerialPanel1.Name = "searchInvoiceSerialPanel1";
+			this.searchInvoiceSerialPanel1.Size = new System.Drawing.Size(562, 1);
+			this.searchInvoiceSerialPanel1.TabIndex = 24;
+			// 
+			// registerComputerServiceGroupBox
+			// 
+			this.registerComputerServiceGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.registerComputerServiceGroupBox.BackColor = System.Drawing.Color.Transparent;
+			this.registerComputerServiceGroupBox.Controls.Add(this.assemblePCButton);
+			this.registerComputerServiceGroupBox.Controls.Add(this.allClearButton1);
+			this.registerComputerServiceGroupBox.Controls.Add(this.invoiceSerialDeleteButton1);
+			this.registerComputerServiceGroupBox.Controls.Add(this.confirmStatusPicturBox1);
+			this.registerComputerServiceGroupBox.Controls.Add(this.saveOrderButton1);
+			this.registerComputerServiceGroupBox.Controls.Add(this.descriptionPanel1);
+			this.registerComputerServiceGroupBox.Controls.Add(this.descriptionTextBox1);
+			this.registerComputerServiceGroupBox.Controls.Add(this.serviceTypeComboBox);
+			this.registerComputerServiceGroupBox.Controls.Add(this.newSerialButton1);
+			this.registerComputerServiceGroupBox.Controls.Add(this.invoiceSerialLabel1);
+			this.registerComputerServiceGroupBox.Controls.Add(this.registerDateLabel1);
+			this.registerComputerServiceGroupBox.Controls.Add(this.serviceTypePanel);
+			this.registerComputerServiceGroupBox.Controls.Add(this.invoiceSerialPanel1);
+			this.registerComputerServiceGroupBox.Controls.Add(this.clientNameTextBox1);
+			this.registerComputerServiceGroupBox.Controls.Add(this.clientNamePanel1);
+			this.showPageTransition2.SetDecoration(this.registerComputerServiceGroupBox, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.registerComputerServiceGroupBox, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.registerComputerServiceGroupBox, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition1.SetDecoration(this.registerComputerServiceGroupBox, BunifuAnimatorNS.DecorationType.None);
+			this.registerComputerServiceGroupBox.ForeColor = System.Drawing.Color.White;
+			this.registerComputerServiceGroupBox.Location = new System.Drawing.Point(644, 26);
+			this.registerComputerServiceGroupBox.Name = "registerComputerServiceGroupBox";
+			this.registerComputerServiceGroupBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.registerComputerServiceGroupBox.Size = new System.Drawing.Size(350, 381);
+			this.registerComputerServiceGroupBox.TabIndex = 1;
+			this.registerComputerServiceGroupBox.TabStop = false;
+			this.registerComputerServiceGroupBox.Text = "ثبت درخواست خدمات کامپیوتر";
+			// 
+			// assemblePCButton
+			// 
+			this.assemblePCButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.assemblePCButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.showPageTransition1.SetDecoration(this.assemblePCButton, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.assemblePCButton, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.assemblePCButton, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition2.SetDecoration(this.assemblePCButton, BunifuAnimatorNS.DecorationType.None);
+			this.assemblePCButton.FlatAppearance.BorderSize = 0;
+			this.assemblePCButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.assemblePCButton.Image = ((System.Drawing.Image)(resources.GetObject("assemblePCButton.Image")));
+			this.assemblePCButton.Location = new System.Drawing.Point(23, 115);
+			this.assemblePCButton.Name = "assemblePCButton";
+			this.assemblePCButton.Size = new System.Drawing.Size(50, 25);
+			this.assemblePCButton.TabIndex = 35;
+			this.assemblePCButton.UseVisualStyleBackColor = true;
+			this.assemblePCButton.Visible = false;
+			this.assemblePCButton.Click += new System.EventHandler(this.AssemblePCButton_Click);
+			// 
+			// allClearButton1
+			// 
+			this.allClearButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.allClearButton1.BackColor = System.Drawing.Color.Transparent;
+			this.allClearButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("allClearButton1.BackgroundImage")));
+			this.allClearButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.showPageTransition1.SetDecoration(this.allClearButton1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.allClearButton1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.allClearButton1, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition2.SetDecoration(this.allClearButton1, BunifuAnimatorNS.DecorationType.None);
+			this.allClearButton1.FlatAppearance.BorderSize = 0;
+			this.allClearButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.allClearButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.allClearButton1.Location = new System.Drawing.Point(322, 350);
+			this.allClearButton1.Name = "allClearButton1";
+			this.allClearButton1.Size = new System.Drawing.Size(25, 25);
+			this.allClearButton1.TabIndex = 34;
+			this.allClearButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.allClearButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.allClearButton1.UseVisualStyleBackColor = false;
+			this.allClearButton1.Visible = false;
+			this.allClearButton1.Click += new System.EventHandler(this.AllClearButton1_Click);
+			// 
+			// invoiceSerialDeleteButton1
+			// 
+			this.invoiceSerialDeleteButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.invoiceSerialDeleteButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.showPageTransition1.SetDecoration(this.invoiceSerialDeleteButton1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.invoiceSerialDeleteButton1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.invoiceSerialDeleteButton1, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition2.SetDecoration(this.invoiceSerialDeleteButton1, BunifuAnimatorNS.DecorationType.None);
+			this.invoiceSerialDeleteButton1.FlatAppearance.BorderSize = 0;
+			this.invoiceSerialDeleteButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.invoiceSerialDeleteButton1.Image = ((System.Drawing.Image)(resources.GetObject("invoiceSerialDeleteButton1.Image")));
+			this.invoiceSerialDeleteButton1.Location = new System.Drawing.Point(21, 42);
+			this.invoiceSerialDeleteButton1.Name = "invoiceSerialDeleteButton1";
+			this.invoiceSerialDeleteButton1.Size = new System.Drawing.Size(25, 25);
+			this.invoiceSerialDeleteButton1.TabIndex = 1;
+			this.invoiceSerialDeleteButton1.UseVisualStyleBackColor = true;
+			this.invoiceSerialDeleteButton1.Visible = false;
+			this.invoiceSerialDeleteButton1.Click += new System.EventHandler(this.InvoiceSerialDeleteButton1_Click);
+			// 
+			// confirmStatusPicturBox1
+			// 
+			this.confirmStatusPicturBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.showPageTransition1.SetDecoration(this.confirmStatusPicturBox1, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition2.SetDecoration(this.confirmStatusPicturBox1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.confirmStatusPicturBox1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.confirmStatusPicturBox1, BunifuAnimatorNS.DecorationType.None);
+			this.confirmStatusPicturBox1.Image = global::ComputerServices.Properties.Resources.Tik_True;
+			this.confirmStatusPicturBox1.Location = new System.Drawing.Point(305, 43);
+			this.confirmStatusPicturBox1.Name = "confirmStatusPicturBox1";
+			this.confirmStatusPicturBox1.Size = new System.Drawing.Size(21, 22);
+			this.confirmStatusPicturBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.confirmStatusPicturBox1.TabIndex = 33;
+			this.confirmStatusPicturBox1.TabStop = false;
+			this.confirmStatusPicturBox1.Visible = false;
+			// 
+			// saveOrderButton1
+			// 
+			this.saveOrderButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.saveOrderButton1.BackColor = System.Drawing.Color.SteelBlue;
+			this.showPageTransition1.SetDecoration(this.saveOrderButton1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.saveOrderButton1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.saveOrderButton1, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition2.SetDecoration(this.saveOrderButton1, BunifuAnimatorNS.DecorationType.None);
+			this.saveOrderButton1.Enabled = false;
+			this.saveOrderButton1.FlatAppearance.BorderSize = 0;
+			this.saveOrderButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.saveOrderButton1.Image = ((System.Drawing.Image)(resources.GetObject("saveOrderButton1.Image")));
+			this.saveOrderButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.saveOrderButton1.Location = new System.Drawing.Point(39, 318);
+			this.saveOrderButton1.Name = "saveOrderButton1";
+			this.saveOrderButton1.Size = new System.Drawing.Size(260, 31);
+			this.saveOrderButton1.TabIndex = 7;
+			this.saveOrderButton1.Text = "ثبت درخواست";
+			this.saveOrderButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.saveOrderButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.saveOrderButton1.UseVisualStyleBackColor = false;
+			this.saveOrderButton1.Click += new System.EventHandler(this.SaveOrderButton1_Click);
+			// 
+			// descriptionPanel1
+			// 
+			this.descriptionPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.descriptionPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+			this.showPageTransition2.SetDecoration(this.descriptionPanel1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.descriptionPanel1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.descriptionPanel1, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition1.SetDecoration(this.descriptionPanel1, BunifuAnimatorNS.DecorationType.None);
+			this.descriptionPanel1.Location = new System.Drawing.Point(39, 311);
+			this.descriptionPanel1.Name = "descriptionPanel1";
+			this.descriptionPanel1.Size = new System.Drawing.Size(260, 1);
+			this.descriptionPanel1.TabIndex = 11;
+			// 
+			// descriptionTextBox1
+			// 
+			this.descriptionTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.descriptionTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(21)))), ((int)(((byte)(113)))));
+			this.descriptionTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.showPageTransition1.SetDecoration(this.descriptionTextBox1, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition2.SetDecoration(this.descriptionTextBox1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.descriptionTextBox1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.descriptionTextBox1, BunifuAnimatorNS.DecorationType.None);
+			this.descriptionTextBox1.ForeColor = System.Drawing.Color.White;
+			this.descriptionTextBox1.Location = new System.Drawing.Point(39, 151);
+			this.descriptionTextBox1.MaxLength = 1000;
+			this.descriptionTextBox1.Multiline = true;
+			this.descriptionTextBox1.Name = "descriptionTextBox1";
+			this.descriptionTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.descriptionTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+			this.descriptionTextBox1.Size = new System.Drawing.Size(260, 155);
+			this.descriptionTextBox1.TabIndex = 6;
+			this.descriptionTextBox1.Text = "توضیحات مشتری";
+			this.descriptionTextBox1.Enter += new System.EventHandler(this.DescriptionTextBox1_Enter);
+			this.descriptionTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DescriptionTextBox1_KeyPress);
+			this.descriptionTextBox1.Leave += new System.EventHandler(this.DescriptionTextBox1_Leave);
+			// 
+			// serviceTypeComboBox
+			// 
+			this.serviceTypeComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.serviceTypeComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(21)))), ((int)(((byte)(113)))));
+			this.showPageTransition1.SetDecoration(this.serviceTypeComboBox, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.serviceTypeComboBox, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.serviceTypeComboBox, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition2.SetDecoration(this.serviceTypeComboBox, BunifuAnimatorNS.DecorationType.None);
+			this.serviceTypeComboBox.DropDownHeight = 250;
+			this.serviceTypeComboBox.DropDownWidth = 310;
+			this.serviceTypeComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.serviceTypeComboBox.ForeColor = System.Drawing.Color.White;
+			this.serviceTypeComboBox.FormattingEnabled = true;
+			this.serviceTypeComboBox.IntegralHeight = false;
+			this.serviceTypeComboBox.Items.AddRange(new object[] {
+            "اسمبل یک سیستم",
+            "اسمبل یک سیستم به همراه نصب ویندوز",
+            "اسمبل یک سیستم به همراه نصب ویندوز و سایر نرم افزارهای جانبی",
+            "تعمیرات سخت افزار",
+            "تعمیرات نرم افزار",
+            "سرویس سیستم (تمیزکاری سیستم)",
+            "نصب سخت افزار",
+            "نصب نرم افزار",
+            "نصب ویندوز",
+            "نصب ویندوز و نرم افزار های جانبی"});
+			this.serviceTypeComboBox.Location = new System.Drawing.Point(79, 115);
+			this.serviceTypeComboBox.Name = "serviceTypeComboBox";
+			this.serviceTypeComboBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.serviceTypeComboBox.Size = new System.Drawing.Size(220, 25);
+			this.serviceTypeComboBox.Sorted = true;
+			this.serviceTypeComboBox.TabIndex = 5;
+			this.serviceTypeComboBox.Text = "نوع خدمات را تعیین کنید...";
+			this.serviceTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.ServiceTypeComboBox_SelectedIndexChanged);
+			// 
+			// newSerialButton1
+			// 
+			this.newSerialButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.newSerialButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("newSerialButton1.BackgroundImage")));
+			this.newSerialButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.showPageTransition1.SetDecoration(this.newSerialButton1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.newSerialButton1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.newSerialButton1, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition2.SetDecoration(this.newSerialButton1, BunifuAnimatorNS.DecorationType.None);
+			this.newSerialButton1.FlatAppearance.BorderSize = 0;
+			this.newSerialButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.newSerialButton1.Location = new System.Drawing.Point(52, 43);
+			this.newSerialButton1.Name = "newSerialButton1";
+			this.newSerialButton1.Size = new System.Drawing.Size(21, 22);
+			this.newSerialButton1.TabIndex = 2;
+			this.newSerialButton1.UseVisualStyleBackColor = true;
+			this.newSerialButton1.Click += new System.EventHandler(this.NewSerialButton1_Click);
+			// 
+			// invoiceSerialLabel1
+			// 
+			this.invoiceSerialLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.showPageTransition1.SetDecoration(this.invoiceSerialLabel1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.invoiceSerialLabel1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.invoiceSerialLabel1, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition2.SetDecoration(this.invoiceSerialLabel1, BunifuAnimatorNS.DecorationType.None);
+			this.invoiceSerialLabel1.Location = new System.Drawing.Point(79, 46);
+			this.invoiceSerialLabel1.Name = "invoiceSerialLabel1";
+			this.invoiceSerialLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.invoiceSerialLabel1.Size = new System.Drawing.Size(220, 17);
+			this.invoiceSerialLabel1.TabIndex = 3;
+			this.invoiceSerialLabel1.Text = "سریال فاکتور";
+			this.invoiceSerialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.invoiceSerialLabel1.TextChanged += new System.EventHandler(this.InvoiceSerialLabel1_TextChanged);
+			// 
+			// registerDateLabel1
+			// 
+			this.registerDateLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.showPageTransition1.SetDecoration(this.registerDateLabel1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.registerDateLabel1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.registerDateLabel1, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition2.SetDecoration(this.registerDateLabel1, BunifuAnimatorNS.DecorationType.None);
+			this.registerDateLabel1.Location = new System.Drawing.Point(8, 16);
+			this.registerDateLabel1.Name = "registerDateLabel1";
+			this.registerDateLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.registerDateLabel1.Size = new System.Drawing.Size(129, 17);
+			this.registerDateLabel1.TabIndex = 0;
+			this.registerDateLabel1.Text = "تاریخ ثبت";
+			this.registerDateLabel1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+			// 
+			// serviceTypePanel
+			// 
+			this.serviceTypePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.serviceTypePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+			this.showPageTransition2.SetDecoration(this.serviceTypePanel, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.serviceTypePanel, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.serviceTypePanel, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition1.SetDecoration(this.serviceTypePanel, BunifuAnimatorNS.DecorationType.None);
+			this.serviceTypePanel.Location = new System.Drawing.Point(79, 145);
+			this.serviceTypePanel.Name = "serviceTypePanel";
+			this.serviceTypePanel.Size = new System.Drawing.Size(220, 1);
+			this.serviceTypePanel.TabIndex = 10;
+			// 
+			// invoiceSerialPanel1
+			// 
+			this.invoiceSerialPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.invoiceSerialPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+			this.showPageTransition2.SetDecoration(this.invoiceSerialPanel1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.invoiceSerialPanel1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.invoiceSerialPanel1, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition1.SetDecoration(this.invoiceSerialPanel1, BunifuAnimatorNS.DecorationType.None);
+			this.invoiceSerialPanel1.Location = new System.Drawing.Point(79, 73);
+			this.invoiceSerialPanel1.Name = "invoiceSerialPanel1";
+			this.invoiceSerialPanel1.Size = new System.Drawing.Size(220, 1);
+			this.invoiceSerialPanel1.TabIndex = 8;
+			// 
+			// clientNameTextBox1
+			// 
+			this.clientNameTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.clientNameTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(21)))), ((int)(((byte)(113)))));
+			this.clientNameTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.showPageTransition1.SetDecoration(this.clientNameTextBox1, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition2.SetDecoration(this.clientNameTextBox1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.clientNameTextBox1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.clientNameTextBox1, BunifuAnimatorNS.DecorationType.None);
+			this.clientNameTextBox1.ForeColor = System.Drawing.Color.White;
+			this.clientNameTextBox1.Location = new System.Drawing.Point(79, 83);
+			this.clientNameTextBox1.MaxLength = 45;
+			this.clientNameTextBox1.Name = "clientNameTextBox1";
+			this.clientNameTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.clientNameTextBox1.Size = new System.Drawing.Size(220, 17);
+			this.clientNameTextBox1.TabIndex = 4;
+			this.clientNameTextBox1.Text = "نام مشتری";
+			this.clientNameTextBox1.Enter += new System.EventHandler(this.ClientNameTextBox1_Enter);
+			this.clientNameTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ClientNameTextBox1_KeyPress);
+			this.clientNameTextBox1.Leave += new System.EventHandler(this.ClientNameTextBox1_Leave);
+			// 
+			// clientNamePanel1
+			// 
+			this.clientNamePanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.clientNamePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+			this.showPageTransition2.SetDecoration(this.clientNamePanel1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition1.SetDecoration(this.clientNamePanel1, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.clientNamePanel1, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition1.SetDecoration(this.clientNamePanel1, BunifuAnimatorNS.DecorationType.None);
+			this.clientNamePanel1.Location = new System.Drawing.Point(79, 106);
+			this.clientNamePanel1.Name = "clientNamePanel1";
+			this.clientNamePanel1.Size = new System.Drawing.Size(220, 1);
+			this.clientNamePanel1.TabIndex = 9;
+			// 
 			// cellphoneServicePanel
 			// 
 			this.cellphoneServicePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1671,448 +2113,6 @@
 			this.searchInvoiceSerialPanel2.Size = new System.Drawing.Size(562, 1);
 			this.searchInvoiceSerialPanel2.TabIndex = 20;
 			// 
-			// computerServicePanel
-			// 
-			this.computerServicePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.computerServicePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("computerServicePanel.BackgroundImage")));
-			this.computerServicePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.computerServicePanel.Controls.Add(this.searchInvoiceSerialPicturBox1);
-			this.computerServicePanel.Controls.Add(this.computerServiceDataGridView);
-			this.computerServicePanel.Controls.Add(this.searchInvoiceSerialTextBox1);
-			this.computerServicePanel.Controls.Add(this.searchInvoiceSerialPanel1);
-			this.computerServicePanel.Controls.Add(this.registerComputerServiceGroupBox);
-			this.showPageTransition2.SetDecoration(this.computerServicePanel, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.computerServicePanel, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.computerServicePanel, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition1.SetDecoration(this.computerServicePanel, BunifuAnimatorNS.DecorationType.None);
-			this.computerServicePanel.GradientBottomLeft = System.Drawing.Color.BlueViolet;
-			this.computerServicePanel.GradientBottomRight = System.Drawing.Color.BlueViolet;
-			this.computerServicePanel.GradientTopLeft = System.Drawing.Color.Black;
-			this.computerServicePanel.GradientTopRight = System.Drawing.Color.Black;
-			this.computerServicePanel.Location = new System.Drawing.Point(39, 65);
-			this.computerServicePanel.Name = "computerServicePanel";
-			this.computerServicePanel.Quality = 10;
-			this.computerServicePanel.Size = new System.Drawing.Size(1023, 616);
-			this.computerServicePanel.TabIndex = 27;
-			// 
-			// searchInvoiceSerialPicturBox1
-			// 
-			this.searchInvoiceSerialPicturBox1.BackColor = System.Drawing.Color.Transparent;
-			this.showPageTransition1.SetDecoration(this.searchInvoiceSerialPicturBox1, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition2.SetDecoration(this.searchInvoiceSerialPicturBox1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.searchInvoiceSerialPicturBox1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.searchInvoiceSerialPicturBox1, BunifuAnimatorNS.DecorationType.None);
-			this.searchInvoiceSerialPicturBox1.Image = ((System.Drawing.Image)(resources.GetObject("searchInvoiceSerialPicturBox1.Image")));
-			this.searchInvoiceSerialPicturBox1.Location = new System.Drawing.Point(44, 26);
-			this.searchInvoiceSerialPicturBox1.Name = "searchInvoiceSerialPicturBox1";
-			this.searchInvoiceSerialPicturBox1.Size = new System.Drawing.Size(17, 17);
-			this.searchInvoiceSerialPicturBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.searchInvoiceSerialPicturBox1.TabIndex = 26;
-			this.searchInvoiceSerialPicturBox1.TabStop = false;
-			// 
-			// computerServiceDataGridView
-			// 
-			this.computerServiceDataGridView.AllowUserToAddRows = false;
-			this.computerServiceDataGridView.AllowUserToDeleteRows = false;
-			this.computerServiceDataGridView.AllowUserToResizeColumns = false;
-			this.computerServiceDataGridView.AllowUserToResizeRows = false;
-			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.DimGray;
-			this.computerServiceDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-			this.computerServiceDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.computerServiceDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.computerServiceDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(21)))), ((int)(((byte)(113)))));
-			this.computerServiceDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.computerServiceDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-			this.computerServiceDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.RoyalBlue;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("IRANSans", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.computerServiceDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-			this.computerServiceDataGridView.ColumnHeadersHeight = 30;
-			this.computerServiceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-			this.menuTransition2.SetDecoration(this.computerServiceDataGridView, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.computerServiceDataGridView, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition2.SetDecoration(this.computerServiceDataGridView, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition1.SetDecoration(this.computerServiceDataGridView, BunifuAnimatorNS.DecorationType.None);
-			this.computerServiceDataGridView.EnableHeadersVisualStyles = false;
-			this.computerServiceDataGridView.Location = new System.Drawing.Point(44, 57);
-			this.computerServiceDataGridView.Name = "computerServiceDataGridView";
-			this.computerServiceDataGridView.ReadOnly = true;
-			this.computerServiceDataGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.computerServiceDataGridView.RowHeadersVisible = false;
-			this.computerServiceDataGridView.RowHeadersWidth = 45;
-			this.computerServiceDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle3.BackColor = System.Drawing.Color.CornflowerBlue;
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DimGray;
-			this.computerServiceDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
-			this.computerServiceDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.computerServiceDataGridView.Size = new System.Drawing.Size(562, 528);
-			this.computerServiceDataGridView.TabIndex = 25;
-			// 
-			// searchInvoiceSerialTextBox1
-			// 
-			this.searchInvoiceSerialTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.searchInvoiceSerialTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(21)))), ((int)(((byte)(113)))));
-			this.searchInvoiceSerialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.showPageTransition1.SetDecoration(this.searchInvoiceSerialTextBox1, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition2.SetDecoration(this.searchInvoiceSerialTextBox1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.searchInvoiceSerialTextBox1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.searchInvoiceSerialTextBox1, BunifuAnimatorNS.DecorationType.None);
-			this.searchInvoiceSerialTextBox1.ForeColor = System.Drawing.Color.White;
-			this.searchInvoiceSerialTextBox1.Location = new System.Drawing.Point(44, 26);
-			this.searchInvoiceSerialTextBox1.MaxLength = 24;
-			this.searchInvoiceSerialTextBox1.Name = "searchInvoiceSerialTextBox1";
-			this.searchInvoiceSerialTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.searchInvoiceSerialTextBox1.Size = new System.Drawing.Size(562, 17);
-			this.searchInvoiceSerialTextBox1.TabIndex = 23;
-			this.searchInvoiceSerialTextBox1.Text = "سریال فاکتور را وارد نمایید...";
-			this.searchInvoiceSerialTextBox1.TextChanged += new System.EventHandler(this.SearchInvoiceSerialTextBox1_TextChanged);
-			this.searchInvoiceSerialTextBox1.Enter += new System.EventHandler(this.SearchInvoiceSerialTextBox1_Enter);
-			this.searchInvoiceSerialTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SearchInvoiceSerialTextBox1_KeyPress);
-			this.searchInvoiceSerialTextBox1.Leave += new System.EventHandler(this.SearchInvoiceSerialTextBox1_Leave);
-			// 
-			// searchInvoiceSerialPanel1
-			// 
-			this.searchInvoiceSerialPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.searchInvoiceSerialPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			this.showPageTransition2.SetDecoration(this.searchInvoiceSerialPanel1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.searchInvoiceSerialPanel1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.searchInvoiceSerialPanel1, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition1.SetDecoration(this.searchInvoiceSerialPanel1, BunifuAnimatorNS.DecorationType.None);
-			this.searchInvoiceSerialPanel1.Location = new System.Drawing.Point(44, 49);
-			this.searchInvoiceSerialPanel1.Name = "searchInvoiceSerialPanel1";
-			this.searchInvoiceSerialPanel1.Size = new System.Drawing.Size(562, 1);
-			this.searchInvoiceSerialPanel1.TabIndex = 24;
-			// 
-			// registerComputerServiceGroupBox
-			// 
-			this.registerComputerServiceGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.registerComputerServiceGroupBox.BackColor = System.Drawing.Color.Transparent;
-			this.registerComputerServiceGroupBox.Controls.Add(this.assemblePCButton);
-			this.registerComputerServiceGroupBox.Controls.Add(this.allClearButton1);
-			this.registerComputerServiceGroupBox.Controls.Add(this.invoiceSerialDeleteButton1);
-			this.registerComputerServiceGroupBox.Controls.Add(this.confirmStatusPicturBox1);
-			this.registerComputerServiceGroupBox.Controls.Add(this.saveOrderButton1);
-			this.registerComputerServiceGroupBox.Controls.Add(this.descriptionPanel1);
-			this.registerComputerServiceGroupBox.Controls.Add(this.descriptionTextBox1);
-			this.registerComputerServiceGroupBox.Controls.Add(this.serviceTypeComboBox);
-			this.registerComputerServiceGroupBox.Controls.Add(this.newSerialButton1);
-			this.registerComputerServiceGroupBox.Controls.Add(this.invoiceSerialLabel1);
-			this.registerComputerServiceGroupBox.Controls.Add(this.registerDateLabel1);
-			this.registerComputerServiceGroupBox.Controls.Add(this.serviceTypePanel);
-			this.registerComputerServiceGroupBox.Controls.Add(this.invoiceSerialPanel1);
-			this.registerComputerServiceGroupBox.Controls.Add(this.clientNameTextBox1);
-			this.registerComputerServiceGroupBox.Controls.Add(this.clientNamePanel1);
-			this.showPageTransition2.SetDecoration(this.registerComputerServiceGroupBox, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.registerComputerServiceGroupBox, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.registerComputerServiceGroupBox, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition1.SetDecoration(this.registerComputerServiceGroupBox, BunifuAnimatorNS.DecorationType.None);
-			this.registerComputerServiceGroupBox.ForeColor = System.Drawing.Color.White;
-			this.registerComputerServiceGroupBox.Location = new System.Drawing.Point(644, 26);
-			this.registerComputerServiceGroupBox.Name = "registerComputerServiceGroupBox";
-			this.registerComputerServiceGroupBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.registerComputerServiceGroupBox.Size = new System.Drawing.Size(350, 381);
-			this.registerComputerServiceGroupBox.TabIndex = 1;
-			this.registerComputerServiceGroupBox.TabStop = false;
-			this.registerComputerServiceGroupBox.Text = "ثبت درخواست خدمات کامپیوتر";
-			// 
-			// assemblePCButton
-			// 
-			this.assemblePCButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.assemblePCButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.showPageTransition1.SetDecoration(this.assemblePCButton, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.assemblePCButton, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.assemblePCButton, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition2.SetDecoration(this.assemblePCButton, BunifuAnimatorNS.DecorationType.None);
-			this.assemblePCButton.FlatAppearance.BorderSize = 0;
-			this.assemblePCButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.assemblePCButton.Image = ((System.Drawing.Image)(resources.GetObject("assemblePCButton.Image")));
-			this.assemblePCButton.Location = new System.Drawing.Point(23, 115);
-			this.assemblePCButton.Name = "assemblePCButton";
-			this.assemblePCButton.Size = new System.Drawing.Size(50, 25);
-			this.assemblePCButton.TabIndex = 35;
-			this.assemblePCButton.UseVisualStyleBackColor = true;
-			this.assemblePCButton.Visible = false;
-			this.assemblePCButton.Click += new System.EventHandler(this.AssemblePCButton_Click);
-			// 
-			// allClearButton1
-			// 
-			this.allClearButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.allClearButton1.BackColor = System.Drawing.Color.Transparent;
-			this.allClearButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("allClearButton1.BackgroundImage")));
-			this.allClearButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.showPageTransition1.SetDecoration(this.allClearButton1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.allClearButton1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.allClearButton1, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition2.SetDecoration(this.allClearButton1, BunifuAnimatorNS.DecorationType.None);
-			this.allClearButton1.FlatAppearance.BorderSize = 0;
-			this.allClearButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.allClearButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.allClearButton1.Location = new System.Drawing.Point(322, 350);
-			this.allClearButton1.Name = "allClearButton1";
-			this.allClearButton1.Size = new System.Drawing.Size(25, 25);
-			this.allClearButton1.TabIndex = 34;
-			this.allClearButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.allClearButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.allClearButton1.UseVisualStyleBackColor = false;
-			this.allClearButton1.Visible = false;
-			this.allClearButton1.Click += new System.EventHandler(this.AllClearButton1_Click);
-			// 
-			// invoiceSerialDeleteButton1
-			// 
-			this.invoiceSerialDeleteButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.invoiceSerialDeleteButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.showPageTransition1.SetDecoration(this.invoiceSerialDeleteButton1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.invoiceSerialDeleteButton1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.invoiceSerialDeleteButton1, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition2.SetDecoration(this.invoiceSerialDeleteButton1, BunifuAnimatorNS.DecorationType.None);
-			this.invoiceSerialDeleteButton1.FlatAppearance.BorderSize = 0;
-			this.invoiceSerialDeleteButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.invoiceSerialDeleteButton1.Image = ((System.Drawing.Image)(resources.GetObject("invoiceSerialDeleteButton1.Image")));
-			this.invoiceSerialDeleteButton1.Location = new System.Drawing.Point(21, 42);
-			this.invoiceSerialDeleteButton1.Name = "invoiceSerialDeleteButton1";
-			this.invoiceSerialDeleteButton1.Size = new System.Drawing.Size(25, 25);
-			this.invoiceSerialDeleteButton1.TabIndex = 1;
-			this.invoiceSerialDeleteButton1.UseVisualStyleBackColor = true;
-			this.invoiceSerialDeleteButton1.Visible = false;
-			this.invoiceSerialDeleteButton1.Click += new System.EventHandler(this.InvoiceSerialDeleteButton1_Click);
-			// 
-			// confirmStatusPicturBox1
-			// 
-			this.confirmStatusPicturBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.showPageTransition1.SetDecoration(this.confirmStatusPicturBox1, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition2.SetDecoration(this.confirmStatusPicturBox1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.confirmStatusPicturBox1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.confirmStatusPicturBox1, BunifuAnimatorNS.DecorationType.None);
-			this.confirmStatusPicturBox1.Image = global::ComputerServices.Properties.Resources.Tik_True;
-			this.confirmStatusPicturBox1.Location = new System.Drawing.Point(305, 43);
-			this.confirmStatusPicturBox1.Name = "confirmStatusPicturBox1";
-			this.confirmStatusPicturBox1.Size = new System.Drawing.Size(21, 22);
-			this.confirmStatusPicturBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.confirmStatusPicturBox1.TabIndex = 33;
-			this.confirmStatusPicturBox1.TabStop = false;
-			this.confirmStatusPicturBox1.Visible = false;
-			// 
-			// saveOrderButton1
-			// 
-			this.saveOrderButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.saveOrderButton1.BackColor = System.Drawing.Color.SteelBlue;
-			this.showPageTransition1.SetDecoration(this.saveOrderButton1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.saveOrderButton1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.saveOrderButton1, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition2.SetDecoration(this.saveOrderButton1, BunifuAnimatorNS.DecorationType.None);
-			this.saveOrderButton1.Enabled = false;
-			this.saveOrderButton1.FlatAppearance.BorderSize = 0;
-			this.saveOrderButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.saveOrderButton1.Image = ((System.Drawing.Image)(resources.GetObject("saveOrderButton1.Image")));
-			this.saveOrderButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.saveOrderButton1.Location = new System.Drawing.Point(39, 318);
-			this.saveOrderButton1.Name = "saveOrderButton1";
-			this.saveOrderButton1.Size = new System.Drawing.Size(260, 31);
-			this.saveOrderButton1.TabIndex = 7;
-			this.saveOrderButton1.Text = "ثبت درخواست";
-			this.saveOrderButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.saveOrderButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.saveOrderButton1.UseVisualStyleBackColor = false;
-			this.saveOrderButton1.Click += new System.EventHandler(this.SaveOrderButton1_Click);
-			// 
-			// descriptionPanel1
-			// 
-			this.descriptionPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.descriptionPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			this.showPageTransition2.SetDecoration(this.descriptionPanel1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.descriptionPanel1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.descriptionPanel1, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition1.SetDecoration(this.descriptionPanel1, BunifuAnimatorNS.DecorationType.None);
-			this.descriptionPanel1.Location = new System.Drawing.Point(39, 311);
-			this.descriptionPanel1.Name = "descriptionPanel1";
-			this.descriptionPanel1.Size = new System.Drawing.Size(260, 1);
-			this.descriptionPanel1.TabIndex = 11;
-			// 
-			// descriptionTextBox1
-			// 
-			this.descriptionTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.descriptionTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(21)))), ((int)(((byte)(113)))));
-			this.descriptionTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.showPageTransition1.SetDecoration(this.descriptionTextBox1, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition2.SetDecoration(this.descriptionTextBox1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.descriptionTextBox1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.descriptionTextBox1, BunifuAnimatorNS.DecorationType.None);
-			this.descriptionTextBox1.ForeColor = System.Drawing.Color.White;
-			this.descriptionTextBox1.Location = new System.Drawing.Point(39, 151);
-			this.descriptionTextBox1.MaxLength = 1000;
-			this.descriptionTextBox1.Multiline = true;
-			this.descriptionTextBox1.Name = "descriptionTextBox1";
-			this.descriptionTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.descriptionTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.descriptionTextBox1.Size = new System.Drawing.Size(260, 155);
-			this.descriptionTextBox1.TabIndex = 6;
-			this.descriptionTextBox1.Text = "توضیحات مشتری";
-			this.descriptionTextBox1.Enter += new System.EventHandler(this.DescriptionTextBox1_Enter);
-			this.descriptionTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DescriptionTextBox1_KeyPress);
-			this.descriptionTextBox1.Leave += new System.EventHandler(this.DescriptionTextBox1_Leave);
-			// 
-			// serviceTypeComboBox
-			// 
-			this.serviceTypeComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.serviceTypeComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(21)))), ((int)(((byte)(113)))));
-			this.showPageTransition1.SetDecoration(this.serviceTypeComboBox, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.serviceTypeComboBox, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.serviceTypeComboBox, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition2.SetDecoration(this.serviceTypeComboBox, BunifuAnimatorNS.DecorationType.None);
-			this.serviceTypeComboBox.DropDownHeight = 250;
-			this.serviceTypeComboBox.DropDownWidth = 310;
-			this.serviceTypeComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.serviceTypeComboBox.ForeColor = System.Drawing.Color.White;
-			this.serviceTypeComboBox.FormattingEnabled = true;
-			this.serviceTypeComboBox.IntegralHeight = false;
-			this.serviceTypeComboBox.Items.AddRange(new object[] {
-            "اسمبل یک سیستم",
-            "اسمبل یک سیستم به همراه نصب ویندوز",
-            "اسمبل یک سیستم به همراه نصب ویندوز و سایر نرم افزارهای جانبی",
-            "تعمیرات سخت افزار",
-            "تعمیرات نرم افزار",
-            "سرویس سیستم (تمیزکاری سیستم)",
-            "نصب سخت افزار",
-            "نصب نرم افزار",
-            "نصب ویندوز",
-            "نصب ویندوز و نرم افزار های جانبی"});
-			this.serviceTypeComboBox.Location = new System.Drawing.Point(79, 115);
-			this.serviceTypeComboBox.Name = "serviceTypeComboBox";
-			this.serviceTypeComboBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.serviceTypeComboBox.Size = new System.Drawing.Size(220, 25);
-			this.serviceTypeComboBox.Sorted = true;
-			this.serviceTypeComboBox.TabIndex = 5;
-			this.serviceTypeComboBox.Text = "نوع خدمات را تعیین کنید...";
-			this.serviceTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.ServiceTypeComboBox_SelectedIndexChanged);
-			// 
-			// newSerialButton1
-			// 
-			this.newSerialButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.newSerialButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("newSerialButton1.BackgroundImage")));
-			this.newSerialButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.showPageTransition1.SetDecoration(this.newSerialButton1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.newSerialButton1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.newSerialButton1, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition2.SetDecoration(this.newSerialButton1, BunifuAnimatorNS.DecorationType.None);
-			this.newSerialButton1.FlatAppearance.BorderSize = 0;
-			this.newSerialButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.newSerialButton1.Location = new System.Drawing.Point(52, 43);
-			this.newSerialButton1.Name = "newSerialButton1";
-			this.newSerialButton1.Size = new System.Drawing.Size(21, 22);
-			this.newSerialButton1.TabIndex = 2;
-			this.newSerialButton1.UseVisualStyleBackColor = true;
-			this.newSerialButton1.Click += new System.EventHandler(this.NewSerialButton1_Click);
-			// 
-			// invoiceSerialLabel1
-			// 
-			this.invoiceSerialLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.showPageTransition1.SetDecoration(this.invoiceSerialLabel1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.invoiceSerialLabel1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.invoiceSerialLabel1, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition2.SetDecoration(this.invoiceSerialLabel1, BunifuAnimatorNS.DecorationType.None);
-			this.invoiceSerialLabel1.Location = new System.Drawing.Point(79, 46);
-			this.invoiceSerialLabel1.Name = "invoiceSerialLabel1";
-			this.invoiceSerialLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.invoiceSerialLabel1.Size = new System.Drawing.Size(220, 17);
-			this.invoiceSerialLabel1.TabIndex = 3;
-			this.invoiceSerialLabel1.Text = "سریال فاکتور";
-			this.invoiceSerialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.invoiceSerialLabel1.TextChanged += new System.EventHandler(this.InvoiceSerialLabel1_TextChanged);
-			// 
-			// registerDateLabel1
-			// 
-			this.registerDateLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.showPageTransition1.SetDecoration(this.registerDateLabel1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.registerDateLabel1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.registerDateLabel1, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition2.SetDecoration(this.registerDateLabel1, BunifuAnimatorNS.DecorationType.None);
-			this.registerDateLabel1.Location = new System.Drawing.Point(8, 16);
-			this.registerDateLabel1.Name = "registerDateLabel1";
-			this.registerDateLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.registerDateLabel1.Size = new System.Drawing.Size(129, 17);
-			this.registerDateLabel1.TabIndex = 0;
-			this.registerDateLabel1.Text = "تاریخ ثبت";
-			this.registerDateLabel1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-			// 
-			// serviceTypePanel
-			// 
-			this.serviceTypePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.serviceTypePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			this.showPageTransition2.SetDecoration(this.serviceTypePanel, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.serviceTypePanel, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.serviceTypePanel, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition1.SetDecoration(this.serviceTypePanel, BunifuAnimatorNS.DecorationType.None);
-			this.serviceTypePanel.Location = new System.Drawing.Point(79, 145);
-			this.serviceTypePanel.Name = "serviceTypePanel";
-			this.serviceTypePanel.Size = new System.Drawing.Size(220, 1);
-			this.serviceTypePanel.TabIndex = 10;
-			// 
-			// invoiceSerialPanel1
-			// 
-			this.invoiceSerialPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.invoiceSerialPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			this.showPageTransition2.SetDecoration(this.invoiceSerialPanel1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.invoiceSerialPanel1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.invoiceSerialPanel1, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition1.SetDecoration(this.invoiceSerialPanel1, BunifuAnimatorNS.DecorationType.None);
-			this.invoiceSerialPanel1.Location = new System.Drawing.Point(79, 73);
-			this.invoiceSerialPanel1.Name = "invoiceSerialPanel1";
-			this.invoiceSerialPanel1.Size = new System.Drawing.Size(220, 1);
-			this.invoiceSerialPanel1.TabIndex = 8;
-			// 
-			// clientNameTextBox1
-			// 
-			this.clientNameTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.clientNameTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(21)))), ((int)(((byte)(113)))));
-			this.clientNameTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.showPageTransition1.SetDecoration(this.clientNameTextBox1, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition2.SetDecoration(this.clientNameTextBox1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.clientNameTextBox1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.clientNameTextBox1, BunifuAnimatorNS.DecorationType.None);
-			this.clientNameTextBox1.ForeColor = System.Drawing.Color.White;
-			this.clientNameTextBox1.Location = new System.Drawing.Point(79, 83);
-			this.clientNameTextBox1.MaxLength = 45;
-			this.clientNameTextBox1.Name = "clientNameTextBox1";
-			this.clientNameTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.clientNameTextBox1.Size = new System.Drawing.Size(220, 17);
-			this.clientNameTextBox1.TabIndex = 4;
-			this.clientNameTextBox1.Text = "نام مشتری";
-			this.clientNameTextBox1.Enter += new System.EventHandler(this.ClientNameTextBox1_Enter);
-			this.clientNameTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ClientNameTextBox1_KeyPress);
-			this.clientNameTextBox1.Leave += new System.EventHandler(this.ClientNameTextBox1_Leave);
-			// 
-			// clientNamePanel1
-			// 
-			this.clientNamePanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.clientNamePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			this.showPageTransition2.SetDecoration(this.clientNamePanel1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition1.SetDecoration(this.clientNamePanel1, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.clientNamePanel1, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition1.SetDecoration(this.clientNamePanel1, BunifuAnimatorNS.DecorationType.None);
-			this.clientNamePanel1.Location = new System.Drawing.Point(79, 106);
-			this.clientNamePanel1.Name = "clientNamePanel1";
-			this.clientNamePanel1.Size = new System.Drawing.Size(220, 1);
-			this.clientNamePanel1.TabIndex = 9;
-			// 
 			// menuTransition2
 			// 
 			this.menuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
@@ -2224,6 +2224,13 @@
 			this.mainPanel.ResumeLayout(false);
 			this.servicePanel.ResumeLayout(false);
 			this.titlelServicePanel.ResumeLayout(false);
+			this.computerServicePanel.ResumeLayout(false);
+			this.computerServicePanel.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.searchInvoiceSerialPicturBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.computerServiceDataGridView)).EndInit();
+			this.registerComputerServiceGroupBox.ResumeLayout(false);
+			this.registerComputerServiceGroupBox.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.confirmStatusPicturBox1)).EndInit();
 			this.cellphoneServicePanel.ResumeLayout(false);
 			this.cellphoneServicePanel.PerformLayout();
 			this.registerCellphoneServiceGroupBox.ResumeLayout(false);
@@ -2235,13 +2242,6 @@
 			this.softwareServivePanel.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.cellphoneServiceDataGridView)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.searchInvoiceSerialPicturBox2)).EndInit();
-			this.computerServicePanel.ResumeLayout(false);
-			this.computerServicePanel.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.searchInvoiceSerialPicturBox1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.computerServiceDataGridView)).EndInit();
-			this.registerComputerServiceGroupBox.ResumeLayout(false);
-			this.registerComputerServiceGroupBox.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.confirmStatusPicturBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.cellphoneServiceBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.computerServiceBindingSource)).EndInit();
 			this.ResumeLayout(false);

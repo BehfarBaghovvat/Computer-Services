@@ -18,7 +18,7 @@
 		/// </summary>
 		public System.Data.Entity.DbSet<User> Users { get; set; }
 
-		//public System.Data.Entity.DbSet<Client> Clients { get; set; }
+		public System.Data.Entity.DbSet<Client> Clients { get; set; }
 
 		/// <summary>
 		/// Table of LogHistory
@@ -37,6 +37,9 @@
 
 		//public System.Data.Entity.DbSet<ActivityHistory> ActivityHistories { get; set; }
 
-
+		/// <summary>
+		/// Table of ComputerAssembls
+		/// </summary>
+		public System.Data.Entity.DbSet<ComputerAssembl> ComputerAssembls { get; set; }
 	}
 }

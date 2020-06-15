@@ -1632,9 +1632,10 @@ namespace ComputerServices
 		#endregion /FormLoad
 
 		#region Service_Founctions
+
 		#region InvoiceNumber
 		/// <summary>
-		/// تابعی که یه تعداد 7 کاراکتر حروف و عدد به صورت تصادوفی
+		/// تابعی که به تعداد 7 کاراکتر حروف و عدد به صورت تصادوفی
 		///  و ترکیبی ایجاد کرده و به ما بر میگرداند.
 		/// </summary>
 		/// <returns>ممبر letter که حاصل دریافت ترکیبی عدد و حرف میباشد نتیجه این تابع میباشد. </returns>

@@ -49,6 +49,26 @@
     <Reference Include="Kavenegar, Version=1.2.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Kavenegar.1.2.4\lib\net35\Kavenegar.dll</HintPath>
     </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2020.2.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Stimulsoft Designer 2020.2.2\Libs\Reports.Net\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls, Version=2020.2.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Stimulsoft Designer 2020.2.2\Libs\Reports.Net\Stimulsoft.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls.Win, Version=2020.2.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Stimulsoft Designer 2020.2.2\Libs\Reports.Net\Stimulsoft.Controls.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2020.2.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Stimulsoft Designer 2020.2.2\Libs\Reports.Net\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Win, Version=2020.2.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Stimulsoft Designer 2020.2.2\Libs\Reports.Net\Stimulsoft.Report.Win.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -97,11 +117,11 @@
     <Compile Include="Menu\DashBoard\DashBoardForm.Designer.cs">
       <DependentUpon>DashBoardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\Service\ComputerAssembelForm.cs">
+    <Compile Include="Menu\Service\ComputerAssemblForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\Service\ComputerAssembelForm.Designer.cs">
-      <DependentUpon>ComputerAssembelForm.cs</DependentUpon>
+    <Compile Include="Menu\Service\ComputerAssemblForm.Designer.cs">
+      <DependentUpon>ComputerAssemblForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu\Service\OrderInformationForm.cs">
       <SubType>Form</SubType>
@@ -177,8 +197,8 @@
     <EmbeddedResource Include="Menu\DashBoard\DashBoardForm.resx">
       <DependentUpon>DashBoardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\Service\ComputerAssembelForm.resx">
-      <DependentUpon>ComputerAssembelForm.cs</DependentUpon>
+    <EmbeddedResource Include="Menu\Service\ComputerAssemblForm.resx">
+      <DependentUpon>ComputerAssemblForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\Service\OrderInformationForm.resx">
       <DependentUpon>OrderInformationForm.cs</DependentUpon>

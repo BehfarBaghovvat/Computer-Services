@@ -235,7 +235,7 @@
 			// 
 			this.captionLabel1.AutoSize = true;
 			this.captionLabel1.ForeColor = System.Drawing.Color.Gray;
-			this.captionLabel1.Location = new System.Drawing.Point(253, 14);
+			this.captionLabel1.Location = new System.Drawing.Point(266, 14);
 			this.captionLabel1.Name = "captionLabel1";
 			this.captionLabel1.Size = new System.Drawing.Size(123, 17);
 			this.captionLabel1.TabIndex = 0;
@@ -245,7 +245,7 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.ForeColor = System.Drawing.Color.Gray;
-			this.label1.Location = new System.Drawing.Point(148, 14);
+			this.label1.Location = new System.Drawing.Point(141, 14);
 			this.label1.Name = "label1";
 			this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.label1.Size = new System.Drawing.Size(54, 17);
